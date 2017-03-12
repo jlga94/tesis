@@ -1,0 +1,10 @@
+[(0, '0.055*"proyect" + 0.034*"gestion" + 0.020*"proces" + 0.014*"desarroll" + 0.014*"experient" + 0.013*"servici" + 0.012*"tecnolog" + 0.012*"mejor"'), 
+(1, '0.033*"trabaj" + 0.024*"capac" + 0.023*"experient" + 0.022*"equip" + 0.020*"softwar" + 0.019*"desarroll" + 0.017*"prueb" + 0.011*"habil"'), 
+(2, '0.036*"inform" + 0.024*"segur" + 0.021*"riesg" + 0.019*"control" + 0.017*"gestion" + 0.016*"proces" + 0.013*"sistem" + 0.012*"auditor"'), 
+(3, '0.051*"web" + 0.042*"desarroll" + 0.036*"conoc" + 0.027*"program" + 0.026*"jav" + 0.024*"aplic" + 0.019*"experient" + 0.019*"php"'), 
+(4, '0.016*"practic" + 0.014*"ingeni" + 0.012*"profesional" + 0.012*"nivel" + 0.011*"trabaj" + 0.010*"carrer" + 0.010*"sistem" + 0.010*"empres"'), 
+(5, '0.031*"administr" + 0.031*"red" + 0.027*"sistem" + 0.021*"conoc" + 0.020*"soport" + 0.019*"servici" + 0.017*"oper" + 0.017*"servidor"'), 
+(6, '0.045*"dat" + 0.033*"inform" + 0.032*"apoy" + 0.029*"bas" + 0.027*"proces" + 0.023*"practic" + 0.022*"analisis" + 0.021*"report"'), 
+(7, '0.039*"program" + 0.039*"desarroll" + 0.035*"sistem" + 0.033*"experient" + 0.030*"conoc" + 0.020*"anal" + 0.020*"sql" + 0.019*"aplic"'), 
+(8, '0.064*"client" + 0.038*"vent" + 0.028*"comercial" + 0.021*"product" + 0.020*"empres" + 0.019*"experient" + 0.018*"negoci" + 0.017*"consultor"'), 
+(9, '0.038*"sap" + 0.036*"sistem" + 0.028*"usuari" + 0.028*"soport" + 0.025*"implement" + 0.023*"requer" + 0.021*"realiz" + 0.017*"funcional"')]

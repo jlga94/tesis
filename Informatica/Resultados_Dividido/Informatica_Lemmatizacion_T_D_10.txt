@@ -1,0 +1,10 @@
+[(0, '0.030*"sistema" + 0.027*"seguridad" + 0.023*"soporte" + 0.022*"servicio" + 0.022*"red" + 0.016*"información" + 0.015*"equipo" + 0.014*"usuario"'), 
+(1, '0.045*"información" + 0.028*"gestión" + 0.025*"apoyo" + 0.024*"reporte" + 0.023*"proceso" + 0.023*"practicante" + 0.020*"análisis" + 0.020*"dato"'), 
+(2, '0.036*"conocimiento" + 0.032*"web" + 0.026*"desarrollo" + 0.025*"programación" + 0.024*"experiencia" + 0.024*"sql" + 0.023*"programador" + 0.022*"java"'), 
+(3, '0.047*"sap" + 0.041*"proceso" + 0.022*"implementación" + 0.021*"proyecto" + 0.021*"apoyo" + 0.019*"consultor" + 0.019*"soporte" + 0.017*"mejora"'), 
+(4, '0.078*"cliente" + 0.035*"venta" + 0.029*"comercial" + 0.025*"producto" + 0.021*"servicio" + 0.014*"nuevo" + 0.014*"realizar" + 0.013*"canal"'), 
+(5, '0.042*"sistema" + 0.033*"desarrollo" + 0.026*"requerimiento" + 0.025*"prueba" + 0.025*"realizar" + 0.023*"aplicación" + 0.022*"analista" + 0.020*"proyecto"'), 
+(6, '0.035*"empresa" + 0.032*"profesional" + 0.026*"búsqueda" + 0.020*"encontrar" + 0.020*"ser" + 0.019*"función" + 0.017*"cliente" + 0.015*"consultoría"'), 
+(7, '0.010*"realizar" + 0.010*"inversión" + 0.009*"programa" + 0.009*"sistema" + 0.008*"contrato" + 0.008*"personal" + 0.007*"curso" + 0.007*"n"'), 
+(8, '0.020*"equipo" + 0.020*"software" + 0.017*"arquitectura" + 0.013*"aplicación" + 0.013*"desarrollo" + 0.012*"prueba" + 0.011*"ser" + 0.011*"tecnología"'), 
+(9, '0.051*"proyecto" + 0.022*"proceso" + 0.016*"gestión" + 0.014*"área" + 0.013*"gestionar" + 0.012*"mejora" + 0.012*"negocio" + 0.011*"plan"')]

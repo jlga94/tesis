@@ -1,0 +1,10 @@
+[(0, '0.023*"web" + 0.022*"experiencia" + 0.020*"desarrollo" + 0.020*"conocimiento" + 0.019*"aplicación" + 0.014*"software" + 0.013*"prueba" + 0.011*"diseño"'), 
+(1, '0.041*"apoyo" + 0.027*"cliente" + 0.026*"practicante" + 0.022*"información" + 0.021*"elaboración" + 0.020*"apoyar" + 0.018*"seguimiento" + 0.018*"realizar"'), 
+(2, '0.036*"sistema" + 0.029*"seguridad" + 0.020*"administración" + 0.017*"red" + 0.017*"servicio" + 0.016*"información" + 0.016*"servidor" + 0.016*"conocimiento"'), 
+(3, '0.036*"desarrollo" + 0.032*"sistema" + 0.032*"experiencia" + 0.026*"conocimiento" + 0.022*"programación" + 0.021*"año" + 0.020*"analista" + 0.020*"java"'), 
+(4, '0.029*"red" + 0.021*"experiencia" + 0.014*"público" + 0.013*"telecomunicación" + 0.011*"año" + 0.010*"servicio" + 0.010*"técnico" + 0.010*"conocimiento"'), 
+(5, '0.021*"empresa" + 0.017*"profesional" + 0.017*"ingeniería" + 0.016*"experiencia" + 0.015*"cliente" + 0.015*"carrera" + 0.015*"trabajo" + 0.013*"nivel"'), 
+(6, '0.023*"comercial" + 0.022*"información" + 0.019*"análisis" + 0.018*"proceso" + 0.017*"reporte" + 0.017*"venta" + 0.016*"gestión" + 0.014*"área"'), 
+(7, '0.055*"sap" + 0.043*"soporte" + 0.027*"sistema" + 0.026*"usuario" + 0.020*"implementación" + 0.019*"solución" + 0.018*"proyecto" + 0.017*"erp"'), 
+(8, '0.058*"dato" + 0.052*"conocimiento" + 0.045*"base" + 0.038*"nivel" + 0.034*"intermedio" + 0.034*"sql" + 0.025*"avanzar" + 0.020*"oracle"'), 
+(9, '0.042*"proyecto" + 0.022*"proceso" + 0.019*"gestión" + 0.012*"experiencia" + 0.011*"año" + 0.010*"negocio" + 0.010*"servicio" + 0.010*"sistema"')]

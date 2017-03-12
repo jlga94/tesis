@@ -1,0 +1,10 @@
+[(0, '0.027*"sap" + 0.027*"experiencia" + 0.019*"empresa" + 0.018*"año" + 0.016*"beneficio" + 0.016*"proyecto" + 0.012*"ley" + 0.011*"profesional"'), 
+(1, '0.062*"conocimiento" + 0.038*"red" + 0.030*"administración" + 0.028*"sistema" + 0.028*"windows" + 0.021*"linux" + 0.021*"operativo" + 0.021*"servidor"'), 
+(2, '0.125*"experiencia" + 0.103*"año" + 0.067*"pequeño" + 0.033*"proyecto" + 0.025*"similar" + 0.022*"gestión" + 0.021*"deseable" + 0.020*"sistema"'), 
+(3, '0.039*"experiencia" + 0.035*"conocimiento" + 0.033*"desarrollo" + 0.030*"aplicación" + 0.030*"java" + 0.021*"año" + 0.018*"herramienta" + 0.017*"web"'), 
+(4, '0.100*"nivel" + 0.082*"intermedio" + 0.068*"conocimiento" + 0.060*"avanzar" + 0.041*"manejo" + 0.034*"office" + 0.033*"inglés" + 0.031*"excel"'), 
+(5, '0.046*"conocimiento" + 0.044*"gestión" + 0.038*"proceso" + 0.025*"información" + 0.023*"proyecto" + 0.021*"negocio" + 0.020*"análisis" + 0.019*"sistema"'),
+ (6, '0.053*"capacidad" + 0.042*"trabajo" + 0.036*"equipo" + 0.026*"trabajar" + 0.025*"habilidad" + 0.025*"comunicación" + 0.021*"disponibilidad" + 0.019*"nivel"'), 
+(7, '0.075*"ingeniería" + 0.060*"sistema" + 0.039*"informática" + 0.039*"carrera" + 0.034*"afín" + 0.033*"afine" + 0.022*"bachiller" + 0.022*"egresar"'), 
+(8, '0.113*"None" + 0.029*"experiencia" + 0.018*"requerimiento" + 0.015*"prueba" + 0.015*"diseño" + 0.014*"solución" + 0.011*"ser" + 0.010*"realizar"'), 
+(9, '0.065*"conocimiento" + 0.043*"experiencia" + 0.041*"sql" + 0.036*"programación" + 0.028*"desarrollo" + 0.028*"net" + 0.027*"dato" + 0.025*"base"')]
