@@ -82,7 +82,7 @@ class TextProcessor:
     		#print(lemmaResultText)
     		for wordLemmaResult in lemmaResultText:
     			#print(word)
-    			word = wordLemmaResult.split('\t')[lemmaElement]
+    			word = wordLemmaResult.split('\t')[lemmaElement].lower()
     			if word not in self.stopEnglish and word not in self.stopSpanish:
     				if not(len(word)==1 and not(word in string.punctuation)):
     					newText += ' ' + word
@@ -199,16 +199,17 @@ class Input_Output:
         sheets = wb.get_sheet_names()
         sheetAviso = wb.get_sheet_by_name(sheets[0])
         maxFilas = sheetAviso.max_row + 1
+        infoColumn = 1
 
         for num_oferta in range(1, maxFilas):
-            text = str(sheetAviso.cell(row=num_oferta, column=1).value)
+            text = str(sheetAviso.cell(row=num_oferta, column=infoColumn).value)
             dataset.append(text)
         
         datasetLemmatizacion,bigramLemmatizacion = self.limpiarDataset_Lemmatizacion_Bigram(dataset)
-        datasetSteeming,bigramSteeming = self.limpiarDataset_Steeming_Bigram(dataset)
+        #datasetSteeming,bigramSteeming = self.limpiarDataset_Steeming_Bigram(dataset)
 
         #return datasetSteeming
-        return datasetLemmatizacion,bigramLemmatizacion,datasetSteeming,bigramSteeming
+        return datasetLemmatizacion,bigramLemmatizacion#,datasetSteeming,bigramSteeming
         #return datasetLemmatizacion,datasetSteeming
 
     def obtenerDatasetAClasificar_Dividido(self, filename):
@@ -286,6 +287,10 @@ class Input_Output:
     	columnasABuscar.append(self.secciones['Job: Description'])
     	columnasABuscar.append(self.secciones['Job: Qualifications'])
 
+    	numColNewExcel_Text = 1
+    	numColNewExcel_Year = 2
+    	numColNewExcel_Month = 3
+
     	numRowNewExcel=1
     	for num_oferta in range(2, maxFilas):
     		completeText = ''
@@ -295,7 +300,15 @@ class Input_Output:
     		idioma = detect(completeText.strip())
     		if(idioma=='es'):
     			text = self.procesadorTextos.firstpreprocessText(completeText)
-    			newSheet.cell(row=numRowNewExcel, column=1).value = text
+    			newSheet.cell(row=numRowNewExcel, column=numColNewExcel_Text).value = text
+
+    			date = str(sheetAviso.cell(row=num_oferta, column=self.secciones['Job: Posting Date']).value)
+    			print(date)
+    			ddmmyyyy = date.split('/')
+
+    			newSheet.cell(row=numRowNewExcel, column=numColNewExcel_Year).value = int(ddmmyyyy[2])
+    			newSheet.cell(row=numRowNewExcel, column=numColNewExcel_Month).value = int(ddmmyyyy[1])
+
     			numRowNewExcel+=1
 
     	filenameWithoutExtension = filename.split('.')[0]
@@ -321,6 +334,9 @@ class Input_Output:
 
     	numColNewExcel_Title_Descp=1
     	numColNewExcel_Qualifications=2
+    	numColNewExcel_Year=3
+    	numColNewExcel_Month = 4
+
     	numRowNewExcel=1
     	for num_oferta in range(2, maxFilas):
     		title_descp_Text = ''
@@ -338,6 +354,13 @@ class Input_Output:
     			
     			newSheet.cell(row=numRowNewExcel, column=numColNewExcel_Title_Descp).value = title_descp_Text
     			newSheet.cell(row=numRowNewExcel, column=numColNewExcel_Qualifications).value = qualif_Text
+    			
+    			date = str(sheetAviso.cell(row=num_oferta, column=self.secciones['Job: Posting Date']).value)
+    			print(date)
+    			ddmmyyyy = date.split('/')
+
+    			newSheet.cell(row=numRowNewExcel, column=numColNewExcel_Year).value = int(ddmmyyyy[2])
+    			newSheet.cell(row=numRowNewExcel, column=numColNewExcel_Month).value = int(ddmmyyyy[1])
     			
     			numRowNewExcel+=1
 

@@ -1,9 +1,11 @@
 from preprocesamiento import Input_Output
 
-import math,numpy
+import math,numpy, operator, pickle
 from textblob import TextBlob as tb
+from collections import Counter
+from gensim.models import Phrases,Word2Vec,CoherenceModel
 
-def tf(word, blob):
+'''def tf(word, blob):
 	return blob.words.count(word) / len(blob.words)
 
 def n_containing(word, bloblist):
@@ -49,7 +51,7 @@ def example():
 		sorted_words = sorted(scores.items(), key=lambda x: x[1], reverse=True)
 		print(sorted_words)
 		for word, score in sorted_words[:3]:
-			print("\tWord: {}, TF-IDF: {}".format(word, round(score, 5)))
+			print("\tWord: {}, TF-IDF: {}".format(word, round(score, 5)))'''
 
 def getDictionaryDistributionInDocuments(dataset):
 	dictionaryDistribution = {}
@@ -68,9 +70,15 @@ def get_TFIDF(dataset,dictionaryDistribution):
 	TFIDF_dataset=[]
 	N_documents = len(dataset)
 	wordsList = sorted(dictionaryDistribution.keys())
-	for document in dataset:
+	print('Cantidad de documentos: '+str(len(dataset)))	
+	#i = 0
+
+	for i in range(len(dataset)):
+		document = dataset[i]
+		print('Documento '+ str(i))
 		maxCountWord = -1
 		tf_words = []
+		#print('Contando frecuencias')
 		for word in wordsList: 
 			tf = document.count(word)
 			if tf > maxCountWord:
@@ -78,7 +86,7 @@ def get_TFIDF(dataset,dictionaryDistribution):
 			tf_words.append(tf)
 			if dictionaryDistribution[word]==0:
 				print('La palabra '+ word + ' tiene 0 en el IDF')
-
+		#print('Normalizando y Multiplicando por IDF')
 		for itemIndex in range(len(tf_words)): # Se tiene que normalizar el tf y multiplicar por el IDF
 			tf_words[itemIndex]/=maxCountWord
 			if tf_words[itemIndex]!=0:
@@ -88,16 +96,18 @@ def get_TFIDF(dataset,dictionaryDistribution):
 
 	return TFIDF_dataset
 
-def getNumpyDictionary(dictionaryDistribution,TFIDF_dataset):
+def getVariance(dictionaryDistribution,TFIDF_dataset):
 	wordsList = sorted(dictionaryDistribution.keys())
-	wordsNumpyDictionary = {}
-	for wordIndex in range(len(wordsList)):
+	wordsVarianceDictionary = {}
+	cantidadPalabras = len(wordsList)
+	print('Cantidad de palabras: '+str(cantidadPalabras))
+	for wordIndex in range(cantidadPalabras):
+		print('Palabra '+str(wordIndex)+': '+wordsList[wordIndex])
 		tfidf_Word = []
 		for documentIndex in range(len(TFIDF_dataset)):
 			tfidf_Word.append(TFIDF_dataset[documentIndex][wordIndex])
-		wordsNumpyDictionary[wordsList[wordIndex]] = numpy.array(tfidf_Word)
-
-	return wordsNumpyDictionary
+		wordsVarianceDictionary[wordsList[wordIndex]] = numpy.array(tfidf_Word).var()
+	return wordsVarianceDictionary
 
 def mostrarMasRelevantes(diccionario,TFIDF_dataset,numArch,tipo):
 	F = open(numArch + '_'+ tipo +'_TF_IDF.txt','w')
@@ -110,6 +120,50 @@ def mostrarMasRelevantes(diccionario,TFIDF_dataset,numArch,tipo):
 		nOferta+=1
 
 	F.close()
+
+def showImportantVariance(wordsVarianceDictionary,numArch,tipo):
+	sortedByValue = sorted(wordsVarianceDictionary.items(),key=operator.itemgetter(1))
+	quince_porciento = int(len(sortedByValue)*0.15)
+	F = open(numArch + '_'+ tipo +'_Variance.txt','w')
+	F.write('Los '+str(quince_porciento)+' primeros\n')
+	for i in range(quince_porciento):
+		F.write(str(i)+': '+sortedByValue[i][0]+' - '+ str(sortedByValue[i][1])+'\n')
+
+	F.write('\nLos '+str(quince_porciento)+' ultimos\n')
+	for i in range(len(sortedByValue)-1,len(sortedByValue)-quince_porciento-1,-1):
+		F.write(str(i)+': '+sortedByValue[i][0]+' - '+ str(sortedByValue[i][1])+'\n')
+
+	F.close()
+
+def replaceBigrams(dataset,bigram_model):
+	newDataset=[]
+	for words_oferta in dataset:
+		N_words = len(words_oferta)
+		i=0
+		while(i < N_words-1):
+			possible_bigram = words_oferta[i] + '_' +words_oferta[i+1]
+			if (possible_bigram in bigram_model.vocab.keys()):
+				words_oferta[i] = possible_bigram # Se reemplaza la palabra del indice i por el bigrama
+				words_oferta.pop(i+1)
+				N_words-=1
+			i+=1
+		newDataset.append(words_oferta)
+	return newDataset
+
+def replaceBigrams_v2(dataset,bigram_model):
+	newDataset=[]
+	for words_oferta in dataset:
+		N_words = len(words_oferta)
+		i=0
+		while(i < N_words-1):
+			possible_bigram = words_oferta[i] + '_' +words_oferta[i+1]
+			if (possible_bigram in bigram_model.vocab.keys()):
+				words_oferta.insert(i,possible_bigram) #se agrega el bigrama como indice sin borrar los unigramas
+				i+=1
+				N_words+=1
+			i+=1
+		newDataset.append(words_oferta)
+	return newDataset
 
 
 def TF_IDF_COMPLETO(carrera):
@@ -132,6 +186,36 @@ def TF_IDF_COMPLETO(carrera):
 	TFIDF_dataset_Steeming = get_TFIDF(datasetSteeming,diccionarioSteeming)
 	print('Steeming Completo')
 	mostrarMasRelevantes(diccionarioSteeming,TFIDF_dataset_Steeming)'''
+
+def TF_IDF_COMPLETO_BIGRAM(carrera):
+	inputOutput = Input_Output()
+	#datasetLemmatizacion,bigramLemmatizacion,datasetSteeming,bigramSteeming = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx')
+	datasetLemmatizacion,bigramLemmatizacion = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx')
+
+	print('Comenzo bigram Lemma')
+	bigram_model_Lemmatizacion = Word2Vec(bigramLemmatizacion[datasetLemmatizacion],size=100)
+	#print('Comenzo bigram Steeming')
+	#bigram_model_Steeming = Word2Vec(bigramSteeming[datasetSteeming],size=100)
+
+	print('Comenzo bigram Lemma Reemplazo')
+	datasetLemmatizacionBigram = replaceBigrams(datasetLemmatizacion,bigram_model_Lemmatizacion)
+	#print('Comenzo bigram Steeming Reemplazo')
+	#datasetSteemingBigram = replaceBigrams(datasetSteeming,bigram_model_Steeming)
+
+	datasets = [datasetLemmatizacionBigram]
+	tipos = ['Lemmatizacion']
+
+	for i in range(len(tipos)):
+		print('Procesando diccionario de '+ tipos[i])
+		diccionario = getDictionaryDistributionInDocuments(datasets[i])
+		print('Procesando TF-IDF de ' + tipos[i])
+		TFIDF_dataset = get_TFIDF(datasets[i],diccionario)
+		pickle.dump(TFIDF_dataset,open("tfidf.p","wb"))
+
+		print('Obteniendo varianza de '+ tipos[i])
+		#wordsVarianceDictionary = getVariance(diccionario,TFIDF_dataset)
+		print('Imprimiendo varianza de '+ tipos[i])
+		#showImportantVariance(wordsVarianceDictionary,carrera,tipos[i])
 
 
 def TF_IDF_DIVIDIDO(carrera):
@@ -156,4 +240,4 @@ def TF_IDF_DIVIDIDO(carrera):
 	mostrarMasRelevantes(diccionarioLemmatizacion,TFIDF_dataset_Lemmatizacion)'''
 
 
-TF_IDF_COMPLETO('Informatica')
+TF_IDF_COMPLETO_BIGRAM('Informatica')
