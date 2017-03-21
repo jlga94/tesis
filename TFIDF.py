@@ -1,57 +1,46 @@
 from preprocesamiento import Input_Output
 
-import math,numpy, operator, pickle
+import math,numpy, operator, uuid
 from textblob import TextBlob as tb
 from collections import Counter
-from gensim.models import Phrases,Word2Vec,CoherenceModel
+from gensim.models import Phrases,Word2Vec
+from cassandra.cluster import Cluster
+from cassandra.query import BatchStatement
+from pymongo import MongoClient
+from bson.code import Code
 
-'''def tf(word, blob):
-	return blob.words.count(word) / len(blob.words)
+'''
+CREATE KEYSPACE tesis
+WITH replication = {'class':'SimpleStrategy','replication_factor':3};
 
-def n_containing(word, bloblist):
-	return sum(1 for blob in bloblist if word in blob.words)
+USE tesis;
 
-def idf(word, bloblist):
-	return math.log(len(bloblist) / (1 + n_containing(word, bloblist)))
+CREATE TABLE career(
+career text,
+type text,
+dictionary list<text>,
+PRIMARY KEY (career,type));
 
-def tfidf(word, blob, bloblist):
-	return tf(word, blob) * idf(word, bloblist)
+CREATE TABLE tf_idf_word(
+id uuid,
+career text,
+type text,
+word text,
+nDocument int,
+tf_idf double,
+PRIMARY KEY (id,career,type,word,nDocument));
 
-def example():
-	document1 = tb(str("""Python is a 2000 made-for-TV horror movie directed by Richard
-	Clabaugh. The film features several cult favorite actors, including William
-	Zabka of The Karate Kid fame, Wil Wheaton, Casper Van Dien, Jenny McCarthy,
-	Keith Coogan, Robert Englund (best known for his role as Freddy Krueger in the
-	A Nightmare on Elm Street series of films), Dana Barron, David Bowe, and Sean
-	Whalen. The film concerns a genetically engineered snake, a python, that
-	escapes and unleashes itself on a small town. It includes the classic final
-	girl scenario evident in films like Friday the 13th. It was filmed in Los Angeles,
-	 California and Malibu, California. Python was followed by two sequels: Python
-	 II (2002) and Boa vs. Python (2004), both also made-for-TV films.""").lower())
+CREATE TABLE variance_word(
+id uuid,
+career text,
+type text,
+word text,
+variance double,
+PRIMARY KEY (id,career,type,word));
 
-	document2 = tb(str("""Python, from the Greek word (πύθων/πύθωνας), is a genus of
-	nonvenomous pythons[2] found in Africa and Asia. Currently, 7 species are
-	recognised.[2] A member of this genus, P. reticulatus, is among the longest
-	snakes known.""").lower())
 
-	document3 = tb(str("""The Colt Python is a .357 Magnum caliber revolver formerly
-	manufactured by Colt's Manufacturing Company of Hartford, Connecticut.
-	It is sometimes referred to as a "Combat Magnum".[1] It was first introduced
-	in 1955, the same year as Smith &amp; Wesson's M29 .44 Magnum. The now discontinued
-	Colt Python targeted the premium revolver market segment. Some firearm
-	collectors and writers such as Jeff Cooper, Ian V. Hogg, Chuck Hawks, Leroy
-	Thompson, Renee Smeets and Martin Dougherty have described the Python as the
-	finest production revolver ever made.""").lower())
+'''
 
-	bloblist = [document1, document2, document3]
-	for i, blob in enumerate(bloblist):
-		print("Top words in document {}".format(i + 1))
-		scores = {word: tfidf(word, blob, bloblist) for word in blob.words}
-		
-		sorted_words = sorted(scores.items(), key=lambda x: x[1], reverse=True)
-		print(sorted_words)
-		for word, score in sorted_words[:3]:
-			print("\tWord: {}, TF-IDF: {}".format(word, round(score, 5)))'''
 
 def getDictionaryDistributionInDocuments(dataset):
 	dictionaryDistribution = {}
@@ -66,19 +55,34 @@ def getDictionaryDistributionInDocuments(dataset):
 
 	return dictionaryDistribution
 
-def get_TFIDF(dataset,dictionaryDistribution): 
-	TFIDF_dataset=[]
+def insertDictionary(career,typePreprocess,dictionaryDistribution):
+	wordsList = sorted(dictionaryDistribution.keys())
+
+	cluster = Cluster()
+	session = cluster.connect('tesis')
+	query = "INSERT INTO career(career,type,dictionary) VALUES (?,?,?);"
+	prepared = session.prepare(query)
+	session.execute(prepared,(career,typePreprocess,wordsList))
+
+
+def get_TFIDF_Cassandra(career,typePreprocess,dataset,dictionaryDistribution): 
+	cluster = Cluster()
+	session = cluster.connect('tesis')
+	query = "INSERT INTO tf_idf_word(id,career,type,word,nDocument,tf_idf) VALUES (?,?,?,?,?,?);"
+	prepared = session.prepare(query)
+
+	#TFIDF_dataset=[]
 	N_documents = len(dataset)
 	wordsList = sorted(dictionaryDistribution.keys())
 	print('Cantidad de documentos: '+str(len(dataset)))	
-	#i = 0
-
-	for i in range(len(dataset)):
-		document = dataset[i]
-		print('Documento '+ str(i))
+	
+	#Se quedo 238
+	for iDocument in range(len(dataset)):
+		document = dataset[iDocument]
+		print('Documento '+ str(iDocument))
 		maxCountWord = -1
 		tf_words = []
-		#print('Contando frecuencias')
+
 		for word in wordsList: 
 			tf = document.count(word)
 			if tf > maxCountWord:
@@ -86,15 +90,54 @@ def get_TFIDF(dataset,dictionaryDistribution):
 			tf_words.append(tf)
 			if dictionaryDistribution[word]==0:
 				print('La palabra '+ word + ' tiene 0 en el IDF')
-		#print('Normalizando y Multiplicando por IDF')
+		
+		batch = BatchStatement()
 		for itemIndex in range(len(tf_words)): # Se tiene que normalizar el tf y multiplicar por el IDF
 			tf_words[itemIndex]/=maxCountWord
 			if tf_words[itemIndex]!=0:
 				tf_words[itemIndex]*= math.log(N_documents / (1 + dictionaryDistribution[wordsList[itemIndex]])) #Se multiplica por el IDF version smooth
 
-		TFIDF_dataset.append(tf_words)
+			batch.add(prepared,(uuid.uuid1(),career,typePreprocess,wordsList[itemIndex],iDocument,tf_words[itemIndex]))
+		
+		session.execute(batch)
 
-	return TFIDF_dataset
+		#TFIDF_dataset.append(tf_words)
+
+	#return TFIDF_dataset
+
+def get_TFIDF_MongoDB(career,typePreprocess,dataset,dictionaryDistribution): 
+	client = MongoClient('localhost', 27017)
+	db = client['tesisdb']
+	collection = db[career+'_'+typePreprocess]
+
+	N_documents = len(dataset)
+	wordsList = sorted(dictionaryDistribution.keys())
+	print('Cantidad de documentos: '+str(len(dataset)))	
+	
+	for iDocument in range(len(dataset)):
+		document = dataset[iDocument]
+		print('Documento '+ str(iDocument))
+		maxCountWord = -1
+		tf_words = []
+
+		for word in wordsList: 
+			tf = document.count(word)
+			if tf > maxCountWord:
+				maxCountWord = tf
+			tf_words.append(tf)
+			if dictionaryDistribution[word]==0:
+				print('La palabra '+ word + ' tiene 0 en el IDF')
+		
+		insertsDB = {}
+		for itemIndex in range(len(tf_words)): # Se tiene que normalizar el tf y multiplicar por el IDF
+			tf_words[itemIndex]/=maxCountWord
+			if tf_words[itemIndex]!=0:
+				tf_words[itemIndex]*= math.log(N_documents / (1 + dictionaryDistribution[wordsList[itemIndex]])) #Se multiplica por el IDF version smooth
+
+			insertsDB[wordsList[itemIndex]] = tf_words[itemIndex]
+			
+		collection.insert_one(insertsDB)
+
 
 def getVariance(dictionaryDistribution,TFIDF_dataset):
 	wordsList = sorted(dictionaryDistribution.keys())
@@ -108,6 +151,96 @@ def getVariance(dictionaryDistribution,TFIDF_dataset):
 			tfidf_Word.append(TFIDF_dataset[documentIndex][wordIndex])
 		wordsVarianceDictionary[wordsList[wordIndex]] = numpy.array(tfidf_Word).var()
 	return wordsVarianceDictionary
+
+def getVariance_Cassandra(career,typePreprocess):
+	cluster = Cluster()
+	session = cluster.connect('tesis')
+	query_tfidf_per_word = "SELECT tf_idf from tf_idf_word where career=? AND type=? AND word=?;"
+	query_variance = "INSERT INTO variance_word(career,type,word,variance) VALUES (?,?,?,?);"
+
+
+	wordsList = session.execute('SELECT dictionary from career where career='+career+' AND type=' + typePreprocess+';')
+	
+	print('Cantidad de palabras: '+str(len(wordsList)))
+	for wordIndex in range(len(wordsList)):
+		print('Palabra '+str(wordIndex)+': '+wordsList[wordIndex])
+		prepared = session.prepare(query_tfidf_per_word)
+		tfidf_Word = session.execute(prepared,(career,typePreprocess,wordsList[wordIndex]))
+		variance_word = numpy.array(tfidf_Word).var()
+
+		prepared = session.prepare(query_variance)
+		session.execute(prepared,(career,typePreprocess,wordsList[wordIndex],variance_word))
+
+def getValue(mongoCursorItem):
+	#print(mongoCursorItem)
+	return list(mongoCursorItem.values())[0]
+
+def getVariance_MongoDB(career,typePreprocess):
+	client = MongoClient('localhost', 27017)
+	db = client['tesisdb']
+	collectionVariance = db[career+'_'+typePreprocess+'_Estadistics']
+	collectionTFIDF = db[career+'_'+typePreprocess]
+
+	cluster = Cluster()
+	session = cluster.connect('tesis')
+	wordsList = session.execute('SELECT dictionary from career ;')[0].dictionary
+	
+	#print(wordsList)
+
+	wordsVarianceDictionary = {}
+	numWords = len(wordsList)
+	print('Cantidad de palabras: '+str(numWords))
+	for wordIndex in range(numWords):
+		print('Palabra '+str(wordIndex)+': '+wordsList[wordIndex])
+		tfidf_Word_Result = list(map(getValue,collectionTFIDF.find({},{wordsList[wordIndex]:1,'_id':0})))	
+		print(len(tfidf_Word_Result))
+		'''tfidf_Word = []
+		for document in tfidf_Word_Result:
+			#print(document)
+			#print(document[wordsList[wordIndex]])
+			tfidf_Word.append(document[wordsList[wordIndex]])'''
+		print('Ya se tiene tfidf de: '+ wordsList[wordIndex])
+		wordsVarianceDictionary[wordsList[wordIndex]] = numpy.array(tfidf_Word_Result).var()
+		print('Ya se tiene varianza de: '+ wordsList[wordIndex])
+	return wordsVarianceDictionary
+
+def getVariance_MongoDB_MapReduce(career,typePreprocess):
+	client = MongoClient('localhost', 27017)
+	db = client['tesisdb']
+	collectionEstadistics = db[career+'_'+typePreprocess+'__Estadistics']
+	collectionTFIDF = db[career+'_'+typePreprocess]
+
+	cluster = Cluster()
+	session = cluster.connect('tesis')
+	wordsList = session.execute('SELECT dictionary from career ;')[0].dictionary
+	
+	map = Code(open('map.js','r').read())
+	reduce = Code(open('reduce.js','r').read())
+	finalize = Code(open('finalize.js','r').read())
+
+
+	wordsVarianceDictionary = {}
+	numWords = len(wordsList)
+	print('Cantidad de palabras: '+str(numWords))
+	for wordIndex in range(numWords):
+		print('Palabra '+str(wordIndex)+': '+wordsList[wordIndex])
+		
+		#query = {{},{wordsList[wordIndex]:1,'_id':0}}
+		tfidf_Word_Result = collectionTFIDF.map_reduce(map,reduce,out={'inline':1},finalize=finalize,scope={'word':wordsList[wordIndex]})['results'][0]['value']
+
+		print(tfidf_Word_Result)
+		
+		insertDocument = {'word':wordsList[wordIndex],'variance':tfidf_Word_Result['variance'],'average':tfidf_Word_Result['avg'],'stddev':tfidf_Word_Result['stddev'],
+		'min':tfidf_Word_Result['min'],'max':tfidf_Word_Result['max'],
+		'sum':tfidf_Word_Result['sum']}
+		
+		collectionEstadistics.insert_one(insertDocument)
+		wordsVarianceDictionary[wordsList[wordIndex]] = tfidf_Word_Result['variance'] #lo bota como una lista por lo que hay ingresar como primer elemento
+		print('Ya se tiene varianza de: '+ wordsList[wordIndex])
+
+
+	return wordsVarianceDictionary
+
 
 def mostrarMasRelevantes(diccionario,TFIDF_dataset,numArch,tipo):
 	F = open(numArch + '_'+ tipo +'_TF_IDF.txt','w')
@@ -123,14 +256,14 @@ def mostrarMasRelevantes(diccionario,TFIDF_dataset,numArch,tipo):
 
 def showImportantVariance(wordsVarianceDictionary,numArch,tipo):
 	sortedByValue = sorted(wordsVarianceDictionary.items(),key=operator.itemgetter(1))
-	quince_porciento = int(len(sortedByValue)*0.15)
+	venticinco_porciento = int(len(sortedByValue)*0.25)
 	F = open(numArch + '_'+ tipo +'_Variance.txt','w')
-	F.write('Los '+str(quince_porciento)+' primeros\n')
-	for i in range(quince_porciento):
+	F.write('Los '+str(venticinco_porciento)+' primeros\n')
+	for i in range(venticinco_porciento):
 		F.write(str(i)+': '+sortedByValue[i][0]+' - '+ str(sortedByValue[i][1])+'\n')
 
-	F.write('\nLos '+str(quince_porciento)+' ultimos\n')
-	for i in range(len(sortedByValue)-1,len(sortedByValue)-quince_porciento-1,-1):
+	F.write('\nLos '+str(venticinco_porciento)+' ultimos\n')
+	for i in range(len(sortedByValue)-1,len(sortedByValue)-venticinco_porciento-1,-1):
 		F.write(str(i)+': '+sortedByValue[i][0]+' - '+ str(sortedByValue[i][1])+'\n')
 
 	F.close()
@@ -190,32 +323,34 @@ def TF_IDF_COMPLETO(carrera):
 def TF_IDF_COMPLETO_BIGRAM(carrera):
 	inputOutput = Input_Output()
 	#datasetLemmatizacion,bigramLemmatizacion,datasetSteeming,bigramSteeming = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx')
-	datasetLemmatizacion,bigramLemmatizacion = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx')
+	#datasetLemmatizacion,bigramLemmatizacion = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx')
 
 	print('Comenzo bigram Lemma')
-	bigram_model_Lemmatizacion = Word2Vec(bigramLemmatizacion[datasetLemmatizacion],size=100)
+	#bigram_model_Lemmatizacion = Word2Vec(bigramLemmatizacion[datasetLemmatizacion],size=100)
 	#print('Comenzo bigram Steeming')
 	#bigram_model_Steeming = Word2Vec(bigramSteeming[datasetSteeming],size=100)
 
 	print('Comenzo bigram Lemma Reemplazo')
-	datasetLemmatizacionBigram = replaceBigrams(datasetLemmatizacion,bigram_model_Lemmatizacion)
+	#datasetLemmatizacionBigram = replaceBigrams(datasetLemmatizacion,bigram_model_Lemmatizacion)
 	#print('Comenzo bigram Steeming Reemplazo')
 	#datasetSteemingBigram = replaceBigrams(datasetSteeming,bigram_model_Steeming)
 
-	datasets = [datasetLemmatizacionBigram]
+	#datasets = [datasetLemmatizacionBigram]
 	tipos = ['Lemmatizacion']
 
 	for i in range(len(tipos)):
 		print('Procesando diccionario de '+ tipos[i])
-		diccionario = getDictionaryDistributionInDocuments(datasets[i])
+		#diccionario = getDictionaryDistributionInDocuments(datasets[i])
+		print('Insertando diccionario a BD de '+ tipos[i])
+		#insertDictionary(carrera,tipos[i],diccionario)
 		print('Procesando TF-IDF de ' + tipos[i])
-		TFIDF_dataset = get_TFIDF(datasets[i],diccionario)
-		pickle.dump(TFIDF_dataset,open("tfidf.p","wb"))
-
+		#TFIDF_dataset = get_TFIDF(carrera,tipos[i],datasets[i],diccionario)
+		#get_TFIDF_MongoDB(carrera,tipos[i],datasets[i],diccionario)
 		print('Obteniendo varianza de '+ tipos[i])
 		#wordsVarianceDictionary = getVariance(diccionario,TFIDF_dataset)
+		wordsVarianceDictionary = getVariance_MongoDB_MapReduce(carrera,tipos[i])
 		print('Imprimiendo varianza de '+ tipos[i])
-		#showImportantVariance(wordsVarianceDictionary,carrera,tipos[i])
+		showImportantVariance(wordsVarianceDictionary,carrera,tipos[i])
 
 
 def TF_IDF_DIVIDIDO(carrera):

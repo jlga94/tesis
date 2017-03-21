@@ -82,7 +82,7 @@ class TextProcessor:
     		#print(lemmaResultText)
     		for wordLemmaResult in lemmaResultText:
     			#print(word)
-    			word = wordLemmaResult.split('\t')[lemmaElement].lower()
+    			word = wordLemmaResult.split('\t')[lemmaElement].lower().strip()
     			if word not in self.stopEnglish and word not in self.stopSpanish:
     				if not(len(word)==1 and not(word in string.punctuation)):
     					newText += ' ' + word
