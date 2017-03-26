@@ -1,0 +1,11 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_18_7: -1.20379679116
+Coherencia c_v de Informatica_Steeming_Bigram_Th_18_7: 0.600450784615
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_18_7: 0.291358849008
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_18_7: 0.117110362734
+Topic 0: 0.032*"administr" + 0.029*"sistem" + 0.026*"red" + 0.021*"servici" + 0.021*"soport" + 0.020*"conoc" + 0.018*"oper" + 0.016*"equip" + 0.016*"servidor" + 0.015*"infraestructur" + 0.013*"manten" + 0.012*"segur" + 0.012*"plataform" + 0.011*"usuari" + 0.011*"informat"
+Topic 1: 0.031*"client" + 0.030*"proyect" + 0.018*"desarroll" + 0.017*"servici" + 0.015*"empres" + 0.015*"gestion" + 0.014*"tecnolog" + 0.014*"solucion" + 0.013*"negoci" + 0.013*"equip" + 0.012*"conoc" + 0.010*"años" + 0.009*"tecnic" + 0.008*"vent" + 0.008*"profesional"
+Topic 2: 0.017*"empres" + 0.013*"equip" + 0.012*"diseñ" + 0.011*"colabor" + 0.010*"negoci" + 0.010*"trabaj" + 0.010*"softwar" + 0.010*"capac" + 0.009*"servici" + 0.009*"años" + 0.008*"client" + 0.008*"herramient" + 0.008*"tecnolog_outsourcing" + 0.008*"consultor" + 0.008*"profesional"
+Topic 3: 0.036*"proyect" + 0.029*"proces" + 0.029*"gestion" + 0.023*"inform" + 0.017*"sistem" + 0.013*"control" + 0.012*"implement" + 0.011*"apoy" + 0.010*"coordin" + 0.010*"sap" + 0.010*"realiz" + 0.010*"mejor" + 0.010*"conoc" + 0.009*"elabor" + 0.009*"segur"
+Topic 4: 0.028*"inform" + 0.018*"report" + 0.018*"apoy" + 0.017*"gestion" + 0.016*"proces" + 0.016*"client" + 0.016*"analisis" + 0.014*"elabor" + 0.012*"practic" + 0.012*"bas_dat" + 0.012*"gener" + 0.012*"comercial" + 0.011*"manej" + 0.011*"seguimient" + 0.011*"dat"
+Topic 5: 0.053*"conoc" + 0.052*"program" + 0.038*"desarroll" + 0.033*"sistem" + 0.026*"bas_dat" + 0.020*"oracl" + 0.020*"web" + 0.018*"jav" + 0.016*"manej" + 0.016*"net" + 0.016*"anal" + 0.015*"minim" + 0.014*"aplic" + 0.014*"sql_serv" + 0.014*"años"
+Topic 6: 0.042*"desarroll" + 0.030*"aplic" + 0.023*"sistem" + 0.022*"prueb" + 0.020*"diseñ" + 0.020*"requer" + 0.019*"funcional" + 0.017*"softwar" + 0.017*"proyect" + 0.017*"tecnic" + 0.016*"realiz" + 0.016*"solucion" + 0.016*"conoc" + 0.015*"document" + 0.015*"analisis"

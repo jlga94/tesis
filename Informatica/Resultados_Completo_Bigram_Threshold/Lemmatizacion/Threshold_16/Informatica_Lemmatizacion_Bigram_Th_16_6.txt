@@ -1,0 +1,10 @@
+Coherencia u_mass de Informatica_Lemmatizacion_Bigram_Th_16_6: -1.30161891361
+Coherencia c_v de Informatica_Lemmatizacion_Bigram_Th_16_6: 0.594103709795
+Coherencia c_uci de Informatica_Lemmatizacion_Bigram_Th_16_6: 0.300848559339
+Coherencia c_npmi de Informatica_Lemmatizacion_Bigram_Th_16_6: 0.114074056817
+Topic 0: 0.020*"cliente" + 0.019*"equipo" + 0.017*"empresa" + 0.016*"capacidad" + 0.015*"proyecto" + 0.014*"desarrollo" + 0.013*"profesional" + 0.012*"solución" + 0.011*"software" + 0.010*"ingeniería" + 0.010*"trabajar" + 0.009*"tecnología" + 0.009*"negocio" + 0.009*"servicio" + 0.008*"habilidad"
+Topic 1: 0.031*"sistema" + 0.024*"red" + 0.023*"conocimiento" + 0.020*"soporte" + 0.020*"servicio" + 0.019*"administración" + 0.015*"servidor" + 0.013*"equipo" + 0.011*"usuario" + 0.011*"plataforma" + 0.011*"infraestructura" + 0.010*"técnico" + 0.010*"comunicación" + 0.009*"seguridad" + 0.008*"configuración"
+Topic 2: 0.044*"conocimiento" + 0.035*"desarrollo" + 0.024*"web" + 0.023*"sistema" + 0.023*"programación" + 0.022*"java" + 0.022*"base_dato" + 0.021*"aplicación" + 0.016*"diseño" + 0.015*"net" + 0.013*"oracle" + 0.012*"análisis" + 0.011*"sql_server" + 0.010*"manejo" + 0.010*"analista_programador"
+Topic 3: 0.022*"cliente" + 0.021*"información" + 0.015*"apoyo" + 0.015*"comercial" + 0.015*"reporte" + 0.015*"análisis" + 0.014*"área" + 0.014*"gestión" + 0.014*"proceso" + 0.013*"practicante" + 0.012*"base_dato" + 0.012*"venta" + 0.012*"manejo" + 0.011*"conocimiento" + 0.011*"seguimiento"
+Topic 4: 0.018*"gestión" + 0.017*"información" + 0.017*"proyecto" + 0.013*"servicio" + 0.011*"proceso" + 0.010*"seguridad" + 0.010*"control" + 0.009*"área" + 0.008*"gestionar" + 0.008*"riesgo" + 0.008*"coordinar" + 0.007*"sistema" + 0.007*"realizar" + 0.007*"cumplimiento" + 0.006*"empresa"
+Topic 5: 0.047*"proyecto" + 0.031*"sistema" + 0.026*"proceso" + 0.018*"desarrollo" + 0.018*"conocimiento" + 0.015*"requerimiento" + 0.014*"solución" + 0.014*"implementación" + 0.013*"gestión" + 0.013*"prueba" + 0.013*"analista" + 0.012*"realizar" + 0.012*"análisis" + 0.011*"usuario" + 0.011*"aplicación"

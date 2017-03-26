@@ -1,0 +1,11 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_20_7: -1.26810467711
+Coherencia c_v de Informatica_Steeming_Bigram_Th_20_7: 0.603294667215
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_20_7: 0.311665340391
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_20_7: 0.118076951123
+Topic 0: 0.055*"proyect" + 0.029*"gestion" + 0.019*"sistem" + 0.016*"servici" + 0.016*"implement" + 0.015*"tecnolog" + 0.014*"solucion" + 0.012*"requer" + 0.011*"equip" + 0.011*"coordin" + 0.011*"empres" + 0.011*"años" + 0.011*"proces" + 0.011*"usuari" + 0.011*"desarroll"
+Topic 1: 0.041*"administr" + 0.035*"red" + 0.034*"segur" + 0.031*"sistem" + 0.030*"conoc" + 0.023*"servidor" + 0.022*"oper" + 0.018*"soport" + 0.017*"servici" + 0.017*"plataform" + 0.015*"infraestructur" + 0.013*"configur" + 0.013*"inform" + 0.012*"informat" + 0.012*"windows"
+Topic 2: 0.013*"empres" + 0.011*"sap" + 0.011*"profesional" + 0.011*"realiz" + 0.010*"funcion" + 0.009*"conoc" + 0.008*"administr" + 0.007*"sistem" + 0.007*"servici" + 0.007*"contrat" + 0.006*"capacit" + 0.006*"client" + 0.006*"tecnic" + 0.006*"minim" + 0.006*"ingeni"
+Topic 3: 0.041*"inform" + 0.036*"proces" + 0.027*"apoy" + 0.025*"gestion" + 0.017*"elabor" + 0.015*"report" + 0.015*"analisis" + 0.014*"practic" + 0.013*"control" + 0.013*"mejor" + 0.011*"conoc" + 0.011*"bas_dat" + 0.011*"seguimient" + 0.010*"indic" + 0.010*"riesg"
+Topic 4: 0.061*"client" + 0.032*"comercial" + 0.030*"product" + 0.028*"vent" + 0.021*"negoci" + 0.015*"desarroll" + 0.013*"servici" + 0.012*"nuev" + 0.010*"estrategi" + 0.010*"canal" + 0.010*"campañ" + 0.009*"merc" + 0.008*"propuest" + 0.008*"oportun" + 0.008*"solucion"
+Topic 5: 0.037*"desarroll" + 0.020*"conoc" + 0.019*"aplic" + 0.018*"web" + 0.017*"equip" + 0.016*"softwar" + 0.016*"capac" + 0.014*"diseñ" + 0.012*"tecnolog" + 0.011*"trabaj" + 0.010*"arquitectur" + 0.010*"integr" + 0.009*"practic" + 0.008*"solucion" + 0.008*"habil"
+Topic 6: 0.044*"program" + 0.043*"desarroll" + 0.039*"conoc" + 0.036*"sistem" + 0.023*"aplic" + 0.020*"anal" + 0.019*"diseñ" + 0.018*"analisis" + 0.018*"bas_dat" + 0.017*"jav" + 0.015*"prueb" + 0.015*"años" + 0.014*"oracl" + 0.014*"requer" + 0.013*"realiz"

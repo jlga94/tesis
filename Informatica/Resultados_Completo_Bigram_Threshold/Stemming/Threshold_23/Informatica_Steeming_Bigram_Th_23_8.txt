@@ -1,0 +1,12 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_23_8: -1.2602265477
+Coherencia c_v de Informatica_Steeming_Bigram_Th_23_8: 0.554140770929
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_23_8: 0.242020531131
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_23_8: 0.0954869855893
+Topic 0: 0.029*"administr" + 0.028*"sistem" + 0.024*"servici" + 0.021*"red" + 0.021*"conoc" + 0.018*"soport" + 0.017*"oper" + 0.017*"segur" + 0.016*"equip" + 0.014*"tecnolog" + 0.013*"servidor" + 0.013*"infraestructur" + 0.013*"manten" + 0.013*"gestion" + 0.012*"informat"
+Topic 1: 0.059*"client" + 0.025*"vent" + 0.023*"comercial" + 0.019*"product" + 0.016*"servici" + 0.015*"negoci" + 0.014*"empres" + 0.012*"desarroll" + 0.012*"realiz" + 0.010*"nuev" + 0.009*"solucion" + 0.009*"merc" + 0.008*"oportun" + 0.008*"tecnic" + 0.007*"años"
+Topic 2: 0.050*"desarroll" + 0.043*"program" + 0.038*"conoc" + 0.030*"sistem" + 0.029*"aplic" + 0.020*"diseñ" + 0.018*"jav" + 0.018*"anal" + 0.016*"prueb" + 0.016*"analisis" + 0.016*"años" + 0.016*"softwar" + 0.015*"bas_dat" + 0.014*"net" + 0.013*"oracl"
+Topic 3: 0.038*"inform" + 0.031*"apoy" + 0.029*"bas_dat" + 0.028*"proces" + 0.026*"conoc" + 0.025*"analisis" + 0.024*"report" + 0.020*"dat" + 0.020*"manej" + 0.019*"practic" + 0.017*"gestion" + 0.016*"elabor" + 0.016*"avanz" + 0.014*"herramient" + 0.013*"intermedi"
+Topic 4: 0.026*"desarroll" + 0.025*"web" + 0.017*"equip" + 0.017*"diseñ" + 0.014*"softwar" + 0.012*"aplic" + 0.012*"conoc" + 0.012*"tecnolog" + 0.012*"trabaj" + 0.011*"colabor" + 0.010*"capac" + 0.010*"empres" + 0.009*"negoci" + 0.009*"program" + 0.009*"php"
+Topic 5: 0.036*"sistem" + 0.029*"sap" + 0.023*"conoc" + 0.021*"profesional" + 0.017*"proyect" + 0.016*"informat" + 0.015*"consultor" + 0.015*"apoy" + 0.015*"ingeni" + 0.013*"practic" + 0.011*"empres" + 0.010*"funcion" + 0.010*"implement" + 0.010*"erp" + 0.009*"minim"
+Topic 6: 0.049*"proyect" + 0.032*"gestion" + 0.029*"proces" + 0.023*"inform" + 0.015*"sistem" + 0.014*"implement" + 0.014*"mejor" + 0.013*"desarroll" + 0.013*"control" + 0.012*"realiz" + 0.012*"negoci" + 0.012*"calid" + 0.011*"requer" + 0.011*"coordin" + 0.011*"elabor"
+Topic 7: 0.011*"control" + 0.010*"contrat" + 0.010*"administr" + 0.008*"coordin" + 0.008*"gestion" + 0.007*"ingres" + 0.007*"personal" + 0.007*"program" + 0.006*"banc" + 0.006*"realiz" + 0.006*"seguimient" + 0.006*"servici" + 0.006*"inversion" + 0.006*"report" + 0.006*"oper"

@@ -1,0 +1,10 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_17_6: -1.11121628085
+Coherencia c_v de Informatica_Steeming_Bigram_Th_17_6: 0.596527746088
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_17_6: 0.278792159334
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_17_6: 0.114986828054
+Topic 0: 0.046*"inform" + 0.034*"apoy" + 0.026*"proces" + 0.020*"gestion" + 0.019*"analisis" + 0.019*"report" + 0.019*"practic" + 0.017*"bas_dat" + 0.017*"conoc" + 0.017*"elabor" + 0.014*"dat" + 0.014*"segur" + 0.013*"manej" + 0.012*"riesg" + 0.011*"avanz"
+Topic 1: 0.033*"sistem" + 0.031*"administr" + 0.023*"red" + 0.023*"conoc" + 0.022*"soport" + 0.018*"servici" + 0.016*"oper" + 0.015*"equip" + 0.014*"servidor" + 0.013*"manten" + 0.012*"informat" + 0.012*"infraestructur" + 0.011*"usuari" + 0.011*"plataform" + 0.011*"segur"
+Topic 2: 0.044*"desarroll" + 0.041*"program" + 0.039*"conoc" + 0.027*"sistem" + 0.023*"aplic" + 0.017*"diseñ" + 0.016*"bas_dat" + 0.016*"jav" + 0.016*"web" + 0.015*"anal" + 0.014*"analisis" + 0.013*"oracl" + 0.013*"años" + 0.012*"net" + 0.012*"minim"
+Topic 3: 0.047*"proyect" + 0.028*"gestion" + 0.023*"proces" + 0.017*"sistem" + 0.015*"implement" + 0.015*"desarroll" + 0.014*"inform" + 0.011*"tecnolog" + 0.011*"mejor" + 0.011*"solucion" + 0.011*"requer" + 0.010*"coordin" + 0.010*"negoci" + 0.010*"calid" + 0.010*"años"
+Topic 4: 0.033*"client" + 0.015*"comercial" + 0.014*"vent" + 0.012*"servici" + 0.011*"product" + 0.011*"empres" + 0.009*"realiz" + 0.009*"coordin" + 0.008*"gestion" + 0.007*"negoci" + 0.006*"seguimient" + 0.006*"oportun" + 0.006*"años" + 0.006*"manej" + 0.006*"minim"
+Topic 5: 0.022*"desarroll" + 0.018*"equip" + 0.015*"prueb" + 0.014*"diseñ" + 0.014*"softwar" + 0.013*"capac" + 0.013*"proyect" + 0.012*"tecnolog" + 0.012*"trabaj" + 0.011*"empres" + 0.010*"aplic" + 0.010*"negoci" + 0.009*"client" + 0.009*"practic" + 0.008*"herramient"

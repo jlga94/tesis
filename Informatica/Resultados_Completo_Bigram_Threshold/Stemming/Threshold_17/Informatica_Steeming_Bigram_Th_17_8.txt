@@ -1,0 +1,12 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_17_8: -1.22284384526
+Coherencia c_v de Informatica_Steeming_Bigram_Th_17_8: 0.592734635753
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_17_8: 0.31245274577
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_17_8: 0.114634214034
+Topic 0: 0.028*"desarroll" + 0.022*"softwar" + 0.021*"equip" + 0.021*"capac" + 0.018*"tecnolog" + 0.016*"arquitectur" + 0.014*"aplic" + 0.014*"diseñ" + 0.013*"trabaj" + 0.013*"conoc" + 0.012*"sistem" + 0.012*"ingeni" + 0.011*"proyect" + 0.011*"solucion" + 0.010*"habil"
+Topic 1: 0.057*"sap" + 0.039*"consultor" + 0.024*"proyect" + 0.022*"implement" + 0.016*"erp" + 0.016*"empres" + 0.015*"client" + 0.015*"funcional" + 0.013*"negoci" + 0.012*"modul" + 0.012*"conoc" + 0.012*"realiz" + 0.011*"años" + 0.011*"sistem" + 0.011*"minim"
+Topic 2: 0.049*"proyect" + 0.031*"gestion" + 0.020*"proces" + 0.015*"inform" + 0.013*"sistem" + 0.013*"coordin" + 0.013*"implement" + 0.012*"servici" + 0.012*"desarroll" + 0.011*"tecnolog" + 0.011*"mejor" + 0.010*"años" + 0.010*"control" + 0.010*"calid" + 0.010*"requer"
+Topic 3: 0.025*"sistem" + 0.018*"empres" + 0.017*"profesional" + 0.016*"informat" + 0.016*"funcion" + 0.015*"realiz" + 0.011*"program" + 0.011*"ingeni" + 0.010*"practic" + 0.010*"administr" + 0.010*"equip" + 0.008*"disponibil" + 0.007*"laboral" + 0.007*"asistent" + 0.007*"mes"
+Topic 4: 0.059*"client" + 0.030*"comercial" + 0.025*"vent" + 0.023*"product" + 0.016*"negoci" + 0.011*"servici" + 0.010*"nuev" + 0.009*"desarroll" + 0.009*"canal" + 0.009*"realiz" + 0.009*"campañ" + 0.008*"estrategi" + 0.008*"seguimient" + 0.008*"empres" + 0.008*"merc"
+Topic 5: 0.048*"desarroll" + 0.043*"program" + 0.039*"conoc" + 0.028*"sistem" + 0.027*"aplic" + 0.020*"diseñ" + 0.018*"jav" + 0.017*"anal" + 0.017*"web" + 0.016*"bas_dat" + 0.016*"analisis" + 0.014*"prueb" + 0.014*"años" + 0.013*"oracl" + 0.013*"net"
+Topic 6: 0.035*"administr" + 0.030*"red" + 0.028*"conoc" + 0.027*"sistem" + 0.023*"soport" + 0.022*"servici" + 0.019*"oper" + 0.019*"servidor" + 0.016*"plataform" + 0.016*"infraestructur" + 0.015*"segur" + 0.015*"equip" + 0.013*"manten" + 0.012*"configur" + 0.012*"comun"
+Topic 7: 0.046*"inform" + 0.034*"apoy" + 0.034*"proces" + 0.021*"gestion" + 0.019*"report" + 0.018*"practic" + 0.018*"analisis" + 0.018*"elabor" + 0.017*"conoc" + 0.016*"bas_dat" + 0.013*"manej" + 0.013*"dat" + 0.012*"segur" + 0.012*"riesg" + 0.012*"control"

@@ -1,0 +1,11 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_22_7: -1.2196372025
+Coherencia c_v de Informatica_Steeming_Bigram_Th_22_7: 0.571241105862
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_22_7: 0.247762411587
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_22_7: 0.102908940248
+Topic 0: 0.036*"desarroll" + 0.017*"softwar" + 0.016*"aplic" + 0.014*"equip" + 0.014*"tecnolog" + 0.012*"web" + 0.012*"diseñ" + 0.011*"conoc" + 0.011*"practic" + 0.009*"solucion" + 0.009*"prueb" + 0.009*"trabaj" + 0.008*"tecnic" + 0.008*"proyect" + 0.007*"product"
+Topic 1: 0.028*"inform" + 0.023*"client" + 0.021*"apoy" + 0.020*"report" + 0.019*"proces" + 0.018*"gestion" + 0.017*"analisis" + 0.016*"comercial" + 0.015*"elabor" + 0.015*"vent" + 0.014*"manej" + 0.013*"practic" + 0.013*"bas_dat" + 0.012*"gener" + 0.012*"seguimient"
+Topic 2: 0.048*"proyect" + 0.030*"gestion" + 0.023*"proces" + 0.016*"implement" + 0.013*"sistem" + 0.013*"inform" + 0.012*"servici" + 0.012*"negoci" + 0.012*"desarroll" + 0.012*"solucion" + 0.011*"coordin" + 0.011*"mejor" + 0.010*"requer" + 0.010*"tecnolog" + 0.010*"años"
+Topic 3: 0.035*"administr" + 0.029*"sistem" + 0.028*"red" + 0.025*"conoc" + 0.024*"segur" + 0.023*"soport" + 0.020*"servici" + 0.019*"oper" + 0.017*"servidor" + 0.016*"equip" + 0.015*"infraestructur" + 0.013*"plataform" + 0.013*"manten" + 0.011*"informat" + 0.011*"comun"
+Topic 4: 0.045*"desarroll" + 0.040*"program" + 0.040*"conoc" + 0.033*"sistem" + 0.026*"aplic" + 0.019*"bas_dat" + 0.018*"diseñ" + 0.018*"anal" + 0.017*"analisis" + 0.017*"jav" + 0.014*"oracl" + 0.014*"años" + 0.013*"requer" + 0.013*"minim" + 0.012*"prueb"
+Topic 5: 0.025*"sistem" + 0.022*"inform" + 0.013*"realiz" + 0.012*"apoy" + 0.011*"auditor" + 0.010*"funcion" + 0.010*"administr" + 0.009*"informat" + 0.009*"profesional" + 0.008*"ingeni" + 0.008*"program" + 0.008*"control" + 0.008*"gestion" + 0.008*"empres" + 0.008*"proces"
+Topic 6: 0.023*"empres" + 0.019*"profesional" + 0.019*"capac" + 0.017*"program" + 0.017*"equip" + 0.016*"conoc" + 0.012*"client" + 0.012*"funcion" + 0.011*"trabaj" + 0.010*"diseñ" + 0.009*"comun" + 0.009*"servici" + 0.008*"proactiv" + 0.008*"consultor" + 0.008*"competent"

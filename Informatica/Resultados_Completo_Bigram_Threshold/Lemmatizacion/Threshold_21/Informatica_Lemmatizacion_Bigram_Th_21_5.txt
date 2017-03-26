@@ -1,0 +1,9 @@
+Coherencia u_mass de Informatica_Lemmatizacion_Bigram_Th_21_5: -1.33280884116
+Coherencia c_v de Informatica_Lemmatizacion_Bigram_Th_21_5: 0.601415547429
+Coherencia c_uci de Informatica_Lemmatizacion_Bigram_Th_21_5: 0.305285011167
+Coherencia c_npmi de Informatica_Lemmatizacion_Bigram_Th_21_5: 0.117500725121
+Topic 0: 0.028*"sistema" + 0.018*"seguridad" + 0.017*"servicio" + 0.016*"red" + 0.016*"conocimiento" + 0.014*"información" + 0.013*"administración" + 0.012*"soporte" + 0.010*"equipo" + 0.010*"servidor" + 0.008*"usuario" + 0.008*"técnico" + 0.008*"plataforma" + 0.007*"comunicación" + 0.007*"infraestructura"
+Topic 1: 0.055*"proyecto" + 0.017*"proceso" + 0.017*"gestión" + 0.014*"cliente" + 0.014*"sistema" + 0.013*"solución" + 0.012*"desarrollo" + 0.012*"negocio" + 0.011*"servicio" + 0.010*"implementación" + 0.010*"empresa" + 0.009*"área" + 0.009*"conocimiento" + 0.009*"requerimiento" + 0.008*"realizar"
+Topic 2: 0.021*"conocimiento" + 0.019*"desarrollo" + 0.017*"web" + 0.014*"prueba" + 0.014*"software" + 0.014*"aplicación" + 0.012*"equipo" + 0.009*"diseño" + 0.008*"capacidad" + 0.007*"php" + 0.007*"tecnología" + 0.007*"trabajar" + 0.006*"proyecto" + 0.006*"herramienta" + 0.006*"calidad"
+Topic 3: 0.041*"conocimiento" + 0.036*"sistema" + 0.034*"desarrollo" + 0.021*"aplicación" + 0.020*"base_dato" + 0.018*"programación" + 0.017*"análisis" + 0.017*"java" + 0.015*"oracle" + 0.015*"diseño" + 0.013*"net" + 0.012*"realizar" + 0.011*"herramienta" + 0.011*"requerimiento" + 0.011*"sql_server"
+Topic 4: 0.021*"información" + 0.021*"proceso" + 0.017*"gestión" + 0.013*"cliente" + 0.013*"área" + 0.012*"análisis" + 0.011*"apoyo" + 0.011*"reporte" + 0.010*"seguimiento" + 0.009*"comercial" + 0.009*"practicante" + 0.009*"conocimiento" + 0.009*"realizar" + 0.009*"indicador" + 0.009*"manejo"

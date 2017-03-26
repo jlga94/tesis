@@ -1,4 +1,5 @@
 from nltk.corpus import stopwords
+from stop_words import get_stop_words
 import csv
 import operator
 import codecs
@@ -24,12 +25,21 @@ class TextProcessor:
 
     def __init__(self):
         self.lemmatizer = treetaggerwrapper.TreeTagger(TAGLANG='es')
-        self.stopEnglish = stopwords.words('english')
-        self.stopSpanish = stopwords.words('spanish')
-        self.stopSpanish.append('y/o')
+        stopwords_en_nltk = set(stopwords.words('english'))
+        stopwords_en_sw = set(get_stop_words('english'))
+        self.stopEnglish = set(stopwords_en_nltk.union(stopwords_en_sw))
+        
+        stopwords_sp_nltk = set(stopwords.words('spanish'))
+        stopwords_sp_sw = set(get_stop_words('spanish'))
+        self.stopSpanish = set(stopwords_sp_nltk.union(stopwords_sp_sw))
+        additionalStopwordsSpanish = {'u','y/o','año','años','ser','hacer','tener','experiencia','trabajo','bueno','afín','afine','nivel','pequeño','haber','menos','deseable','incluir',
+        'pues','lunes','martes','miércoles','jueves','viernes','sábado','domingo','enero','febrero','marzo','abril','mayo','junio','julio','agosto','setiembre','octubre','noviembre','diciembre','asi','así'
+        'través'}
+        self.stopSpanish = self.stopSpanish.union(additionalStopwordsSpanish)
+        
         self.spanishStemmer=SpanishStemmer()
-        #string.punctuation+='•'
 
+        
     def _remove_numbers(self, text):
         "Elimina los números del texto"
 
@@ -50,6 +60,9 @@ class TextProcessor:
     		newText+=letter
     		previousLetter=letter
     	return newText
+
+    def removeStopwordsInList(self,text):
+    	return [word for word in text.split() if word not in self.stopEnglish and word not in self.stopSpanish]
 
     def _retireRareLetters(self,text):
     	return ''.join([letter for letter in text if letter.isalpha() or letter in string.punctuation or letter==' ' or letter=='\n'])
@@ -75,15 +88,15 @@ class TextProcessor:
     def lematizeText(self,text):
     	newText = ""
     	lemmaElement = 2
-    	
-    	for sentence in sent_tokenize(text,language='spanish'): #Para 
+
+    	for sentence in sent_tokenize(text,language='spanish'): #Para analizar frases y mejorar el desempeno del lemmatizador
     		textWithSeparatePunctuation=self._separateFirstLetterFromPunctuation(sentence)
     		lemmaResultText = self.lemmatizer.tag_text(textWithSeparatePunctuation)# Return [[word,type of word, lemma]]
     		#print(lemmaResultText)
     		for wordLemmaResult in lemmaResultText:
     			#print(word)
-    			word = wordLemmaResult.split('\t')[lemmaElement].lower().strip()
-    			if word not in self.stopEnglish and word not in self.stopSpanish:
+    			word = wordLemmaResult.split('\t')[lemmaElement].lower().strip()    			
+    			if word not in self.stopEnglish and word not in self.stopSpanish: #Se retiran stopwords
     				if not(len(word)==1 and not(word in string.punctuation)):
     					newText += ' ' + word
     	
@@ -128,29 +141,37 @@ class Input_Output:
     	print('Se termino de limpiarlo completamente con Lemmatizacion.')
     	return newDataset
 
-    def limpiarDataset_Steeming_Bigram(self, dataset):
-    	bigram = Phrases(threshold=20)
+    def limpiarDataset_Steeming_Bigram(self, dataset,thresholds):
+    	bigrams = []
+    	for threshold in thresholds:
+    		bigrams.append(Phrases(threshold=threshold))
     	newDataset = []
     	for ofertaText in dataset:
     		ofertaText = self.procesadorTextos.preprocessText(ofertaText)
     		ofertaText = self.procesadorTextos.stemText(ofertaText)
-    		listaPalabras = ofertaText.strip().split()
-    		bigram.add_vocab([listaPalabras])
+    		listaPalabras = self.procesadorTextos.removeStopwordsInList(ofertaText.strip())
+    		for bigram in bigrams:
+    			bigram.add_vocab([listaPalabras])
     		newDataset.append(listaPalabras)
     	print('Se termino de limpiarlo completamente con Steeming-Bigram.')
-    	return newDataset,bigram
+    	return newDataset,bigrams
 
-    def limpiarDataset_Lemmatizacion_Bigram(self, dataset):
-    	bigram = Phrases(threshold=20)
+    def limpiarDataset_Lemmatizacion_Bigram(self, dataset,thresholds):
+    	bigrams = []
+    	for threshold in thresholds:
+    		bigrams.append(Phrases(threshold=threshold)) 
+    	
     	newDataset = []
     	for oferta in dataset:
     		cadenaLemmatizada = self.procesadorTextos.lematizeText(oferta.strip())
     		cadenaPreProcesadaLemmatizada = self.procesadorTextos.preprocessText(cadenaLemmatizada)
-    		listaPalabras = cadenaPreProcesadaLemmatizada.split()
-    		bigram.add_vocab([listaPalabras])
+    		listaPalabras = self.procesadorTextos.removeStopwordsInList(cadenaPreProcesadaLemmatizada)
+
+    		for bigram in bigrams:
+    			bigram.add_vocab([listaPalabras])
     		newDataset.append(listaPalabras)
     	print('Se termino de limpiarlo completamente con Lemmatizacion-Bigram.')
-    	return newDataset,bigram
+    	return newDataset,bigrams
 
     def leerSecciones(self, filename):
     	dataset = []
@@ -191,7 +212,7 @@ class Input_Output:
         return datasetLemmatizacion
         #return datasetLemmatizacion,datasetSteeming
 
-    def obtenerDatasetAClasificar_Completo_Bigram(self, filename):
+    def obtenerDatasetAClasificar_Completo_Bigram(self, filename,thresholds):
         "Se lee un archivo Excel con las ofertas a clasificar"
 
         dataset = []
@@ -204,12 +225,12 @@ class Input_Output:
         for num_oferta in range(1, maxFilas):
             text = str(sheetAviso.cell(row=num_oferta, column=infoColumn).value)
             dataset.append(text)
-        
-        datasetLemmatizacion,bigramLemmatizacion = self.limpiarDataset_Lemmatizacion_Bigram(dataset)
-        #datasetSteeming,bigramSteeming = self.limpiarDataset_Steeming_Bigram(dataset)
+
+        datasetLemmatizacion,bigramsLemmatizacion = self.limpiarDataset_Lemmatizacion_Bigram(dataset,thresholds)
+        datasetSteeming,bigramsSteeming = self.limpiarDataset_Steeming_Bigram(dataset,thresholds)
 
         #return datasetSteeming
-        return datasetLemmatizacion,bigramLemmatizacion#,datasetSteeming,bigramSteeming
+        return datasetLemmatizacion,bigramsLemmatizacion,datasetSteeming,bigramsSteeming
         #return datasetLemmatizacion,datasetSteeming
 
     def obtenerDatasetAClasificar_Dividido(self, filename):

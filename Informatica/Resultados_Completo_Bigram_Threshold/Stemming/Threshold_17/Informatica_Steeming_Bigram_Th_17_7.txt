@@ -1,0 +1,11 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_17_7: -1.3420698144
+Coherencia c_v de Informatica_Steeming_Bigram_Th_17_7: 0.571051019212
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_17_7: 0.261671109398
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_17_7: 0.103806910741
+Topic 0: 0.060*"proyect" + 0.033*"gestion" + 0.024*"proces" + 0.017*"implement" + 0.016*"desarroll" + 0.016*"negoci" + 0.015*"solucion" + 0.013*"client" + 0.013*"conoc" + 0.012*"servici" + 0.011*"mejor" + 0.011*"años" + 0.011*"tecnolog" + 0.010*"sap" + 0.009*"sistem"
+Topic 1: 0.031*"inform" + 0.027*"sistem" + 0.018*"segur" + 0.016*"control" + 0.013*"realiz" + 0.012*"coordin" + 0.012*"gestion" + 0.012*"proces" + 0.009*"informat" + 0.009*"activ" + 0.009*"funcion" + 0.009*"administr" + 0.008*"servici" + 0.008*"evalu" + 0.008*"empres"
+Topic 2: 0.026*"profesional" + 0.021*"empres" + 0.017*"capac" + 0.017*"ingeni" + 0.014*"sistem" + 0.014*"equip" + 0.014*"client" + 0.010*"trabaj" + 0.010*"funcion" + 0.010*"informat" + 0.009*"comun" + 0.008*"conoc" + 0.008*"competent" + 0.008*"requisit" + 0.008*"habil"
+Topic 3: 0.021*"web" + 0.020*"program" + 0.013*"diseñ" + 0.012*"digital" + 0.011*"colabor" + 0.011*"practic" + 0.010*"empres" + 0.009*"desarroll" + 0.009*"pagin_web" + 0.009*"academ" + 0.009*"conoc" + 0.009*"funcion" + 0.008*"equip" + 0.007*"tecnolog_outsourcing" + 0.007*"html"
+Topic 4: 0.029*"inform" + 0.025*"apoy" + 0.020*"report" + 0.020*"client" + 0.019*"proces" + 0.017*"gestion" + 0.016*"analisis" + 0.016*"elabor" + 0.015*"comercial" + 0.014*"manej" + 0.014*"practic" + 0.014*"bas_dat" + 0.013*"vent" + 0.012*"seguimient" + 0.012*"conoc"
+Topic 5: 0.035*"administr" + 0.031*"red" + 0.028*"conoc" + 0.027*"sistem" + 0.025*"soport" + 0.021*"servici" + 0.020*"servidor" + 0.018*"oper" + 0.017*"equip" + 0.015*"infraestructur" + 0.014*"plataform" + 0.013*"configur" + 0.011*"manten" + 0.011*"comun" + 0.011*"windows"
+Topic 6: 0.046*"desarroll" + 0.037*"program" + 0.037*"conoc" + 0.028*"sistem" + 0.026*"aplic" + 0.019*"diseñ" + 0.016*"anal" + 0.016*"bas_dat" + 0.016*"analisis" + 0.015*"jav" + 0.015*"softwar" + 0.014*"prueb" + 0.012*"años" + 0.012*"requer" + 0.012*"web"

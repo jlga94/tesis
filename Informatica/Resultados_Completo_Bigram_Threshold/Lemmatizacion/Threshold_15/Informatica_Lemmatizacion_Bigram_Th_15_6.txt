@@ -1,0 +1,10 @@
+Coherencia u_mass de Informatica_Lemmatizacion_Bigram_Th_15_6: -1.55677497034
+Coherencia c_v de Informatica_Lemmatizacion_Bigram_Th_15_6: 0.572973865651
+Coherencia c_uci de Informatica_Lemmatizacion_Bigram_Th_15_6: 0.161147646954
+Coherencia c_npmi de Informatica_Lemmatizacion_Bigram_Th_15_6: 0.104981765923
+Topic 0: 0.037*"información" + 0.030*"proceso" + 0.022*"gestión" + 0.017*"sistema" + 0.013*"apoyo" + 0.012*"área" + 0.012*"conocimiento" + 0.012*"control" + 0.011*"análisis" + 0.011*"apoyar" + 0.010*"base_dato" + 0.010*"riesgo" + 0.010*"practicante" + 0.010*"seguridad" + 0.009*"mejora"
+Topic 1: 0.032*"sistema" + 0.023*"red" + 0.021*"conocimiento" + 0.021*"servicio" + 0.020*"soporte" + 0.019*"administración" + 0.015*"servidor" + 0.013*"equipo" + 0.012*"usuario" + 0.012*"plataforma" + 0.011*"infraestructura" + 0.010*"técnico" + 0.010*"seguridad" + 0.009*"comunicación" + 0.008*"configuración"
+Topic 2: 0.032*"cliente" + 0.016*"comercial" + 0.013*"venta" + 0.012*"servicio" + 0.011*"empresa" + 0.011*"producto" + 0.010*"área" + 0.009*"realizar" + 0.008*"seguimiento" + 0.008*"negocio" + 0.006*"gestión" + 0.006*"conocimiento" + 0.006*"manejo" + 0.006*"reporte" + 0.005*"nuevo"
+Topic 3: 0.064*"proyecto" + 0.018*"sistema" + 0.017*"proceso" + 0.016*"gestión" + 0.016*"solución" + 0.015*"desarrollo" + 0.013*"implementación" + 0.013*"conocimiento" + 0.012*"requerimiento" + 0.011*"negocio" + 0.009*"funcional" + 0.008*"sap" + 0.008*"realizar" + 0.008*"usuario" + 0.008*"gestionar"
+Topic 4: 0.011*"profesional" + 0.010*"web" + 0.010*"digital" + 0.009*"función" + 0.008*"equipo" + 0.008*"ingeniería" + 0.008*"servicio" + 0.007*"cliente" + 0.007*"académico" + 0.006*"tecnología_outsourcing" + 0.006*"área" + 0.006*"practicante" + 0.006*"avanzar" + 0.006*"curso" + 0.005*"docente"
+Topic 5: 0.039*"conocimiento" + 0.035*"desarrollo" + 0.026*"sistema" + 0.021*"aplicación" + 0.017*"programación" + 0.017*"java" + 0.016*"web" + 0.015*"base_dato" + 0.014*"diseño" + 0.014*"software" + 0.013*"análisis" + 0.012*"net" + 0.010*"oracle" + 0.010*"prueba" + 0.010*"realizar"

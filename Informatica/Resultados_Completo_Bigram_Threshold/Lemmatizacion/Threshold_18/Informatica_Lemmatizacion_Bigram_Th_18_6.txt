@@ -1,0 +1,10 @@
+Coherencia u_mass de Informatica_Lemmatizacion_Bigram_Th_18_6: -1.28344807164
+Coherencia c_v de Informatica_Lemmatizacion_Bigram_Th_18_6: 0.595837468035
+Coherencia c_uci de Informatica_Lemmatizacion_Bigram_Th_18_6: 0.324105391849
+Coherencia c_npmi de Informatica_Lemmatizacion_Bigram_Th_18_6: 0.117030587838
+Topic 0: 0.023*"software" + 0.023*"desarrollo" + 0.022*"prueba" + 0.021*"sistema" + 0.016*"conocimiento" + 0.015*"proyecto" + 0.014*"aplicación" + 0.014*"diseño" + 0.011*"herramienta" + 0.011*"arquitectura" + 0.010*"equipo" + 0.009*"técnico" + 0.009*"funcional" + 0.009*"tecnología" + 0.009*"solución"
+Topic 1: 0.043*"conocimiento" + 0.036*"desarrollo" + 0.029*"sistema" + 0.024*"aplicación" + 0.020*"programación" + 0.020*"web" + 0.017*"base_dato" + 0.015*"java" + 0.014*"diseño" + 0.013*"análisis" + 0.013*"net" + 0.012*"oracle" + 0.010*"sql_server" + 0.010*"realizar" + 0.010*"proyecto"
+Topic 2: 0.041*"proyecto" + 0.015*"gestión" + 0.014*"cliente" + 0.013*"servicio" + 0.012*"proceso" + 0.011*"área" + 0.011*"solución" + 0.010*"sistema" + 0.010*"realizar" + 0.009*"negocio" + 0.009*"empresa" + 0.008*"gestionar" + 0.007*"desarrollo" + 0.007*"coordinar" + 0.007*"implementación"
+Topic 3: 0.032*"sistema" + 0.023*"seguridad" + 0.023*"red" + 0.022*"conocimiento" + 0.019*"servicio" + 0.018*"administración" + 0.017*"soporte" + 0.014*"servidor" + 0.012*"infraestructura" + 0.012*"equipo" + 0.012*"plataforma" + 0.011*"información" + 0.010*"usuario" + 0.010*"comunicación" + 0.009*"técnico"
+Topic 4: 0.036*"proceso" + 0.036*"información" + 0.024*"gestión" + 0.019*"análisis" + 0.017*"apoyo" + 0.017*"conocimiento" + 0.014*"área" + 0.014*"sistema" + 0.013*"apoyar" + 0.013*"practicante" + 0.013*"elaboración" + 0.013*"reporte" + 0.012*"base_dato" + 0.012*"control" + 0.011*"analista"
+Topic 5: 0.029*"cliente" + 0.022*"venta" + 0.020*"comercial" + 0.010*"producto" + 0.009*"empresa" + 0.009*"profesional" + 0.008*"campaña" + 0.007*"realizar" + 0.007*"manejo" + 0.007*"mercado" + 0.007*"conocimiento" + 0.007*"función" + 0.006*"oportunidad" + 0.006*"canal" + 0.006*"marketing"

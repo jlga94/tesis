@@ -1,0 +1,11 @@
+Coherencia u_mass de Informatica_Lemmatizacion_Bigram_Th_18_7: -1.25046723298
+Coherencia c_v de Informatica_Lemmatizacion_Bigram_Th_18_7: 0.592694467874
+Coherencia c_uci de Informatica_Lemmatizacion_Bigram_Th_18_7: 0.309745185257
+Coherencia c_npmi de Informatica_Lemmatizacion_Bigram_Th_18_7: 0.113915218367
+Topic 0: 0.044*"conocimiento" + 0.024*"web" + 0.023*"programación" + 0.021*"desarrollo" + 0.013*"sistema" + 0.013*"base_dato" + 0.012*"java" + 0.012*"php" + 0.010*"manejo" + 0.010*"net" + 0.009*"sql_server" + 0.009*"aplicación" + 0.009*"avanzar" + 0.009*"diseño" + 0.009*"intermedio"
+Topic 1: 0.019*"equipo" + 0.014*"profesional" + 0.014*"capacidad" + 0.013*"proyecto" + 0.012*"ingeniería" + 0.012*"empresa" + 0.012*"trabajar" + 0.010*"negocio" + 0.009*"habilidad" + 0.009*"servicio" + 0.009*"cliente" + 0.009*"tecnología" + 0.009*"software" + 0.008*"función" + 0.008*"sistema"
+Topic 2: 0.017*"información" + 0.016*"proceso" + 0.015*"realizar" + 0.014*"control" + 0.011*"gestión" + 0.011*"riesgo" + 0.010*"seguimiento" + 0.009*"sistema" + 0.008*"apoyar" + 0.008*"área" + 0.007*"cumplimiento" + 0.006*"actividad" + 0.006*"reporte" + 0.006*"calidad" + 0.006*"auditoría"
+Topic 3: 0.038*"desarrollo" + 0.036*"sistema" + 0.027*"aplicación" + 0.026*"conocimiento" + 0.018*"diseño" + 0.018*"prueba" + 0.018*"software" + 0.017*"requerimiento" + 0.017*"proyecto" + 0.016*"análisis" + 0.014*"realizar" + 0.014*"técnico" + 0.014*"java" + 0.012*"funcional" + 0.012*"solución"
+Topic 4: 0.034*"proceso" + 0.029*"información" + 0.027*"conocimiento" + 0.023*"apoyo" + 0.021*"análisis" + 0.021*"gestión" + 0.017*"base_dato" + 0.017*"practicante" + 0.016*"sistema" + 0.015*"manejo" + 0.014*"área" + 0.014*"reporte" + 0.014*"sap" + 0.013*"proyecto" + 0.013*"elaboración"
+Topic 5: 0.045*"proyecto" + 0.025*"cliente" + 0.018*"gestión" + 0.013*"servicio" + 0.013*"proceso" + 0.011*"área" + 0.011*"negocio" + 0.011*"empresa" + 0.011*"producto" + 0.010*"solución" + 0.010*"venta" + 0.010*"gestionar" + 0.009*"comercial" + 0.007*"desarrollo" + 0.007*"realizar"
+Topic 6: 0.035*"sistema" + 0.023*"seguridad" + 0.021*"red" + 0.020*"servicio" + 0.020*"conocimiento" + 0.017*"administración" + 0.017*"soporte" + 0.016*"información" + 0.013*"servidor" + 0.013*"equipo" + 0.011*"usuario" + 0.011*"infraestructura" + 0.011*"plataforma" + 0.010*"técnico" + 0.010*"comunicación"

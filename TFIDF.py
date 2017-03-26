@@ -138,6 +138,56 @@ def get_TFIDF_MongoDB(career,typePreprocess,dataset,dictionaryDistribution):
 			
 		collection.insert_one(insertsDB)
 
+def _update_Mean_Variance(n,x,mean,M2):
+	n+=1
+	delta = float(x - mean)
+	mean += float(delta/n)
+	delta2 = float(x - mean)
+	M2 += float(delta*delta2)
+	return mean,M2
+
+
+def get_TFIDF_Mean_Variance(dataset,dictionaryDistribution): 
+
+	N_documents = len(dataset)
+	wordsList = sorted(dictionaryDistribution.keys())
+	wordsMean = [0.0]*len(wordsList)
+	wordsM2 = [0.0]*len(wordsList)
+	print('Cantidad de documentos: '+str(len(dataset)))	
+	
+	for iDocument in range(len(dataset)):
+		document = dataset[iDocument]
+		print('Documento '+ str(iDocument))
+		maxCountWord = -1
+		tf_words = []
+
+		for word in wordsList: 
+			tf = document.count(word)
+			if tf > maxCountWord:
+				maxCountWord = tf
+			tf_words.append(tf)
+			if dictionaryDistribution[word]==0:
+				print('La palabra '+ word + ' tiene 0 en el IDF')
+		
+		for itemIndex in range(len(tf_words)): # Se tiene que normalizar el tf y multiplicar por el IDF
+			tf_words[itemIndex]/=maxCountWord
+			if tf_words[itemIndex]!=0:
+				tf_words[itemIndex]*= math.log(N_documents / (1 + dictionaryDistribution[wordsList[itemIndex]])) #Se multiplica por el IDF version smooth
+
+			mean,M2 = _update_Mean_Variance(iDocument,tf_words[itemIndex],wordsMean[itemIndex],wordsM2[itemIndex])
+			wordsMean[itemIndex] = mean
+			wordsM2[itemIndex] = M2
+
+	dictionaryMean = {}
+	dictionaryVariance = {}
+	for wordIndex in range(len(wordsList)):
+		dictionaryMean[wordsList[wordIndex]] = wordsMean[wordIndex]
+		dictionaryVariance[wordsList[wordIndex]] = wordsM2[wordIndex]/(len(wordsList)-1) #El numero de documentos debe ser mayor a 1
+		print(wordsList[wordIndex]+': Mean = ' + str(wordsMean[wordIndex]) + ' - Varianza: '+ str(wordsM2[wordIndex]/(len(wordsList)-1)))
+
+	return dictionaryMean,dictionaryVariance
+
+
 
 def getVariance(dictionaryDistribution,TFIDF_dataset):
 	wordsList = sorted(dictionaryDistribution.keys())
@@ -254,6 +304,17 @@ def mostrarMasRelevantes(diccionario,TFIDF_dataset,numArch,tipo):
 
 	F.close()
 
+def insertEstadistics_MongoDB(career,typePreprocess,dictionaryMean,dictionaryVariance):
+	client = MongoClient('localhost', 27017)
+	db = client['tesisdb']
+	collectionEstadistics = db['Estadistics']
+
+	wordsList = sorted(dictionaryVariance.keys())
+	for word in wordsList:
+		newDocument = {'career':career,'typePreprocess':typePreprocess,'word':word,'mean':float(dictionaryMean[word]),'variance':float(dictionaryVariance[word])}
+		collectionEstadistics.insert_one(newDocument)
+
+
 def showImportantVariance(wordsVarianceDictionary,numArch,tipo):
 	sortedByValue = sorted(wordsVarianceDictionary.items(),key=operator.itemgetter(1))
 	venticinco_porciento = int(len(sortedByValue)*0.25)
@@ -352,6 +413,35 @@ def TF_IDF_COMPLETO_BIGRAM(carrera):
 		print('Imprimiendo varianza de '+ tipos[i])
 		showImportantVariance(wordsVarianceDictionary,carrera,tipos[i])
 
+def TF_IDF_COMPLETO_BIGRAM_V2(carrera):
+	inputOutput = Input_Output()
+	#datasetLemmatizacion,bigramLemmatizacion,datasetSteeming,bigramSteeming = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx')
+	datasetLemmatizacion,bigramLemmatizacion = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx')
+
+	print('Comenzo bigram Lemma')
+	bigram_model_Lemmatizacion = Word2Vec(bigramLemmatizacion[datasetLemmatizacion],size=100)
+	#print('Comenzo bigram Steeming')
+	#bigram_model_Steeming = Word2Vec(bigramSteeming[datasetSteeming],size=100)
+
+	print('Comenzo bigram Lemma Reemplazo')
+	datasetLemmatizacionBigram = replaceBigrams(datasetLemmatizacion,bigram_model_Lemmatizacion)
+	#print('Comenzo bigram Steeming Reemplazo')
+	#datasetSteemingBigram = replaceBigrams(datasetSteeming,bigram_model_Steeming)
+
+	datasets = [datasetLemmatizacionBigram]
+	tipos = ['Lemmatizacion']
+
+	for i in range(len(tipos)):
+		print('Procesando diccionario de '+ tipos[i])
+		dictionaryDistribution = getDictionaryDistributionInDocuments(datasets[i])
+		print('Insertando diccionario a BD de '+ tipos[i])
+		insertDictionary(carrera,tipos[i],dictionaryDistribution)
+		print('Procesando TF-IDF/Media/Varianza de ' + tipos[i])
+		dictionaryMean,dictionaryVariance = get_TFIDF_Mean_Variance(datasets[i],dictionaryDistribution)
+		print('Imprimiendo varianza de '+ tipos[i])
+		showImportantVariance(dictionaryVariance,carrera,tipos[i])
+		print('Insertando estadisticas de ' + tipos[i])
+		insertEstadistics_MongoDB(carrera,tipos[i],dictionaryMean,dictionaryVariance)
 
 def TF_IDF_DIVIDIDO(carrera):
 	inputOutput = Input_Output()
@@ -375,4 +465,4 @@ def TF_IDF_DIVIDIDO(carrera):
 	mostrarMasRelevantes(diccionarioLemmatizacion,TFIDF_dataset_Lemmatizacion)'''
 
 
-TF_IDF_COMPLETO_BIGRAM('Informatica')
+TF_IDF_COMPLETO_BIGRAM_V2('Informatica')

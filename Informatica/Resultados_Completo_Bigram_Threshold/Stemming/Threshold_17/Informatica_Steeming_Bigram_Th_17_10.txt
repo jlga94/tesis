@@ -1,0 +1,14 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_17_10: -1.39609611234
+Coherencia c_v de Informatica_Steeming_Bigram_Th_17_10: 0.606507963115
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_17_10: 0.334530446555
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_17_10: 0.119124762531
+Topic 0: 0.027*"profesional" + 0.022*"empres" + 0.015*"ingeni" + 0.014*"laboral" + 0.013*"funcion" + 0.012*"minim" + 0.012*"informat" + 0.011*"contrat" + 0.009*"capacit" + 0.009*"carrer" + 0.009*"años" + 0.009*"afin" + 0.008*"servici" + 0.008*"curs" + 0.008*"benefici"
+Topic 1: 0.098*"proyect" + 0.045*"gestion" + 0.020*"servici" + 0.016*"coordin" + 0.013*"años" + 0.012*"jef" + 0.012*"equip" + 0.012*"asign" + 0.011*"requer" + 0.011*"negoci" + 0.010*"tecnolog" + 0.010*"control" + 0.010*"implement" + 0.010*"empres" + 0.010*"asegur"
+Topic 2: 0.042*"client" + 0.025*"desarroll" + 0.022*"solucion" + 0.020*"negoci" + 0.019*"product" + 0.017*"tecnolog" + 0.015*"tecnic" + 0.014*"nuev" + 0.013*"servici" + 0.013*"vent" + 0.013*"empres" + 0.012*"equip" + 0.012*"comercial" + 0.011*"softwar" + 0.008*"mejor"
+Topic 3: 0.033*"sistem" + 0.028*"red" + 0.027*"administr" + 0.023*"soport" + 0.021*"servici" + 0.018*"conoc" + 0.017*"oper" + 0.017*"equip" + 0.015*"manten" + 0.014*"infraestructur" + 0.013*"usuari" + 0.013*"informat" + 0.012*"servidor" + 0.012*"tecnic" + 0.011*"segur"
+Topic 4: 0.040*"bas_dat" + 0.038*"conoc" + 0.035*"dat" + 0.027*"inform" + 0.025*"analisis" + 0.023*"herramient" + 0.022*"avanz" + 0.020*"sql" + 0.020*"model" + 0.020*"manej" + 0.017*"desarroll" + 0.016*"intermedi" + 0.015*"report" + 0.015*"implement" + 0.014*"proces"
+Topic 5: 0.045*"proces" + 0.033*"inform" + 0.030*"sistem" + 0.025*"gestion" + 0.019*"implement" + 0.019*"proyect" + 0.018*"apoy" + 0.016*"segur" + 0.015*"conoc" + 0.015*"sap" + 0.014*"mejor" + 0.012*"elabor" + 0.011*"control" + 0.010*"negoci" + 0.010*"realiz"
+Topic 6: 0.043*"conoc" + 0.026*"administr" + 0.024*"bas_dat" + 0.021*"oracl" + 0.020*"servidor" + 0.020*"sistem" + 0.018*"aplic" + 0.014*"plataform" + 0.013*"serv" + 0.012*"solucion" + 0.012*"años" + 0.012*"arquitectur" + 0.011*"servici" + 0.011*"linux" + 0.011*"herramient"
+Topic 7: 0.027*"capac" + 0.022*"equip" + 0.016*"conoc" + 0.015*"trabaj" + 0.014*"comun" + 0.014*"program" + 0.014*"profesional" + 0.014*"web" + 0.011*"proactiv" + 0.011*"habil" + 0.011*"practic" + 0.010*"competent" + 0.008*"avanz" + 0.008*"investig" + 0.008*"diseñ"
+Topic 8: 0.026*"inform" + 0.021*"gestion" + 0.019*"report" + 0.019*"apoy" + 0.018*"elabor" + 0.016*"seguimient" + 0.016*"proces" + 0.014*"realiz" + 0.013*"gener" + 0.013*"indic" + 0.013*"client" + 0.012*"practic" + 0.011*"control" + 0.011*"analisis" + 0.010*"coordin"
+Topic 9: 0.053*"desarroll" + 0.043*"program" + 0.034*"conoc" + 0.032*"sistem" + 0.029*"aplic" + 0.020*"diseñ" + 0.019*"anal" + 0.018*"jav" + 0.017*"prueb" + 0.017*"analisis" + 0.016*"softwar" + 0.015*"requer" + 0.015*"web" + 0.014*"realiz" + 0.013*"net"

@@ -1,0 +1,12 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_20_8: -1.11296193608
+Coherencia c_v de Informatica_Steeming_Bigram_Th_20_8: 0.601012035719
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_20_8: 0.292402727334
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_20_8: 0.117755069518
+Topic 0: 0.038*"client" + 0.023*"comercial" + 0.019*"vent" + 0.018*"product" + 0.015*"gestion" + 0.014*"report" + 0.012*"analisis" + 0.012*"negoci" + 0.012*"inform" + 0.011*"seguimient" + 0.011*"elabor" + 0.010*"gener" + 0.010*"realiz" + 0.009*"manej" + 0.009*"indic"
+Topic 1: 0.049*"desarroll" + 0.035*"conoc" + 0.028*"program" + 0.027*"web" + 0.027*"aplic" + 0.019*"softwar" + 0.019*"jav" + 0.018*"diseñ" + 0.013*"prueb" + 0.009*"net" + 0.009*"php" + 0.009*"arquitectur" + 0.009*"tecnolog" + 0.008*"proyect" + 0.007*"bas_dat"
+Topic 2: 0.044*"proyect" + 0.033*"gestion" + 0.024*"proces" + 0.020*"inform" + 0.012*"tecnolog" + 0.012*"control" + 0.012*"mejor" + 0.011*"implement" + 0.011*"negoci" + 0.011*"desarroll" + 0.011*"coordin" + 0.011*"servici" + 0.010*"calid" + 0.010*"sistem" + 0.009*"asegur"
+Topic 3: 0.036*"sistem" + 0.029*"requer" + 0.029*"funcional" + 0.026*"realiz" + 0.026*"desarroll" + 0.024*"implement" + 0.024*"sap" + 0.022*"aplic" + 0.022*"usuari" + 0.022*"program" + 0.019*"anal" + 0.019*"proyect" + 0.019*"prueb" + 0.019*"tecnic" + 0.017*"document"
+Topic 4: 0.043*"conoc" + 0.042*"sistem" + 0.034*"desarroll" + 0.033*"bas_dat" + 0.030*"program" + 0.024*"oracl" + 0.021*"analisis" + 0.021*"anal" + 0.020*"herramient" + 0.019*"años" + 0.018*"minim" + 0.017*"diseñ" + 0.015*"model" + 0.015*"dat" + 0.014*"aplic"
+Topic 5: 0.034*"administr" + 0.030*"red" + 0.029*"sistem" + 0.024*"servici" + 0.022*"conoc" + 0.021*"soport" + 0.019*"oper" + 0.019*"equip" + 0.018*"servidor" + 0.016*"infraestructur" + 0.014*"plataform" + 0.013*"manten" + 0.012*"segur" + 0.012*"tecnic" + 0.011*"informat"
+Topic 6: 0.027*"empres" + 0.024*"profesional" + 0.018*"capac" + 0.018*"client" + 0.017*"equip" + 0.014*"consultor" + 0.013*"servici" + 0.012*"funcion" + 0.011*"trabaj" + 0.010*"proyect" + 0.010*"ingeni" + 0.009*"laboral" + 0.008*"comun" + 0.008*"minim" + 0.008*"competent"
+Topic 7: 0.053*"apoy" + 0.035*"inform" + 0.033*"practic" + 0.022*"proces" + 0.017*"elabor" + 0.015*"report" + 0.014*"conoc" + 0.013*"sistem" + 0.013*"manej" + 0.011*"gestion" + 0.011*"realiz" + 0.011*"control" + 0.010*"actualiz" + 0.010*"intermedi" + 0.010*"document"

@@ -1,0 +1,11 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_15_7: -1.17012744679
+Coherencia c_v de Informatica_Steeming_Bigram_Th_15_7: 0.605447460095
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_15_7: 0.304438197366
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_15_7: 0.119805450052
+Topic 0: 0.024*"empres" + 0.021*"profesional" + 0.016*"equip" + 0.015*"capac" + 0.014*"client" + 0.013*"ingeni" + 0.012*"funcion" + 0.011*"trabaj" + 0.010*"sistem" + 0.010*"program" + 0.009*"desarroll" + 0.009*"consultor" + 0.009*"servici" + 0.008*"comun" + 0.008*"conoc"
+Topic 1: 0.047*"program" + 0.046*"sistem" + 0.045*"conoc" + 0.036*"desarroll" + 0.029*"bas_dat" + 0.023*"anal" + 0.021*"oracl" + 0.020*"analisis" + 0.019*"aplic" + 0.016*"diseñ" + 0.016*"años" + 0.016*"minim" + 0.015*"net" + 0.015*"herramient" + 0.014*"requer"
+Topic 2: 0.051*"proyect" + 0.030*"gestion" + 0.026*"proces" + 0.017*"sistem" + 0.016*"implement" + 0.015*"desarroll" + 0.013*"inform" + 0.011*"tecnolog" + 0.011*"solucion" + 0.011*"negoci" + 0.011*"conoc" + 0.011*"mejor" + 0.010*"requer" + 0.010*"años" + 0.009*"calid"
+Topic 3: 0.040*"inform" + 0.029*"segur" + 0.018*"riesg" + 0.018*"apoy" + 0.016*"auditor" + 0.015*"control" + 0.010*"sistem" + 0.010*"realiz" + 0.009*"evalu" + 0.009*"program" + 0.008*"practic" + 0.008*"administr" + 0.008*"coordin" + 0.007*"activ" + 0.007*"elabor"
+Topic 4: 0.031*"administr" + 0.029*"sistem" + 0.026*"red" + 0.022*"servici" + 0.021*"soport" + 0.019*"conoc" + 0.018*"oper" + 0.017*"equip" + 0.016*"servidor" + 0.014*"infraestructur" + 0.013*"manten" + 0.012*"plataform" + 0.011*"usuari" + 0.011*"tecnic" + 0.011*"tecnolog"
+Topic 5: 0.026*"client" + 0.022*"inform" + 0.019*"gestion" + 0.017*"report" + 0.015*"apoy" + 0.015*"proces" + 0.015*"comercial" + 0.013*"elabor" + 0.013*"analisis" + 0.012*"vent" + 0.012*"manej" + 0.011*"seguimient" + 0.011*"product" + 0.011*"gener" + 0.010*"practic"
+Topic 6: 0.045*"desarroll" + 0.027*"aplic" + 0.027*"conoc" + 0.024*"web" + 0.021*"prueb" + 0.021*"softwar" + 0.019*"diseñ" + 0.017*"program" + 0.014*"jav" + 0.010*"tecnolog" + 0.009*"tecnic" + 0.008*"arquitectur" + 0.008*"proyect" + 0.008*"document" + 0.008*"calid"

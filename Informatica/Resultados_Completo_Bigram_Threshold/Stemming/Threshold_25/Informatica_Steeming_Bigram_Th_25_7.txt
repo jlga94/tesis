@@ -1,0 +1,11 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_25_7: -1.18120967989
+Coherencia c_v de Informatica_Steeming_Bigram_Th_25_7: 0.572341879322
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_25_7: 0.242733507676
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_25_7: 0.103063231885
+Topic 0: 0.070*"proyect" + 0.031*"gestion" + 0.019*"proces" + 0.019*"desarroll" + 0.018*"negoci" + 0.016*"solucion" + 0.015*"implement" + 0.014*"tecnolog" + 0.014*"client" + 0.011*"años" + 0.011*"servici" + 0.010*"empres" + 0.010*"calid" + 0.010*"mejor" + 0.009*"equip"
+Topic 1: 0.028*"sistem" + 0.026*"administr" + 0.021*"segur" + 0.020*"inform" + 0.019*"servici" + 0.018*"red" + 0.017*"oper" + 0.016*"gestion" + 0.013*"conoc" + 0.012*"tecnolog" + 0.011*"manten" + 0.011*"equip" + 0.011*"servidor" + 0.011*"infraestructur" + 0.011*"control"
+Topic 2: 0.042*"apoy" + 0.035*"sistem" + 0.034*"sap" + 0.033*"conoc" + 0.027*"soport" + 0.021*"practic" + 0.020*"usuari" + 0.015*"intermedi" + 0.014*"realiz" + 0.013*"erp" + 0.012*"implement" + 0.011*"basic" + 0.011*"consultor" + 0.010*"manej" + 0.010*"tecnic"
+Topic 3: 0.048*"desarroll" + 0.039*"program" + 0.035*"conoc" + 0.029*"sistem" + 0.028*"aplic" + 0.019*"diseñ" + 0.018*"bas_dat" + 0.018*"anal" + 0.017*"analisis" + 0.017*"jav" + 0.017*"prueb" + 0.016*"softwar" + 0.014*"oracl" + 0.014*"años" + 0.013*"requer"
+Topic 4: 0.027*"inform" + 0.025*"proces" + 0.020*"gestion" + 0.017*"client" + 0.015*"apoy" + 0.015*"elabor" + 0.014*"report" + 0.013*"analisis" + 0.012*"seguimient" + 0.012*"comercial" + 0.011*"realiz" + 0.010*"mejor" + 0.010*"indic" + 0.010*"manej" + 0.009*"gener"
+Topic 5: 0.023*"profesional" + 0.019*"ingeni" + 0.017*"empres" + 0.016*"informat" + 0.015*"sistem" + 0.014*"capac" + 0.013*"conoc" + 0.013*"equip" + 0.012*"program" + 0.011*"funcion" + 0.010*"laboral" + 0.010*"minim" + 0.009*"trabaj" + 0.008*"competent" + 0.008*"requisit"
+Topic 6: 0.025*"web" + 0.024*"conoc" + 0.021*"desarroll" + 0.019*"dat" + 0.018*"diseñ" + 0.015*"bi" + 0.013*"program" + 0.010*"plataform" + 0.010*"aplic" + 0.010*"implement" + 0.010*"digital" + 0.009*"herramient" + 0.009*"php" + 0.009*"inteligent_negoci" + 0.008*"avanz"

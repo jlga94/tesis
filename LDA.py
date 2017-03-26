@@ -3,18 +3,58 @@ import gensim
 from preprocesamiento import Input_Output
 from collections import Counter
 from gensim.models import Phrases,Word2Vec,CoherenceModel
+import openpyxl
 
-def writeLDAFile(numArch,tipo,listTopics,dictionary,corpus):
+coherenceTypes = ['u_mass','c_v','c_uci','c_npmi']
+
+def writeLDAFile(numArch,tipo,listTopics,dictionary,corpus,texts):	
+	coherencePerKTopic = {}
 	for i in range(len(listTopics)):
 		print('Empezando '+ tipo +' con: '+str(listTopics[i]))
 		ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=listTopics[i],id2word = dictionary, passes=20)
 		print('Se creo objeto')
-		cm = CoherenceModel(model=ldamodel,corpus=corpus,coherence='u_mass')		
+		
 		F = open(numArch + '_'+ tipo +'_'+str(listTopics[i])+'.txt','w')
-		F.write('Coherencia de ' + numArch + '_'+ tipo +'_'+str(listTopics[i]) + ': ' +str(cm.get_coherence())+'\n')
-		F.write(str(ldamodel.print_topics(num_topics=listTopics[i],num_words=8)))
+
+		coherenceTypesValues = []
+		for iCoherenceType in coherenceTypes:
+			cm_coherence_Model = CoherenceModel(model=ldamodel,corpus=corpus,texts=texts,coherence=iCoherenceType).get_coherence()
+			coherenceTypesValues.append(cm_coherence_Model)
+			F.write('Coherencia '+ str(iCoherenceType) +' de ' + numArch + '_'+ tipo +'_'+str(listTopics[i]) + ': ' +str(cm_coherence_Model)+'\n')
+		
+		coherencePerKTopic[listTopics[i]] = coherenceTypesValues
+
+		#F.write(str(ldamodel.print_topic(num_topics=listTopics[i],num_words=15))+'\n')
+		for iTopic in range(listTopics[i]):
+			F.write('Topic '+str(iTopic)+': '+str(ldamodel.print_topic(topicno=iTopic,topn=15))+'\n')
 		F.close()
 		print('Terminando '+ tipo +' con: '+str(listTopics[i]))
+
+	return coherencePerKTopic
+
+def writeExcelCoherencePerTopic(carrera,tipo,thresholds,listTopics,coherencePerThreshold):
+	newExcel = openpyxl.Workbook()
+	actualSheet = newExcel.active
+	ThresholdColumn = 1
+	K_Column = 2
+	coherenceColumns = [3,4,5,6]
+
+	actualSheet.title = carrera + '_' + tipo
+	actualSheet.cell(row=1, column=ThresholdColumn).value = 'Threshold'
+	actualSheet.cell(row=1, column=K_Column).value = 'K_Topic'
+	for coherenceIndex in range(len(coherenceColumns)):
+		actualSheet.cell(row=1, column=coherenceColumns[coherenceIndex]).value = coherenceTypes[coherenceIndex]
+
+	actualRow = 2
+	for threshold in thresholds:
+		actualSheet.cell(row=actualRow, column=ThresholdColumn).value = threshold
+		for topicIndex in range(len(listTopics)):
+			actualSheet.cell(row=actualRow, column=K_Column).value = listTopics[topicIndex]
+			for coherenceIndex in range(len(coherenceTypes)):
+				actualSheet.cell(row=actualRow, column=coherenceColumns[coherenceIndex]).value = coherencePerThreshold[threshold][listTopics[topicIndex]][coherenceIndex]
+			actualRow += 1
+
+	newExcel.save(carrera + '_' + tipo + '_Resultados_Coherencia.xlsx')
 
 def LDA_GENSIM_COMPLETO():
 	inputOutput = Input_Output()
@@ -71,7 +111,7 @@ def replaceBigrams(dataset,bigram_model):
 		i=0
 		while(i < N_words-1):
 			possible_bigram = words_oferta[i] + '_' +words_oferta[i+1]
-			if (possible_bigram in bigram_model.vocab.keys()):
+			if (possible_bigram in bigram_model.wv.vocab.keys()):
 				words_oferta[i] = possible_bigram # Se reemplaza la palabra del indice i por el bigrama
 				words_oferta.pop(i+1)
 				N_words-=1
@@ -86,7 +126,7 @@ def replaceBigrams_v2(dataset,bigram_model):
 		i=0
 		while(i < N_words-1):
 			possible_bigram = words_oferta[i] + '_' +words_oferta[i+1]
-			if (possible_bigram in bigram_model.vocab.keys()):
+			if (possible_bigram in bigram_model.wv.vocab.keys()):
 				words_oferta.insert(i,possible_bigram) #se agrega el bigrama como indice sin borrar los unigramas
 				i+=1
 				N_words+=1
@@ -98,46 +138,71 @@ def replaceBigrams_v2(dataset,bigram_model):
 def LDA_GENSIM_COMPLETO_BIGRAM():
 	inputOutput = Input_Output()
 	carrera = 'Informatica'
+	thresholds = [15,16,17,18,19,20,21,22,23,24,25]
 
-	datasetLemmatizacion,bigramLemmatizacion,datasetSteeming,bigramSteeming = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx')
+	datasetLemmatizacion,bigramsLemmatizacion,datasetSteeming,bigramsSteeming = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx',thresholds)
+
+	bigram_models_Lemmatizacion = []
+	bigram_models_Steeming = []
 
 	print('Comenzo bigram Lemma')
-	bigram_model_Lemmatizacion = Word2Vec(bigramLemmatizacion[datasetLemmatizacion],size=100)
+	for bigramLemmatizacion in bigramsLemmatizacion:
+		
+		bigram_model_Lemmatizacion = Word2Vec(bigramLemmatizacion[datasetLemmatizacion],size=100)
+		bigram_models_Lemmatizacion.append(bigram_model_Lemmatizacion)
+	
 	print('Comenzo bigram Steeming')
-	bigram_model_Steeming = Word2Vec(bigramSteeming[datasetSteeming],size=100)
+	for bigramSteeming in bigramsSteeming:		
+		bigram_model_Steeming = Word2Vec(bigramSteeming[datasetSteeming],size=100)
+		bigram_models_Steeming.append(bigram_model_Steeming)
+
+	datasetsLemmatizacionBigram = []
+	datasetsSteemingBigram = []
 
 	print('Comenzo bigram Lemma Reemplazo')
-	datasetLemmatizacionBigram = replaceBigrams(datasetLemmatizacion,bigram_model_Lemmatizacion)
+	for bigram_model_Lemmatizacion in bigram_models_Lemmatizacion:
+		datasetLemmatizacionBigram = replaceBigrams(datasetLemmatizacion,bigram_model_Lemmatizacion)
+		datasetsLemmatizacionBigram.append(datasetLemmatizacionBigram)
+	
 	print('Comenzo bigram Steeming Reemplazo')
-	datasetSteemingBigram = replaceBigrams(datasetSteeming,bigram_model_Steeming)
+	for bigram_model_Steeming in bigram_models_Steeming:
+		datasetSteemingBigram = replaceBigrams(datasetSteeming,bigram_model_Steeming)
+		datasetsSteemingBigram.append(datasetSteemingBigram)
 
-	dictionaryLemma = corpora.Dictionary(datasetLemmatizacionBigram)
-	corpusLemma = [dictionaryLemma.doc2bow(text) for text in datasetLemmatizacionBigram]
+	dictionariesLemmaPerThreshold = []
+	corpusLemmaPerThreshold = []
+	print('Comenzo a obtener diccionarios y corpus para Gensim de Lemmatizacion')
+	for datasetLemmatizacionBigram in datasetsLemmatizacionBigram:
+		dictionaryLemma = corpora.Dictionary(datasetLemmatizacionBigram)
+		corpusLemma = [dictionaryLemma.doc2bow(text) for text in datasetLemmatizacionBigram]
+		dictionariesLemmaPerThreshold.append(dictionaryLemma)
+		corpusLemmaPerThreshold.append(corpusLemma)
 
-	dictionarySteeming = corpora.Dictionary(datasetSteemingBigram)
-	corpusSteeming = [dictionarySteeming.doc2bow(text) for text in datasetSteemingBigram]
+	dictionariesSteemingPerThreshold = []
+	corpusSteemingPerThreshold = []
+	print('Comenzo a obtener diccionarios y corpus para Gensim de Steeming')
+	for datasetSteemingBigram in datasetsSteemingBigram:
+		dictionarySteeming = corpora.Dictionary(datasetSteemingBigram)
+		corpusSteeming = [dictionarySteeming.doc2bow(text) for text in datasetSteemingBigram]
+		dictionariesSteemingPerThreshold.append(dictionarySteeming)
+		corpusSteemingPerThreshold.append(corpusSteeming)
 
-	listTopics= [18,19,21,22]
-	listNumWords = []
 
-	writeLDAFile(carrera,'Lemmatizacion_Bigram',listTopics,dictionaryLemma,corpusLemma)
-	writeLDAFile(carrera,'Steeming_Bigram',listTopics,dictionarySteeming,corpusSteeming)
+	listTopics= [4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]
+
+	coherencePerThresholdLemma = {}
+	coherencePerThresholdSteeming = {}
 
 
-	'''
-	#print(str(bigram_model.vocab))
-	#print(str(bigram_model.vocab.keys()))
-	nBigramas=0
-	bigram_model_counter = Counter()
-	for key in bigram_model.vocab.keys():
-		if len(key.split("_"))>1 :
-			bigram_model_counter[key] += bigram_model.vocab[key].count
-			nBigramas+=1
+	for thresholdIndex in range(len(thresholds)):
+		coherencePerKTopic = writeLDAFile(carrera,'Lemmatizacion_Bigram_Th_'+str(thresholds[thresholdIndex]),listTopics,dictionariesLemmaPerThreshold[thresholdIndex],corpusLemmaPerThreshold[thresholdIndex],datasetsLemmatizacionBigram[thresholdIndex])
+		coherencePerThresholdLemma[thresholds[thresholdIndex]] = coherencePerKTopic
 
-	print('Cantidad de Keys: ' + str(len(bigram_model.vocab.keys())))
-	print('Cantidad de Bigramas: '+ str(nBigramas))
-	for key, counts in bigram_model_counter.most_common(50):
-		print (key + ' - '+str(counts))'''
+		coherencePerKTopic = writeLDAFile(carrera,'Steeming_Bigram_Th_'+str(thresholds[thresholdIndex]),listTopics,dictionariesSteemingPerThreshold[thresholdIndex],corpusSteemingPerThreshold[thresholdIndex],datasetsSteemingBigram[thresholdIndex])
+		coherencePerThresholdSteeming[thresholds[thresholdIndex]] = coherencePerKTopic
+
+	writeExcelCoherencePerTopic(carrera,'Lemmatizacion_Bigram_Th',thresholds,listTopics,coherencePerThresholdLemma)
+	writeExcelCoherencePerTopic(carrera,'Steeming_Bigram_Th',thresholds,listTopics,coherencePerThresholdSteeming)
 
 
 

@@ -1,0 +1,11 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_16_7: -1.19025544769
+Coherencia c_v de Informatica_Steeming_Bigram_Th_16_7: 0.580684499358
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_16_7: 0.281907003287
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_16_7: 0.107787559247
+Topic 0: 0.013*"coordin" + 0.012*"administr" + 0.010*"control" + 0.010*"realiz" + 0.010*"program" + 0.008*"contrat" + 0.008*"personal" + 0.007*"oper" + 0.007*"funcion" + 0.006*"supervis" + 0.005*"establec" + 0.005*"curs" + 0.005*"actualiz" + 0.005*"activ" + 0.005*"capacit"
+Topic 1: 0.044*"inform" + 0.036*"proces" + 0.031*"apoy" + 0.023*"gestion" + 0.018*"conoc" + 0.018*"report" + 0.017*"elabor" + 0.017*"analisis" + 0.016*"practic" + 0.016*"bas_dat" + 0.013*"sistem" + 0.013*"dat" + 0.013*"manej" + 0.012*"riesg" + 0.011*"control"
+Topic 2: 0.045*"desarroll" + 0.037*"program" + 0.036*"conoc" + 0.025*"aplic" + 0.025*"sistem" + 0.019*"diseñ" + 0.016*"jav" + 0.016*"web" + 0.014*"bas_dat" + 0.014*"softwar" + 0.014*"anal" + 0.014*"analisis" + 0.013*"prueb" + 0.012*"años" + 0.011*"oracl"
+Topic 3: 0.032*"administr" + 0.031*"sistem" + 0.025*"red" + 0.022*"conoc" + 0.022*"soport" + 0.021*"servici" + 0.017*"oper" + 0.016*"segur" + 0.015*"servidor" + 0.015*"equip" + 0.013*"informat" + 0.013*"manten" + 0.013*"infraestructur" + 0.013*"plataform" + 0.012*"usuari"
+Topic 4: 0.025*"sap" + 0.023*"empres" + 0.021*"profesional" + 0.020*"consultor" + 0.018*"sistem" + 0.017*"conoc" + 0.014*"funcion" + 0.012*"ingeni" + 0.012*"client" + 0.011*"minim" + 0.010*"años" + 0.009*"proyect" + 0.009*"equip" + 0.009*"informat" + 0.009*"capac"
+Topic 5: 0.061*"proyect" + 0.033*"gestion" + 0.020*"proces" + 0.017*"desarroll" + 0.017*"sistem" + 0.016*"implement" + 0.015*"tecnolog" + 0.013*"solucion" + 0.013*"inform" + 0.012*"negoci" + 0.012*"requer" + 0.011*"años" + 0.011*"servici" + 0.011*"coordin" + 0.011*"calid"
+Topic 6: 0.056*"client" + 0.028*"comercial" + 0.024*"product" + 0.024*"vent" + 0.016*"negoci" + 0.011*"servici" + 0.010*"realiz" + 0.010*"nuev" + 0.010*"seguimient" + 0.009*"desarroll" + 0.009*"empres" + 0.009*"estrategi" + 0.009*"canal" + 0.008*"gestion" + 0.008*"campañ"

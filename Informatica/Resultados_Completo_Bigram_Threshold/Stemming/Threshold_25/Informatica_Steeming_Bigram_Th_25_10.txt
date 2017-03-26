@@ -1,0 +1,14 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_25_10: -1.20961771803
+Coherencia c_v de Informatica_Steeming_Bigram_Th_25_10: 0.592662822459
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_25_10: 0.29638393654
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_25_10: 0.113152212738
+Topic 0: 0.054*"desarroll" + 0.047*"program" + 0.045*"conoc" + 0.027*"web" + 0.026*"aplic" + 0.026*"jav" + 0.019*"sistem" + 0.018*"diseñ" + 0.018*"net" + 0.016*"bas_dat" + 0.015*"oracl" + 0.013*"anal" + 0.012*"años" + 0.012*"analisis" + 0.011*"softwar"
+Topic 1: 0.035*"administr" + 0.034*"red" + 0.029*"sistem" + 0.025*"conoc" + 0.023*"servici" + 0.023*"soport" + 0.023*"equip" + 0.021*"servidor" + 0.018*"oper" + 0.017*"infraestructur" + 0.016*"plataform" + 0.014*"manten" + 0.014*"comun" + 0.013*"configur" + 0.013*"tecnic"
+Topic 2: 0.017*"sistem" + 0.015*"proyect" + 0.014*"laboral" + 0.014*"especial" + 0.013*"minim" + 0.012*"tecnolog" + 0.012*"inform" + 0.012*"curs" + 0.012*"diseñ" + 0.011*"institu" + 0.011*"capacit" + 0.011*"general" + 0.010*"acredit" + 0.009*"tecnic" + 0.009*"deb"
+Topic 3: 0.028*"profesional" + 0.024*"ingeni" + 0.021*"empres" + 0.019*"informat" + 0.015*"sistem" + 0.015*"funcion" + 0.011*"program" + 0.010*"trabaj" + 0.010*"laboral" + 0.010*"equip" + 0.010*"afin" + 0.009*"requisit" + 0.009*"estudi" + 0.009*"capac" + 0.009*"carrer"
+Topic 4: 0.078*"apoy" + 0.047*"practic" + 0.041*"inform" + 0.025*"elabor" + 0.023*"report" + 0.019*"proces" + 0.019*"conoc" + 0.019*"gestion" + 0.018*"manej" + 0.016*"intermedi" + 0.014*"sistem" + 0.014*"seguimient" + 0.013*"document" + 0.013*"actualiz" + 0.011*"basic"
+Topic 5: 0.103*"proyect" + 0.037*"gestion" + 0.020*"negoci" + 0.017*"solucion" + 0.016*"client" + 0.015*"equip" + 0.015*"desarroll" + 0.014*"tecnolog" + 0.014*"conoc" + 0.013*"consultor" + 0.013*"implement" + 0.013*"proces" + 0.012*"años" + 0.012*"servici" + 0.011*"empres"
+Topic 6: 0.027*"inform" + 0.027*"gestion" + 0.023*"proces" + 0.017*"control" + 0.016*"segur" + 0.016*"sistem" + 0.014*"coordin" + 0.014*"servici" + 0.012*"mejor" + 0.011*"oper" + 0.011*"tecnolog" + 0.010*"implement" + 0.010*"evalu" + 0.010*"cumplimient" + 0.009*"asegur"
+Topic 7: 0.043*"client" + 0.024*"comercial" + 0.020*"vent" + 0.019*"product" + 0.014*"negoci" + 0.013*"realiz" + 0.012*"seguimient" + 0.011*"gestion" + 0.010*"report" + 0.010*"elabor" + 0.009*"coordin" + 0.009*"nuev" + 0.009*"gener" + 0.008*"servici" + 0.008*"campañ"
+Topic 8: 0.037*"sistem" + 0.030*"desarroll" + 0.025*"prueb" + 0.022*"aplic" + 0.022*"requer" + 0.021*"funcional" + 0.021*"realiz" + 0.018*"document" + 0.017*"implement" + 0.017*"proyect" + 0.017*"usuari" + 0.016*"tecnic" + 0.015*"anal" + 0.015*"softwar" + 0.015*"program"
+Topic 9: 0.038*"bas_dat" + 0.035*"conoc" + 0.033*"proces" + 0.031*"inform" + 0.028*"dat" + 0.023*"analisis" + 0.020*"model" + 0.020*"herramient" + 0.019*"anal" + 0.017*"manej" + 0.017*"avanz" + 0.015*"gestion" + 0.014*"sql" + 0.012*"implement" + 0.012*"oracl"

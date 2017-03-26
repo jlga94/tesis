@@ -1,0 +1,8 @@
+Coherencia u_mass de Informatica_Lemmatizacion_Bigram_Th_19_4: -1.25491040026
+Coherencia c_v de Informatica_Lemmatizacion_Bigram_Th_19_4: 0.552659986027
+Coherencia c_uci de Informatica_Lemmatizacion_Bigram_Th_19_4: 0.227069061292
+Coherencia c_npmi de Informatica_Lemmatizacion_Bigram_Th_19_4: 0.0957790760691
+Topic 0: 0.033*"proyecto" + 0.021*"gestión" + 0.021*"proceso" + 0.018*"información" + 0.014*"sistema" + 0.011*"servicio" + 0.011*"área" + 0.009*"seguridad" + 0.008*"conocimiento" + 0.008*"control" + 0.008*"gestionar" + 0.007*"negocio" + 0.007*"mejora" + 0.007*"realizar" + 0.007*"solución"
+Topic 1: 0.033*"conocimiento" + 0.022*"desarrollo" + 0.018*"aplicación" + 0.017*"web" + 0.016*"sistema" + 0.013*"servidor" + 0.012*"software" + 0.011*"java" + 0.011*"red" + 0.010*"equipo" + 0.010*"administración" + 0.009*"plataforma" + 0.008*"diseño" + 0.008*"base_dato" + 0.008*"solución"
+Topic 2: 0.037*"sistema" + 0.031*"conocimiento" + 0.026*"desarrollo" + 0.018*"análisis" + 0.017*"base_dato" + 0.015*"proyecto" + 0.014*"aplicación" + 0.014*"requerimiento" + 0.014*"realizar" + 0.014*"diseño" + 0.013*"programación" + 0.012*"herramienta" + 0.012*"analista" + 0.011*"funcional" + 0.011*"proceso"
+Topic 3: 0.022*"cliente" + 0.011*"comercial" + 0.010*"área" + 0.010*"apoyo" + 0.010*"venta" + 0.009*"practicante" + 0.009*"información" + 0.009*"servicio" + 0.009*"empresa" + 0.009*"reporte" + 0.008*"realizar" + 0.007*"manejo" + 0.007*"conocimiento" + 0.007*"equipo" + 0.007*"seguimiento"

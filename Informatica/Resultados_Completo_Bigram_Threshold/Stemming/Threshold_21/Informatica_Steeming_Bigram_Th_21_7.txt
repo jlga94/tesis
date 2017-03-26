@@ -1,0 +1,11 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_21_7: -1.3191102232
+Coherencia c_v de Informatica_Steeming_Bigram_Th_21_7: 0.561421922949
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_21_7: 0.246042082949
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_21_7: 0.0993219910538
+Topic 0: 0.033*"sistem" + 0.031*"administr" + 0.025*"servici" + 0.024*"red" + 0.020*"soport" + 0.019*"conoc" + 0.018*"oper" + 0.015*"equip" + 0.014*"servidor" + 0.014*"segur" + 0.014*"manten" + 0.013*"infraestructur" + 0.013*"gestion" + 0.012*"tecnolog" + 0.012*"plataform"
+Topic 1: 0.025*"web" + 0.018*"conoc" + 0.015*"diseñ" + 0.013*"program" + 0.011*"aplic" + 0.010*"empres" + 0.010*"equip" + 0.009*"colabor" + 0.008*"trabaj" + 0.008*"etc" + 0.008*"servici" + 0.007*"capac" + 0.007*"desarroll" + 0.007*"movil" + 0.007*"client"
+Topic 2: 0.056*"proyect" + 0.024*"desarroll" + 0.020*"gestion" + 0.017*"solucion" + 0.014*"implement" + 0.014*"tecnolog" + 0.013*"negoci" + 0.013*"requer" + 0.013*"prueb" + 0.012*"client" + 0.011*"sistem" + 0.011*"aplic" + 0.010*"diseñ" + 0.010*"proces" + 0.010*"funcional"
+Topic 3: 0.038*"proces" + 0.031*"inform" + 0.028*"gestion" + 0.019*"control" + 0.012*"sistem" + 0.012*"mejor" + 0.012*"riesg" + 0.012*"segur" + 0.011*"elabor" + 0.009*"apoy" + 0.009*"coordin" + 0.009*"realiz" + 0.009*"oper" + 0.008*"evalu" + 0.008*"implement"
+Topic 4: 0.049*"desarroll" + 0.047*"program" + 0.041*"conoc" + 0.033*"sistem" + 0.026*"aplic" + 0.021*"bas_dat" + 0.020*"jav" + 0.018*"diseñ" + 0.018*"anal" + 0.017*"analisis" + 0.016*"oracl" + 0.015*"años" + 0.014*"net" + 0.014*"web" + 0.013*"minim"
+Topic 5: 0.025*"apoy" + 0.025*"sap" + 0.022*"sistem" + 0.020*"conoc" + 0.018*"profesional" + 0.016*"practic" + 0.013*"consultor" + 0.012*"ingeni" + 0.012*"empres" + 0.011*"informat" + 0.010*"funcion" + 0.009*"realiz" + 0.008*"intermedi" + 0.008*"capacit" + 0.007*"equip"
+Topic 6: 0.027*"client" + 0.026*"inform" + 0.021*"report" + 0.018*"comercial" + 0.016*"gestion" + 0.016*"analisis" + 0.015*"bas_dat" + 0.015*"vent" + 0.014*"apoy" + 0.014*"manej" + 0.013*"dat" + 0.012*"elabor" + 0.012*"gener" + 0.012*"proces" + 0.012*"product"

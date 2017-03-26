@@ -1,0 +1,11 @@
+Coherencia u_mass de Informatica_Steeming_Bigram_Th_23_7: -1.13977701621
+Coherencia c_v de Informatica_Steeming_Bigram_Th_23_7: 0.590330736891
+Coherencia c_uci de Informatica_Steeming_Bigram_Th_23_7: 0.267911188488
+Coherencia c_npmi de Informatica_Steeming_Bigram_Th_23_7: 0.112139075746
+Topic 0: 0.030*"sistem" + 0.028*"administr" + 0.021*"servici" + 0.021*"segur" + 0.019*"red" + 0.019*"conoc" + 0.016*"oper" + 0.015*"soport" + 0.014*"equip" + 0.013*"informat" + 0.013*"tecnolog" + 0.012*"gestion" + 0.012*"infraestructur" + 0.011*"servidor" + 0.011*"manten"
+Topic 1: 0.056*"program" + 0.039*"sistem" + 0.037*"desarroll" + 0.035*"conoc" + 0.019*"anal" + 0.017*"analisis" + 0.016*"realiz" + 0.016*"net" + 0.014*"diseñ" + 0.014*"bas_dat" + 0.013*"informat" + 0.013*"jav" + 0.013*"tecnic" + 0.012*"manej" + 0.012*"requer"
+Topic 2: 0.015*"equip" + 0.013*"trabaj" + 0.013*"practic" + 0.012*"web" + 0.012*"desarroll" + 0.010*"profesional" + 0.010*"diseñ" + 0.010*"empres" + 0.010*"capac" + 0.009*"program" + 0.008*"colabor" + 0.008*"softwar" + 0.007*"ingeni" + 0.007*"funcion" + 0.007*"client"
+Topic 3: 0.040*"inform" + 0.031*"apoy" + 0.030*"proces" + 0.020*"gestion" + 0.019*"report" + 0.018*"practic" + 0.017*"elabor" + 0.016*"control" + 0.011*"seguimient" + 0.011*"realiz" + 0.011*"analisis" + 0.010*"manej" + 0.010*"riesg" + 0.010*"indic" + 0.010*"bas_dat"
+Topic 4: 0.034*"client" + 0.017*"negoci" + 0.017*"comercial" + 0.015*"product" + 0.015*"gestion" + 0.015*"vent" + 0.014*"servici" + 0.012*"empres" + 0.009*"desarroll" + 0.008*"años" + 0.007*"nuev" + 0.007*"estrategi" + 0.007*"coordin" + 0.007*"oportun" + 0.006*"mejor"
+Topic 5: 0.047*"desarroll" + 0.044*"conoc" + 0.034*"aplic" + 0.024*"bas_dat" + 0.019*"web" + 0.019*"diseñ" + 0.018*"program" + 0.018*"jav" + 0.016*"oracl" + 0.014*"herramient" + 0.013*"model" + 0.013*"sistem" + 0.012*"años" + 0.012*"dat" + 0.012*"analisis"
+Topic 6: 0.063*"proyect" + 0.025*"gestion" + 0.023*"proces" + 0.021*"sistem" + 0.020*"desarroll" + 0.019*"implement" + 0.014*"requer" + 0.013*"prueb" + 0.013*"calid" + 0.012*"solucion" + 0.012*"conoc" + 0.012*"funcional" + 0.012*"inform" + 0.011*"realiz" + 0.011*"años"
