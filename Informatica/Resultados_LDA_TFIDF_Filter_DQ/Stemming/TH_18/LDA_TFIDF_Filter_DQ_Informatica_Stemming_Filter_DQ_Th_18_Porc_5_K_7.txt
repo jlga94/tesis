@@ -1,0 +1,11 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_7: 0.4886914432
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_7: -4.97072434161
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_7: -1.34478491446
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_7: 0.0196731664835
+Topic 0: 0.020*"conoc" + 0.017*"sistem" + 0.008*"red_lan" + 0.007*"impresor" + 0.006*"bootstrap" + 0.006*"central_telefon" + 0.006*"licenci" + 0.005*"disposit" + 0.005*"telefon_ip" + 0.005*"element" + 0.005*"presencial" + 0.005*"firewall" + 0.005*"backups" + 0.005*"pcs" + 0.004*"enlac"
+Topic 1: 0.253*"proyect" + 0.063*"gestion" + 0.051*"conoc" + 0.051*"desarroll" + 0.036*"proces" + 0.026*"inform" + 0.024*"sistem" + 0.005*"pmi" + 0.005*"rol" + 0.004*"etap" + 0.004*"gobiern" + 0.004*"liderazg" + 0.003*"estim" + 0.003*"interaccion" + 0.003*"pmp"
+Topic 2: 0.008*"cotiz" + 0.006*"python" + 0.005*"perifer" + 0.005*"remuner" + 0.005*"comision" + 0.005*"concurs" + 0.005*"stock" + 0.005*"conoc" + 0.005*"horari_oficin" + 0.005*"maquet" + 0.005*"aspect" + 0.005*"vacacion" + 0.004*"js" + 0.004*"licit" + 0.004*"vid"
+Topic 3: 0.174*"inform" + 0.067*"dat" + 0.054*"sistem" + 0.020*"gestion" + 0.008*"priv" + 0.005*"institucional" + 0.005*"conoc" + 0.005*"sector_public" + 0.004*"asign" + 0.004*"legal" + 0.004*"sbs" + 0.004*"vigent" + 0.004*"aprob" + 0.004*"obtencion" + 0.004*"equivalent"
+Topic 4: 0.201*"desarroll" + 0.146*"sistem" + 0.109*"conoc" + 0.052*"dat" + 0.025*"proyect" + 0.008*"inform" + 0.006*"rup" + 0.004*"rup_uml" + 0.004*"prototip" + 0.004*"ide" + 0.004*"ajax" + 0.003*"lug" + 0.003*"logic" + 0.003*"sw" + 0.003*"codif"
+Topic 5: 0.182*"conoc" + 0.116*"dat" + 0.093*"sistem" + 0.031*"desarroll" + 0.010*"gestion" + 0.010*"inform" + 0.004*"respald" + 0.004*"unix" + 0.003*"performanc" + 0.003*"deseabl" + 0.003*"conexion" + 0.003*"linux_unix" + 0.003*"querys" + 0.003*"pucp" + 0.003*"centr_comput"
+Topic 6: 0.194*"proces" + 0.113*"gestion" + 0.082*"inform" + 0.050*"sistem" + 0.035*"conoc" + 0.018*"dat" + 0.004*"matriz" + 0.004*"mape" + 0.004*"proyeccion" + 0.004*"emision" + 0.004*"presupuestal" + 0.004*"clav" + 0.003*"alin" + 0.003*"mision" + 0.003*"excel_pow"

@@ -1,0 +1,11 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_7: 0.529569972687
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_7: -1.71768154152
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_7: 0.287406898685
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_7: 0.0888633098126
+Topic 0: 0.010*"benefici" + 0.010*"minim" + 0.010*"conoc" + 0.009*"grup" + 0.007*"servici" + 0.007*"planill" + 0.007*"proces" + 0.006*"program" + 0.006*"unid" + 0.006*"recurs_human" + 0.006*"gast" + 0.006*"horari" + 0.006*"centr" + 0.005*"equip" + 0.005*"talent"
+Topic 1: 0.028*"client" + 0.019*"program" + 0.015*"equip" + 0.014*"management" + 0.013*"conoc" + 0.011*"line_carrer" + 0.010*"servici" + 0.008*"global_consultor" + 0.007*"rubr_banc" + 0.007*"ingres_planill" + 0.007*"benefici" + 0.006*"part" + 0.006*"red_social" + 0.006*"benefici_ley" + 0.006*"desempeñ_accentur"
+Topic 2: 0.032*"equip" + 0.032*"sistem" + 0.014*"servici" + 0.013*"program" + 0.013*"academ" + 0.011*"correct" + 0.010*"virtual" + 0.009*"registr" + 0.008*"educ" + 0.008*"corre" + 0.008*"docent" + 0.007*"manten_prevent" + 0.007*"institu" + 0.007*"internet" + 0.007*"instal_configur"
+Topic 3: 0.079*"conoc" + 0.072*"desarroll" + 0.066*"dat" + 0.059*"sistem" + 0.056*"program" + 0.050*"bas" + 0.046*"aplic" + 0.037*"analisis" + 0.026*"proyect" + 0.025*"minim" + 0.016*"implement" + 0.013*"inform" + 0.008*"metodolog" + 0.008*"tecnolog" + 0.007*"proces"
+Topic 4: 0.101*"proyect" + 0.069*"client" + 0.050*"gestion" + 0.034*"servici" + 0.027*"inform" + 0.015*"conoc" + 0.015*"equip" + 0.013*"minim" + 0.012*"proces" + 0.012*"implement" + 0.012*"analisis" + 0.011*"desarroll" + 0.010*"mejor" + 0.010*"cost" + 0.010*"tecnolog"
+Topic 5: 0.054*"conoc" + 0.044*"sistem" + 0.044*"tecnolog" + 0.041*"equip" + 0.040*"servici" + 0.031*"aplic" + 0.026*"desarroll" + 0.018*"implement" + 0.017*"proyect" + 0.013*"gestion" + 0.012*"minim" + 0.010*"dat" + 0.008*"mejor" + 0.007*"client" + 0.007*"itil"
+Topic 6: 0.108*"proces" + 0.095*"inform" + 0.051*"gestion" + 0.050*"sistem" + 0.041*"mejor" + 0.027*"conoc" + 0.023*"analisis" + 0.022*"proyect" + 0.019*"implement" + 0.018*"dat" + 0.011*"bas" + 0.011*"tecnolog" + 0.010*"polit" + 0.010*"minim" + 0.008*"norm"

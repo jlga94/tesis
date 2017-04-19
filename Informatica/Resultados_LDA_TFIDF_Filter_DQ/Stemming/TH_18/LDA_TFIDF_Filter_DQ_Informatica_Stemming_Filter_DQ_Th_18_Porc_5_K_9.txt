@@ -1,0 +1,13 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_9: 0.41855283618
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_9: -6.39274031722
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_9: -2.25764697526
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_9: -0.0170071333754
+Topic 0: 0.180*"sistem" + 0.141*"conoc" + 0.098*"desarroll" + 0.074*"dat" + 0.040*"proyect" + 0.031*"inform" + 0.024*"proces" + 0.009*"gestion" + 0.003*"rup" + 0.003*"unix" + 0.002*"performanc" + 0.002*"optim" + 0.002*"deseabl" + 0.002*"bachill_titul" + 0.002*"operat"
+Topic 1: 0.013*"conoc" + 0.012*"capacit_constant" + 0.011*"talent" + 0.010*"conveni" + 0.008*"social" + 0.008*"pucp" + 0.008*"titul" + 0.007*"transferent" + 0.006*"ambiental" + 0.006*"comprob" + 0.005*"convocatori" + 0.005*"descripcion" + 0.005*"priv" + 0.005*"learning" + 0.005*"vacacion"
+Topic 2: 0.166*"desarroll" + 0.017*"proyect" + 0.013*"conoc" + 0.010*"agil" + 0.007*"liderazg" + 0.007*"complej" + 0.007*"candidat" + 0.006*"sw" + 0.005*"bcp" + 0.005*"junt" + 0.005*"api" + 0.005*"global" + 0.005*"competit" + 0.005*"axcess_financial" + 0.004*"empres_transnacional"
+Topic 3: 0.245*"dat" + 0.067*"conoc" + 0.046*"inform" + 0.008*"motor" + 0.007*"aspect" + 0.005*"clasif" + 0.005*"normaliz" + 0.004*"tomcat" + 0.004*"vid" + 0.004*"tabler" + 0.004*"messag_brok" + 0.004*"mining" + 0.004*"dwh" + 0.004*"frameworks_spring" + 0.003*"spss"
+Topic 4: 0.116*"conoc" + 0.073*"desarroll" + 0.007*"html_javascript" + 0.007*"bootstrap" + 0.006*"metodolog_agil" + 0.006*"cotiz" + 0.006*"plus" + 0.006*"analytics" + 0.005*"maquet" + 0.005*"git" + 0.005*"creativ" + 0.005*"js" + 0.005*"seo" + 0.005*"marketing_digital" + 0.004*"comerci_electron"
+Topic 5: 0.182*"inform" + 0.177*"proces" + 0.101*"gestion" + 0.035*"sistem" + 0.025*"conoc" + 0.004*"mape" + 0.004*"clav" + 0.004*"respect" + 0.004*"pow_point" + 0.004*"critic" + 0.004*"presupuestal" + 0.003*"materi" + 0.003*"observ" + 0.003*"referent" + 0.003*"mision"
+Topic 6: 0.026*"sistem" + 0.010*"conoc" + 0.009*"tabl_dinam" + 0.008*"sbs" + 0.008*"central_telefon" + 0.008*"lug" + 0.008*"repar" + 0.007*"excel_macr" + 0.007*"electr" + 0.007*"pcs" + 0.006*"grup_empresarial" + 0.006*"energ" + 0.005*"motiv" + 0.005*"ej" + 0.005*"ofert"
+Topic 7: 0.283*"proyect" + 0.108*"gestion" + 0.039*"conoc" + 0.039*"proces" + 0.025*"inform" + 0.020*"sistem" + 0.016*"desarroll" + 0.006*"pmi" + 0.005*"gobiern" + 0.005*"etap" + 0.005*"rol" + 0.004*"demand" + 0.004*"diplom" + 0.004*"pmp" + 0.004*"certif_pmp"
+Topic 8: 0.044*"conoc" + 0.023*"sistem" + 0.011*"dat" + 0.011*"disposit" + 0.010*"red_lan" + 0.009*"respald" + 0.009*"virtualiz" + 0.009*"gestion" + 0.008*"element" + 0.007*"protocol" + 0.007*"backup" + 0.007*"telefon_ip" + 0.007*"backups" + 0.007*"impresor" + 0.007*"fall"

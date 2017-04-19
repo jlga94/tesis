@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.47161874619
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -4.97109783025
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: -2.06506035774
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: 0.0140280592259
+Topic 0: 0.099*"conoc" + 0.092*"desarroll" + 0.072*"program" + 0.067*"aplic" + 0.066*"sistem" + 0.059*"dat" + 0.048*"bas" + 0.037*"analisis" + 0.029*"minim" + 0.021*"proyect" + 0.006*"uml" + 0.005*"inform" + 0.004*"proces" + 0.004*"patron" + 0.003*"version"
+Topic 1: 0.019*"sed" + 0.017*"servici" + 0.011*"desempeñ_accentur" + 0.011*"industri_import" + 0.009*"accentur_carrer" + 0.009*"mund_emple" + 0.009*"post_vent" + 0.008*"ambiental" + 0.008*"sas" + 0.008*"migracion" + 0.007*"credicorp" + 0.007*"licenci" + 0.007*"categor" + 0.006*"gas_natural" + 0.006*"ux_ui"
+Topic 2: 0.108*"inform" + 0.089*"proces" + 0.060*"gestion" + 0.058*"dat" + 0.047*"sistem" + 0.046*"conoc" + 0.040*"bas" + 0.039*"analisis" + 0.014*"minim" + 0.006*"program" + 0.006*"proyect" + 0.004*"fuent" + 0.004*"period" + 0.004*"servici" + 0.004*"mediant"
+Topic 3: 0.016*"program" + 0.010*"wordpress" + 0.010*"bootstrap" + 0.009*"punt" + 0.008*"red_social" + 0.008*"agent" + 0.008*"internacional" + 0.007*"maquet" + 0.007*"reporting" + 0.007*"tributari" + 0.007*"inversion_public" + 0.007*"pagin" + 0.006*"seo" + 0.006*"ofert" + 0.006*"envi"
+Topic 4: 0.036*"inform" + 0.019*"institu" + 0.015*"priv" + 0.013*"educ" + 0.012*"format" + 0.011*"institucional" + 0.010*"envi" + 0.010*"sector_public" + 0.009*"program" + 0.008*"virtual" + 0.008*"archiv" + 0.007*"riesg_operacional" + 0.007*"sbs" + 0.007*"normat" + 0.007*"entidad"
+Topic 5: 0.013*"crecimient" + 0.012*"potencial" + 0.010*"benefici_ley" + 0.010*"ingres_planill" + 0.009*"gerent" + 0.009*"plaz" + 0.009*"minim" + 0.008*"lin" + 0.008*"compr" + 0.008*"condicion" + 0.008*"servici" + 0.008*"preci" + 0.007*"period" + 0.007*"relacion" + 0.007*"talent"
+Topic 6: 0.147*"proyect" + 0.057*"gestion" + 0.048*"servici" + 0.042*"sistem" + 0.041*"proces" + 0.037*"desarroll" + 0.028*"inform" + 0.028*"conoc" + 0.020*"minim" + 0.017*"aplic" + 0.013*"analisis" + 0.006*"alcanc" + 0.005*"relacion" + 0.005*"cronogram" + 0.005*"innov"
+Topic 7: 0.069*"conoc" + 0.068*"servici" + 0.066*"sistem" + 0.014*"minim" + 0.010*"instal_configur" + 0.010*"dat" + 0.009*"program" + 0.008*"networking" + 0.008*"aplic" + 0.008*"manten_prevent" + 0.007*"respald" + 0.007*"cent" + 0.006*"red_lan" + 0.006*"fall" + 0.006*"cabl"

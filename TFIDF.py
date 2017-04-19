@@ -1,6 +1,6 @@
 from preprocesamiento import Input_Output
 
-import math,numpy, operator, uuid
+import math,numpy, operator, uuid, pickle
 from textblob import TextBlob as tb
 from collections import Counter
 from gensim.models import Phrases,Word2Vec
@@ -169,14 +169,15 @@ def get_TFIDF_Mean_Variance(dataset,dictionaryDistribution):
 			if dictionaryDistribution[word]==0:
 				print('La palabra '+ word + ' tiene 0 en el IDF')
 		
-		for itemIndex in range(len(tf_words)): # Se tiene que normalizar el tf y multiplicar por el IDF
-			tf_words[itemIndex]/=maxCountWord
-			if tf_words[itemIndex]!=0:
-				tf_words[itemIndex]*= math.log(N_documents / (1 + dictionaryDistribution[wordsList[itemIndex]])) #Se multiplica por el IDF version smooth
+		if maxCountWord!=0: # Si en caso no quedan palabras relevantes
+			for itemIndex in range(len(tf_words)): # Se tiene que normalizar el tf y multiplicar por el IDF			
+				tf_words[itemIndex]/=maxCountWord
+				if tf_words[itemIndex]!=0:
+					tf_words[itemIndex]*= math.log(N_documents / (1 + dictionaryDistribution[wordsList[itemIndex]])) #Se multiplica por el IDF version smooth
 
-			mean,M2 = _update_Mean_Variance(iDocument,tf_words[itemIndex],wordsMean[itemIndex],wordsM2[itemIndex])
-			wordsMean[itemIndex] = mean
-			wordsM2[itemIndex] = M2
+				mean,M2 = _update_Mean_Variance(iDocument,tf_words[itemIndex],wordsMean[itemIndex],wordsM2[itemIndex])
+				wordsMean[itemIndex] = mean
+				wordsM2[itemIndex] = M2
 
 	dictionaryMean = {}
 	dictionaryVariance = {}
@@ -329,6 +330,7 @@ def showImportantVariance(wordsVarianceDictionary,numArch,tipo):
 
 	F.close()
 
+
 def replaceBigrams(dataset,bigram_model):
 	newDataset=[]
 	for words_oferta in dataset:
@@ -336,7 +338,7 @@ def replaceBigrams(dataset,bigram_model):
 		i=0
 		while(i < N_words-1):
 			possible_bigram = words_oferta[i] + '_' +words_oferta[i+1]
-			if (possible_bigram in bigram_model.vocab.keys()):
+			if (possible_bigram in bigram_model.wv.vocab.keys()):
 				words_oferta[i] = possible_bigram # Se reemplaza la palabra del indice i por el bigrama
 				words_oferta.pop(i+1)
 				N_words-=1
@@ -351,7 +353,7 @@ def replaceBigrams_v2(dataset,bigram_model):
 		i=0
 		while(i < N_words-1):
 			possible_bigram = words_oferta[i] + '_' +words_oferta[i+1]
-			if (possible_bigram in bigram_model.vocab.keys()):
+			if (possible_bigram in bigram_model.wv.vocab.keys()):
 				words_oferta.insert(i,possible_bigram) #se agrega el bigrama como indice sin borrar los unigramas
 				i+=1
 				N_words+=1
@@ -415,33 +417,74 @@ def TF_IDF_COMPLETO_BIGRAM(carrera):
 
 def TF_IDF_COMPLETO_BIGRAM_V2(carrera):
 	inputOutput = Input_Output()
-	#datasetLemmatizacion,bigramLemmatizacion,datasetSteeming,bigramSteeming = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx')
-	datasetLemmatizacion,bigramLemmatizacion = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_Completo.xlsx')
+	thresholds_Lemma = [15,24]
+	thresholds_Stem = [18,24]
+
+	datasetLemmatizacion,bigramsLemmatizacion,datasetStemming,bigramsStemming = inputOutput.obtenerDatasetAClasificar_Completo_Bigram('Avisos_'+carrera+'_2011-2016_PrimerPreProcesamiento_D_Q.xlsx',thresholds_Lemma,thresholds_Stem)
+
+	bigram_models_Lemmatizacion = []
+	bigram_models_Stemming = []
 
 	print('Comenzo bigram Lemma')
-	bigram_model_Lemmatizacion = Word2Vec(bigramLemmatizacion[datasetLemmatizacion],size=100)
-	#print('Comenzo bigram Steeming')
-	#bigram_model_Steeming = Word2Vec(bigramSteeming[datasetSteeming],size=100)
+	for bigramLemmatizacion in bigramsLemmatizacion:
+		
+		bigram_model_Lemmatizacion = Word2Vec(bigramLemmatizacion[datasetLemmatizacion],size=100)
+		bigram_models_Lemmatizacion.append(bigram_model_Lemmatizacion)
+	
+	print('Comenzo bigram Steeming')
+	for bigramStemming in bigramsStemming:		
+		bigram_model_Stemming = Word2Vec(bigramStemming[datasetStemming],size=100)
+		bigram_models_Stemming.append(bigram_model_Stemming)
+
+	datasetsLemmatizacionBigram = []
+	datasetsStemmingBigram = []
 
 	print('Comenzo bigram Lemma Reemplazo')
-	datasetLemmatizacionBigram = replaceBigrams(datasetLemmatizacion,bigram_model_Lemmatizacion)
-	#print('Comenzo bigram Steeming Reemplazo')
-	#datasetSteemingBigram = replaceBigrams(datasetSteeming,bigram_model_Steeming)
+	for bigram_model_Lemmatizacion in bigram_models_Lemmatizacion:
+		datasetLemmatizacionBigram = replaceBigrams(datasetLemmatizacion,bigram_model_Lemmatizacion)
+		datasetsLemmatizacionBigram.append(datasetLemmatizacionBigram)
+	
+	print('Comenzo bigram Steeming Reemplazo')
+	for bigram_model_Stemming in bigram_models_Stemming:
+		datasetStemmingBigram = replaceBigrams(datasetStemming,bigram_model_Stemming)
+		datasetsStemmingBigram.append(datasetStemmingBigram)
 
-	datasets = [datasetLemmatizacionBigram]
-	tipos = ['Lemmatizacion']
+	'''index_Lemma = [0,1]
+	datasets = [datasetsLemmatizacionBigram[0],datasetsLemmatizacionBigram[1]]
+	typeProcessing = 'Lemmatizacion'
 
-	for i in range(len(tipos)):
-		print('Procesando diccionario de '+ tipos[i])
+	for i in range(len(index_Lemma)):
+		pickle.dump(datasets[i],open("DatasetBigram_Filter_DQ_"+ carrera + '_'+ typeProcessing + "_Th_" + str(thresholds[index_Lemma[i]]) + ".p","wb"))
+		print('Procesando diccionario de '+ typeProcessing + ' - ' + str(thresholds[index_Lemma[i]]))
 		dictionaryDistribution = getDictionaryDistributionInDocuments(datasets[i])
-		print('Insertando diccionario a BD de '+ tipos[i])
-		insertDictionary(carrera,tipos[i],dictionaryDistribution)
-		print('Procesando TF-IDF/Media/Varianza de ' + tipos[i])
+		#print('Insertando diccionario a BD de '+ typeProcessing + ' - ' + str(thresholds[index_Lemma[i]]))
+		#insertDictionary(carrera,tipos[i],dictionaryDistribution)
+		print('Procesando TF-IDF/Media/Varianza de ' + typeProcessing + '_Th_' + str(thresholds[index_Lemma[i]]))
 		dictionaryMean,dictionaryVariance = get_TFIDF_Mean_Variance(datasets[i],dictionaryDistribution)
-		print('Imprimiendo varianza de '+ tipos[i])
-		showImportantVariance(dictionaryVariance,carrera,tipos[i])
-		print('Insertando estadisticas de ' + tipos[i])
-		insertEstadistics_MongoDB(carrera,tipos[i],dictionaryMean,dictionaryVariance)
+		print('Imprimiendo varianza de '+ typeProcessing + ' - ' + str(thresholds[index_Lemma[i]]))
+		pickle.dump(dictionaryVariance,open("Variance_Filter_DQ_"+ carrera + '_'+ typeProcessing + "_Th_" + str(thresholds[index_Lemma[i]]) + ".p","wb"))
+		#pickle.dump(dictionaryVariance,open("Mean_"+ carrera + '_'+ typeProcessing + "_Th_" + str(thresholds[index_Lemma[i]]) + ".p","wb"))
+		#showImportantVariance(dictionaryVariance,carrera,tipos[i])
+		#print('Insertando estadisticas de ' + tipos[i])
+		#insertEstadistics_MongoDB(carrera,tipos[i],dictionaryMean,dictionaryVariance)
+	'''
+	index_Stem = [1,2]
+	datasets = [datasetsStemmingBigram[0],datasetsStemmingBigram[1]]
+	typeProcessing = 'Stemming'
+
+	for i in range(len(datasets)):
+		pickle.dump(datasets[i],open("DatasetBigram_Filter_DQ_"+ carrera + '_'+ typeProcessing + "_Th_" + str(thresholds[index_Stem[i]]) + ".p","wb"))
+		print('Procesando diccionario de '+ typeProcessing + ' - ' + str(thresholds[index_Stem[i]]))
+		dictionaryDistribution = getDictionaryDistributionInDocuments(datasets[i])
+		#print('Insertando diccionario a BD de '+ typeProcessing + ' - ' + str(thresholds[index_Stem[i]]))
+		#insertDictionary(carrera,tipos[i],dictionaryDistribution)
+		print('Procesando TF-IDF/Media/Varianza de ' + typeProcessing + '_Th_' + str(thresholds[index_Stem[i]]))
+		dictionaryMean,dictionaryVariance = get_TFIDF_Mean_Variance(datasets[i],dictionaryDistribution)
+		print('Imprimiendo varianza de '+ typeProcessing + ' - ' + str(thresholds[index_Stem[i]]))
+		pickle.dump(dictionaryVariance,open("Variance_Filter_DQ_" + carrera + '_'+ typeProcessing + "_Th_" + str(thresholds[index_Stem[i]]) + ".p","wb"))
+		#pickle.dump(dictionaryVariance,open("Mean_" + carrera + '_'+ typeProcessing + "_Th_" + str(thresholds[index_Stem[i]]) + ".p","wb"))
+	
+
 
 def TF_IDF_DIVIDIDO(carrera):
 	inputOutput = Input_Output()

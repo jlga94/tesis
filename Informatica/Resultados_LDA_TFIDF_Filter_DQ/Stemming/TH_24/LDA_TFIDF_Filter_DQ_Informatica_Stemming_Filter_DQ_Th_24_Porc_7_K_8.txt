@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.413746604554
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -7.56769802117
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: -3.20842759144
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: -0.0517124663364
+Topic 0: 0.050*"conoc" + 0.007*"central_telefon" + 0.006*"front_end" + 0.006*"concurs" + 0.006*"directory" + 0.006*"corre_electron" + 0.005*"backups" + 0.005*"osce" + 0.005*"vpn" + 0.005*"firewalls" + 0.005*"firewall" + 0.005*"naveg" + 0.005*"asterisk" + 0.005*"switch" + 0.005*"exchang"
+Topic 1: 0.331*"proyect" + 0.073*"gestion" + 0.067*"desarroll" + 0.036*"conoc" + 0.015*"proces" + 0.006*"agil" + 0.004*"certif_pmp" + 0.004*"lid" + 0.003*"estim" + 0.003*"junt" + 0.003*"pmbok" + 0.003*"diplom" + 0.003*"grup_empresarial" + 0.003*"tributari" + 0.003*"pmp"
+Topic 2: 0.045*"inform" + 0.010*"matriz" + 0.010*"gestion" + 0.006*"social" + 0.006*"inmediat" + 0.005*"renov" + 0.005*"vacacion" + 0.005*"agent" + 0.004*"represent" + 0.004*"offic_word" + 0.004*"remuner" + 0.004*"cobertur" + 0.004*"acredit" + 0.004*"inspeccion" + 0.004*"contractual"
+Topic 3: 0.248*"dat" + 0.102*"conoc" + 0.040*"inform" + 0.006*"transferent" + 0.005*"pcs" + 0.005*"backup" + 0.005*"planill_benefici" + 0.005*"regl" + 0.004*"perifer" + 0.004*"cub" + 0.004*"prospect" + 0.004*"integration_servic" + 0.004*"conexion" + 0.004*"edicion" + 0.003*"mining"
+Topic 4: 0.193*"desarroll" + 0.180*"conoc" + 0.116*"sistem" + 0.065*"dat" + 0.024*"proyect" + 0.010*"inform" + 0.004*"metodolog_agil" + 0.003*"weblogic" + 0.003*"rup_uml" + 0.003*"bootstrap" + 0.003*"arquitect" + 0.003*"relacional" + 0.003*"scripts" + 0.003*"logic" + 0.002*"tomcat"
+Topic 5: 0.046*"conoc" + 0.010*"descripcion" + 0.009*"sunat" + 0.006*"experient" + 0.005*"empres_franc" + 0.005*"grat_ambient" + 0.005*"staff" + 0.005*"interact" + 0.005*"seac" + 0.005*"latinoamer_pais" + 0.005*"andro_ios" + 0.005*"eps_val" + 0.005*"funcionari" + 0.005*"sodex_alimentici" + 0.005*"tv"
+Topic 6: 0.216*"sistem" + 0.030*"conoc" + 0.012*"inform" + 0.012*"gestion" + 0.012*"dat" + 0.009*"fall" + 0.007*"plan_contingent" + 0.006*"resolu_incident" + 0.006*"lan" + 0.005*"centr_comput" + 0.004*"entidad_public" + 0.004*"fisic" + 0.004*"ccna" + 0.004*"puest_march" + 0.004*"constanci"
+Topic 7: 0.155*"proces" + 0.141*"inform" + 0.106*"gestion" + 0.090*"sistem" + 0.063*"conoc" + 0.062*"proyect" + 0.027*"dat" + 0.023*"desarroll" + 0.003*"gobiern" + 0.003*"critic" + 0.003*"aprob" + 0.002*"comites" + 0.002*"mision" + 0.002*"sector_public" + 0.002*"metod"

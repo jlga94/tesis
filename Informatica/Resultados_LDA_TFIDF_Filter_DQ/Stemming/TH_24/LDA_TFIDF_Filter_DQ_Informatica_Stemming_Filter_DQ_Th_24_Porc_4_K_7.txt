@@ -1,0 +1,11 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_7: 0.482254072542
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_7: -5.39218800788
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_7: -1.71383745352
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_7: 0.0185700927908
+Topic 0: 0.149*"proyect" + 0.088*"proces" + 0.086*"gestion" + 0.056*"inform" + 0.046*"sistem" + 0.043*"conoc" + 0.032*"desarroll" + 0.008*"alcanc" + 0.004*"altern" + 0.003*"lineamient" + 0.003*"pmi" + 0.003*"rol" + 0.003*"planeamient" + 0.003*"demand" + 0.003*"etap"
+Topic 1: 0.161*"desarroll" + 0.130*"conoc" + 0.087*"sistem" + 0.053*"dat" + 0.047*"bas" + 0.046*"proyect" + 0.007*"patron" + 0.005*"scrum" + 0.005*"proces" + 0.005*"codig_fuent" + 0.005*"cap" + 0.005*"rup" + 0.003*"fas" + 0.003*"weblogic" + 0.003*"ajax"
+Topic 2: 0.010*"event" + 0.007*"miner" + 0.007*"entidad_public" + 0.007*"ofert" + 0.006*"ambiental" + 0.006*"messag_brok" + 0.006*"mund" + 0.005*"dashboards" + 0.005*"element" + 0.005*"manten_evolut" + 0.005*"tv" + 0.004*"triggers" + 0.004*"account_manag" + 0.004*"sucursal" + 0.004*"audiovisual"
+Topic 3: 0.127*"dat" + 0.113*"inform" + 0.089*"bas" + 0.048*"conoc" + 0.046*"proces" + 0.044*"sistem" + 0.030*"gestion" + 0.004*"desarroll" + 0.004*"estructur" + 0.004*"mediant" + 0.003*"archiv" + 0.003*"asegur" + 0.003*"regl" + 0.003*"verif" + 0.002*"consum"
+Topic 4: 0.115*"sistem" + 0.096*"conoc" + 0.013*"gestion" + 0.007*"networking" + 0.007*"inform" + 0.006*"respald" + 0.006*"manten_prevent" + 0.005*"disposit" + 0.005*"red_lan" + 0.005*"corre" + 0.005*"remot" + 0.005*"fall" + 0.005*"backup" + 0.004*"impresor" + 0.004*"virtualiz"
+Topic 5: 0.016*"sistem" + 0.014*"priv" + 0.009*"transport" + 0.008*"sector_public" + 0.007*"sbs" + 0.007*"ley" + 0.006*"sunat" + 0.006*"titul" + 0.006*"equivalent" + 0.006*"electr" + 0.005*"cotiz" + 0.005*"resolu_problem" + 0.005*"tributari" + 0.005*"inversion_public" + 0.005*"condicion"
+Topic 6: 0.023*"desarroll" + 0.019*"conoc" + 0.008*"crecimient" + 0.007*"lin" + 0.007*"liderazg" + 0.007*"analytics" + 0.006*"plus" + 0.006*"post_vent" + 0.006*"candidat" + 0.006*"creativ" + 0.005*"bootstrap" + 0.005*"red_social" + 0.005*"demostr" + 0.005*"pre" + 0.005*"maquet"

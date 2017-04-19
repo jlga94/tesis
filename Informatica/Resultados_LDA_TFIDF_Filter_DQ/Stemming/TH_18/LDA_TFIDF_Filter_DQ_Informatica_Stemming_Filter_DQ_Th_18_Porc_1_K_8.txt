@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.574934389274
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -1.87715083163
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: 0.0579044839817
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: 0.105054412908
+Topic 0: 0.044*"sistem" + 0.039*"administr" + 0.038*"servici" + 0.037*"conoc" + 0.028*"equip" + 0.026*"oper" + 0.025*"usuari" + 0.018*"dat" + 0.017*"softwar" + 0.016*"tecnolog" + 0.014*"tecnic" + 0.012*"hardwar" + 0.012*"aplic" + 0.012*"bas" + 0.010*"gestion"
+Topic 1: 0.025*"pagin_web" + 0.020*"html" + 0.014*"css" + 0.013*"javascript" + 0.009*"virtual" + 0.009*"wordpress" + 0.008*"portal" + 0.008*"etc" + 0.007*"bootstrap" + 0.007*"xa" + 0.007*"conoc" + 0.007*"maquet" + 0.006*"cronogram" + 0.006*"element" + 0.006*"ingles"
+Topic 2: 0.048*"empres" + 0.024*"client" + 0.020*"funcion" + 0.018*"benefici" + 0.018*"line_carrer" + 0.017*"equip" + 0.015*"program" + 0.015*"servici" + 0.013*"benefici_ley" + 0.013*"ingres_planill" + 0.013*"proyect" + 0.012*"colabor" + 0.012*"pais" + 0.011*"management" + 0.011*"conoc"
+Topic 3: 0.060*"inform" + 0.042*"dat" + 0.030*"proces" + 0.030*"bas" + 0.030*"gestion" + 0.026*"analisis" + 0.021*"manej" + 0.018*"client" + 0.013*"conoc" + 0.013*"mejor" + 0.013*"control" + 0.009*"herramient" + 0.009*"oper" + 0.007*"accion" + 0.007*"result"
+Topic 4: 0.063*"conoc" + 0.059*"desarroll" + 0.043*"sistem" + 0.042*"aplic" + 0.041*"program" + 0.035*"dat" + 0.028*"diseñ" + 0.027*"bas" + 0.026*"analisis" + 0.022*"softwar" + 0.019*"minim" + 0.019*"herramient" + 0.018*"tecnic" + 0.016*"proyect" + 0.014*"implement"
+Topic 5: 0.070*"client" + 0.031*"equip" + 0.024*"servici" + 0.023*"negoci" + 0.023*"empres" + 0.018*"solucion" + 0.017*"tecnic" + 0.014*"desarroll" + 0.014*"tecnolog" + 0.008*"habil" + 0.008*"competent" + 0.008*"estrategi" + 0.007*"objet" + 0.006*"softwar" + 0.006*"relacion"
+Topic 6: 0.096*"proyect" + 0.055*"proces" + 0.047*"gestion" + 0.028*"inform" + 0.025*"mejor" + 0.022*"sistem" + 0.021*"implement" + 0.020*"negoci" + 0.018*"conoc" + 0.018*"tecnolog" + 0.016*"servici" + 0.014*"calid" + 0.014*"solucion" + 0.013*"desarroll" + 0.012*"control"
+Topic 7: 0.053*"sistem" + 0.027*"inform" + 0.026*"funcion" + 0.021*"empres" + 0.019*"conoc" + 0.017*"program" + 0.014*"administr" + 0.013*"minim" + 0.012*"control" + 0.011*"personal" + 0.010*"curs" + 0.008*"afin" + 0.008*"contrat" + 0.008*"manej" + 0.007*"academ"

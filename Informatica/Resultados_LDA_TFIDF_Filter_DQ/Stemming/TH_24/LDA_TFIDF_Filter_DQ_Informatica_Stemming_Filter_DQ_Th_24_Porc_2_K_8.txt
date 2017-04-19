@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.550886963076
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -1.71890921271
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: 0.345011772128
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: 0.100770147638
+Topic 0: 0.094*"proyect" + 0.062*"proces" + 0.052*"gestion" + 0.046*"inform" + 0.046*"sistem" + 0.031*"conoc" + 0.028*"mejor" + 0.027*"tecnolog" + 0.025*"implement" + 0.023*"desarroll" + 0.022*"servici" + 0.015*"analisis" + 0.014*"minim" + 0.013*"equip" + 0.010*"metodolog"
+Topic 1: 0.019*"equip" + 0.018*"benefici" + 0.016*"line_carrer" + 0.012*"benefici_ley" + 0.012*"ingres_planill" + 0.012*"ley" + 0.010*"desarroll" + 0.009*"conoc" + 0.008*"servici" + 0.008*"part" + 0.008*"ingenier" + 0.008*"capacit_constant" + 0.008*"eps" + 0.007*"wordpress" + 0.007*"bootstrap"
+Topic 2: 0.090*"conoc" + 0.085*"desarroll" + 0.068*"program" + 0.068*"aplic" + 0.062*"sistem" + 0.037*"dat" + 0.033*"bas" + 0.031*"analisis" + 0.026*"minim" + 0.019*"proyect" + 0.016*"implement" + 0.010*"tecnolog" + 0.010*"equip" + 0.007*"metodolog" + 0.006*"frameworks"
+Topic 3: 0.036*"sistem" + 0.018*"program" + 0.013*"equip" + 0.010*"conoc" + 0.010*"academ" + 0.008*"educ" + 0.008*"minim" + 0.007*"part" + 0.007*"perfil" + 0.006*"material" + 0.006*"horari" + 0.006*"excelent" + 0.006*"direccion" + 0.006*"docent" + 0.005*"univers"
+Topic 4: 0.145*"dat" + 0.096*"bas" + 0.088*"inform" + 0.043*"analisis" + 0.040*"conoc" + 0.027*"proces" + 0.019*"gestion" + 0.012*"client" + 0.011*"program" + 0.010*"minim" + 0.009*"sistem" + 0.009*"mejor" + 0.008*"business_intelligenc" + 0.007*"fuent" + 0.006*"explot"
+Topic 5: 0.040*"gestion" + 0.024*"inform" + 0.018*"proces" + 0.014*"inversion" + 0.014*"analisis" + 0.011*"accion" + 0.010*"econom" + 0.010*"gast" + 0.008*"credit" + 0.008*"mejor" + 0.008*"finanz" + 0.008*"conoc" + 0.007*"unidad" + 0.007*"cost" + 0.007*"financ"
+Topic 6: 0.061*"servici" + 0.061*"equip" + 0.052*"conoc" + 0.048*"sistem" + 0.011*"correct" + 0.011*"tecnolog" + 0.011*"minim" + 0.009*"instal_configur" + 0.009*"networking" + 0.008*"internet" + 0.008*"supervision" + 0.008*"manten_prevent" + 0.008*"itil" + 0.007*"aplic" + 0.007*"corre"
+Topic 7: 0.205*"client" + 0.051*"servici" + 0.027*"equip" + 0.019*"proyect" + 0.017*"minim" + 0.012*"desarroll" + 0.012*"tecnolog" + 0.010*"potencial" + 0.010*"implement" + 0.009*"relacion" + 0.009*"gerent" + 0.008*"valor" + 0.008*"mejor" + 0.006*"conoc" + 0.006*"management"

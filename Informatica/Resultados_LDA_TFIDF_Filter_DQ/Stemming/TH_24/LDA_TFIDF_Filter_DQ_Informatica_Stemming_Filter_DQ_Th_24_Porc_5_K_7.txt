@@ -1,0 +1,11 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_7: 0.438352742581
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_7: -7.35900490916
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_7: -3.12339943573
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_7: -0.0340076048574
+Topic 0: 0.186*"conoc" + 0.150*"desarroll" + 0.089*"sistem" + 0.074*"dat" + 0.022*"proyect" + 0.004*"rup" + 0.003*"plus" + 0.003*"weblogic" + 0.003*"ajax" + 0.003*"logic" + 0.003*"deseabl" + 0.003*"html_javascript" + 0.003*"bootstrap" + 0.003*"metodolog_agil" + 0.003*"capacit_constant"
+Topic 1: 0.007*"presencial" + 0.007*"met" + 0.007*"titul" + 0.007*"comision" + 0.006*"api" + 0.006*"rest" + 0.006*"fideliz" + 0.005*"cotiz" + 0.005*"candidat" + 0.005*"licenci" + 0.005*"scripts" + 0.005*"electr" + 0.005*"cobertur" + 0.005*"licit" + 0.005*"pow"
+Topic 2: 0.147*"proyect" + 0.083*"sistem" + 0.076*"gestion" + 0.056*"proces" + 0.046*"inform" + 0.046*"conoc" + 0.043*"desarroll" + 0.004*"rol" + 0.003*"etap" + 0.003*"pmi" + 0.002*"complej" + 0.002*"demand" + 0.002*"gobiern" + 0.002*"comites" + 0.002*"satisfaccion"
+Topic 3: 0.011*"obtencion" + 0.008*"entidad_public" + 0.007*"priv" + 0.007*"messag_brok" + 0.006*"escritur_lectur" + 0.006*"conversion" + 0.006*"ajust" + 0.005*"asunt" + 0.005*"osinergmin" + 0.005*"naveg" + 0.005*"monitoriz" + 0.005*"salarial" + 0.005*"cor" + 0.004*"institucional" + 0.004*"postvent"
+Topic 4: 0.143*"inform" + 0.123*"dat" + 0.104*"proces" + 0.054*"conoc" + 0.043*"gestion" + 0.029*"sistem" + 0.003*"tabl_dinam" + 0.003*"matriz" + 0.003*"critic" + 0.003*"regl" + 0.003*"respect" + 0.003*"consolid" + 0.003*"sbs" + 0.003*"emision" + 0.003*"med"
+Topic 5: 0.011*"sector_public" + 0.009*"analytics" + 0.008*"seleccion" + 0.008*"concurs" + 0.007*"seo" + 0.007*"ej" + 0.007*"priv" + 0.007*"comprob" + 0.006*"prospect" + 0.006*"osce" + 0.006*"convocatori" + 0.006*"seccion" + 0.006*"frameworks_spring" + 0.005*"contact_cent" + 0.005*"usabil"
+Topic 6: 0.065*"sistem" + 0.021*"conoc" + 0.012*"respald" + 0.010*"disposit" + 0.008*"backup" + 0.008*"impresor" + 0.007*"fall" + 0.007*"central_telefon" + 0.006*"gestion" + 0.006*"enlac" + 0.006*"repar" + 0.006*"telefon_ip" + 0.006*"backups" + 0.006*"conect" + 0.006*"corre_electron"

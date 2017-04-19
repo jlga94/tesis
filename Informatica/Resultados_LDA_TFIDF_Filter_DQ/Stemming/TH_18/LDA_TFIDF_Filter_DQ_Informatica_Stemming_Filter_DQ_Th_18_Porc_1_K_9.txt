@@ -1,0 +1,13 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_9: 0.58589813052
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_9: -1.47199768146
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_9: 0.311540441993
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_9: 0.111076091509
+Topic 0: 0.021*"program" + 0.021*"diseñ" + 0.019*"html" + 0.019*"desarroll" + 0.017*"conoc" + 0.016*"etc" + 0.014*"pagin_web" + 0.014*"aplic" + 0.013*"javascript" + 0.013*"css" + 0.011*"manej" + 0.008*"portal" + 0.007*"wordpress" + 0.007*"bootstrap" + 0.006*"red_social"
+Topic 1: 0.060*"sistem" + 0.046*"proyect" + 0.037*"proces" + 0.036*"desarroll" + 0.029*"tecnolog" + 0.028*"solucion" + 0.025*"inform" + 0.023*"conoc" + 0.022*"implement" + 0.020*"usuari" + 0.020*"aplic" + 0.020*"gestion" + 0.019*"mejor" + 0.017*"softwar" + 0.015*"calid"
+Topic 2: 0.088*"client" + 0.041*"servici" + 0.033*"empres" + 0.029*"negoci" + 0.012*"equip" + 0.012*"funcion" + 0.011*"solucion" + 0.010*"minim" + 0.009*"estrategi" + 0.008*"cuent" + 0.007*"tecnic" + 0.007*"neces" + 0.007*"gestion" + 0.006*"proveedor" + 0.006*"conoc"
+Topic 3: 0.084*"conoc" + 0.067*"program" + 0.063*"desarroll" + 0.049*"dat" + 0.043*"aplic" + 0.043*"bas" + 0.039*"sistem" + 0.029*"analisis" + 0.029*"diseñ" + 0.022*"minim" + 0.021*"herramient" + 0.019*"manej" + 0.018*"tecnic" + 0.017*"softwar" + 0.013*"proyect"
+Topic 4: 0.043*"sistem" + 0.038*"administr" + 0.033*"conoc" + 0.030*"equip" + 0.029*"servici" + 0.027*"oper" + 0.023*"usuari" + 0.019*"dat" + 0.015*"tecnic" + 0.014*"inform" + 0.013*"softwar" + 0.012*"bas" + 0.011*"hardwar" + 0.011*"gestion" + 0.011*"tecnolog"
+Topic 5: 0.038*"desarroll" + 0.028*"softwar" + 0.028*"equip" + 0.025*"aplic" + 0.021*"diseñ" + 0.018*"integr" + 0.017*"solucion" + 0.016*"tecnolog" + 0.015*"tecnic" + 0.014*"herramient" + 0.014*"codig" + 0.012*"analisis" + 0.011*"habil" + 0.011*"negoci" + 0.010*"patron"
+Topic 6: 0.065*"inform" + 0.053*"proces" + 0.046*"dat" + 0.031*"gestion" + 0.030*"analisis" + 0.029*"bas" + 0.022*"conoc" + 0.020*"mejor" + 0.019*"manej" + 0.018*"control" + 0.015*"herramient" + 0.010*"oper" + 0.010*"sistem" + 0.010*"negoci" + 0.007*"proced"
+Topic 7: 0.031*"conoc" + 0.015*"funcion" + 0.014*"sistem" + 0.013*"empres" + 0.012*"benefici" + 0.012*"administr" + 0.010*"minim" + 0.010*"curs" + 0.010*"servici" + 0.009*"academ" + 0.009*"cicl" + 0.009*"line_carrer" + 0.008*"educ" + 0.007*"certif" + 0.007*"horari"
+Topic 8: 0.145*"proyect" + 0.051*"gestion" + 0.020*"inform" + 0.017*"equip" + 0.014*"plan" + 0.014*"planif" + 0.014*"ejecu" + 0.013*"recurs" + 0.013*"cumplimient" + 0.013*"avanc" + 0.012*"control" + 0.012*"proces" + 0.011*"implement" + 0.010*"cost" + 0.009*"tiemp"

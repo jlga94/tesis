@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.428821253676
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -6.23336690517
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: -2.05484604972
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: -0.00777508556796
+Topic 0: 0.034*"gestion" + 0.007*"transferent" + 0.006*"social" + 0.006*"comision" + 0.006*"grup_empresarial" + 0.005*"vide" + 0.005*"ambiental" + 0.005*"entidad_public" + 0.005*"sector_public" + 0.005*"person_talent" + 0.004*"actas_reunion" + 0.004*"inspeccion" + 0.004*"lider_peru" + 0.004*"ej" + 0.004*"funcionari"
+Topic 1: 0.194*"conoc" + 0.156*"dat" + 0.052*"sistem" + 0.007*"inform" + 0.005*"desarroll" + 0.005*"backup" + 0.004*"disposit" + 0.004*"gestion" + 0.004*"telefon_ip" + 0.003*"firewall" + 0.003*"central_telefon" + 0.003*"pcs" + 0.003*"js" + 0.003*"lan" + 0.003*"ccna"
+Topic 2: 0.303*"sistem" + 0.067*"conoc" + 0.067*"desarroll" + 0.049*"inform" + 0.024*"dat" + 0.009*"gestion" + 0.004*"constanci" + 0.004*"tributari" + 0.004*"sunat" + 0.003*"acredit" + 0.003*"fall" + 0.003*"asterisk" + 0.003*"grat_ambient" + 0.003*"sector_public" + 0.003*"san_isidr"
+Topic 3: 0.230*"desarroll" + 0.102*"conoc" + 0.042*"dat" + 0.034*"sistem" + 0.025*"proyect" + 0.006*"agil" + 0.006*"metodolog_agil" + 0.004*"arquitect" + 0.004*"bootstrap" + 0.004*"rup_uml" + 0.003*"front_end" + 0.003*"empres_transnacional" + 0.003*"demostr" + 0.003*"logic" + 0.003*"wcf"
+Topic 4: 0.280*"proyect" + 0.104*"gestion" + 0.067*"conoc" + 0.062*"proces" + 0.060*"sistem" + 0.053*"desarroll" + 0.051*"inform" + 0.004*"gobiern" + 0.003*"cmmi" + 0.003*"pmp" + 0.003*"certif_pmp" + 0.003*"diplom" + 0.003*"pmbok" + 0.003*"estim" + 0.002*"conjunt"
+Topic 5: 0.020*"conoc" + 0.014*"inform" + 0.009*"sbs" + 0.008*"aprob" + 0.007*"spss" + 0.007*"conveni" + 0.007*"peruan" + 0.007*"observ" + 0.006*"expedient" + 0.006*"matriz" + 0.006*"inmediat" + 0.006*"lectur" + 0.006*"offic_word" + 0.006*"afp" + 0.006*"prospect"
+Topic 6: 0.179*"proces" + 0.175*"inform" + 0.079*"gestion" + 0.067*"dat" + 0.033*"sistem" + 0.026*"conoc" + 0.004*"critic" + 0.003*"comites" + 0.003*"confidencial" + 0.003*"clasif" + 0.003*"rediseñ" + 0.003*"proteccion" + 0.003*"criteri" + 0.003*"tratamient" + 0.002*"reglament"
+Topic 7: 0.054*"conoc" + 0.014*"desarroll" + 0.008*"junt" + 0.008*"perifer" + 0.008*"motiv" + 0.007*"post_produccion" + 0.007*"marketing_digital" + 0.006*"escenari" + 0.006*"empres_franc" + 0.005*"descripcion" + 0.005*"cor" + 0.005*"usabil" + 0.005*"latinoamer_pais" + 0.005*"admision" + 0.005*"sodex_alimentici"

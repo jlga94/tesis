@@ -1,0 +1,13 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_9: 0.561892969452
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_9: -2.02126905123
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_9: 0.288954053446
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_9: 0.112884450238
+Topic 0: 0.017*"academ" + 0.017*"material" + 0.017*"equip" + 0.017*"program" + 0.015*"horari" + 0.013*"educ" + 0.011*"virtual" + 0.008*"alumn" + 0.008*"transport" + 0.008*"hor" + 0.008*"orden" + 0.008*"nacional" + 0.007*"tiend" + 0.007*"general" + 0.007*"conveni"
+Topic 1: 0.025*"benefici" + 0.022*"conoc" + 0.017*"line_carrer" + 0.016*"ley" + 0.015*"client" + 0.013*"benefici_ley" + 0.013*"ingres_planill" + 0.012*"planill" + 0.009*"post_vent" + 0.008*"capacit_constant" + 0.008*"eps" + 0.007*"crecimient" + 0.007*"part" + 0.007*"internacional" + 0.007*"minim"
+Topic 2: 0.129*"client" + 0.037*"servici" + 0.011*"inversion" + 0.011*"minim" + 0.010*"gestion" + 0.009*"potencial" + 0.009*"econom" + 0.009*"inform" + 0.009*"gast" + 0.008*"rentabil" + 0.008*"relacion" + 0.008*"cost" + 0.007*"contact" + 0.007*"cierr" + 0.007*"valor"
+Topic 3: 0.156*"proyect" + 0.048*"gestion" + 0.039*"proces" + 0.033*"desarroll" + 0.029*"conoc" + 0.029*"implement" + 0.027*"tecnolog" + 0.026*"sistem" + 0.024*"mejor" + 0.021*"client" + 0.020*"equip" + 0.017*"inform" + 0.015*"servici" + 0.014*"minim" + 0.013*"metodolog"
+Topic 4: 0.090*"servici" + 0.052*"sistem" + 0.050*"equip" + 0.049*"conoc" + 0.046*"tecnolog" + 0.019*"gestion" + 0.014*"inform" + 0.012*"itil" + 0.011*"correct" + 0.009*"minim" + 0.008*"polit" + 0.008*"implement" + 0.008*"instal_configur" + 0.007*"internet" + 0.007*"networking"
+Topic 5: 0.045*"client" + 0.031*"servici" + 0.023*"management" + 0.016*"equip" + 0.015*"peru" + 0.014*"industri" + 0.014*"grup" + 0.014*"sistem" + 0.013*"minim" + 0.013*"global_consultor" + 0.011*"tickets" + 0.010*"accentur" + 0.009*"ccna" + 0.009*"mejor" + 0.009*"desempeñ_accentur"
+Topic 6: 0.088*"conoc" + 0.076*"desarroll" + 0.065*"program" + 0.064*"sistem" + 0.057*"aplic" + 0.049*"dat" + 0.041*"bas" + 0.032*"analisis" + 0.027*"minim" + 0.015*"proyect" + 0.014*"implement" + 0.009*"tecnolog" + 0.009*"equip" + 0.007*"inform" + 0.006*"metodolog"
+Topic 7: 0.041*"equip" + 0.035*"aplic" + 0.028*"sistem" + 0.024*"desarroll" + 0.020*"conoc" + 0.015*"tecnolog" + 0.013*"ingenier" + 0.012*"servici" + 0.010*"mejor" + 0.009*"entorn" + 0.007*"ambient" + 0.007*"cicl_vid" + 0.007*"minim" + 0.007*"qa" + 0.007*"agil"
+Topic 8: 0.085*"inform" + 0.069*"proces" + 0.049*"dat" + 0.043*"gestion" + 0.039*"sistem" + 0.032*"bas" + 0.030*"analisis" + 0.029*"conoc" + 0.026*"mejor" + 0.011*"implement" + 0.010*"minim" + 0.007*"polit" + 0.007*"program" + 0.006*"aplic" + 0.005*"accion"

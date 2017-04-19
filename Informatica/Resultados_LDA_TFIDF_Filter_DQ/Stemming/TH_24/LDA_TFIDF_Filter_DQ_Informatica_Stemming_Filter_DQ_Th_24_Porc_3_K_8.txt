@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.513830775575
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -2.79751779542
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: -0.0563342698726
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: 0.0846955068502
+Topic 0: 0.027*"program" + 0.015*"educ" + 0.014*"ingres_planill" + 0.013*"capacit_constant" + 0.013*"benefici_ley" + 0.012*"crecimient" + 0.010*"pm" + 0.008*"aprendizaj" + 0.007*"peru" + 0.006*"capac_analit" + 0.006*"liderazg" + 0.006*"propuest_salarial" + 0.006*"plaz" + 0.006*"senior" + 0.006*"escritur_lectur"
+Topic 1: 0.169*"dat" + 0.127*"bas" + 0.080*"conoc" + 0.058*"sistem" + 0.045*"analisis" + 0.045*"program" + 0.036*"inform" + 0.035*"desarroll" + 0.025*"minim" + 0.017*"aplic" + 0.015*"proces" + 0.003*"fuent" + 0.003*"db" + 0.003*"analit" + 0.002*"performanc"
+Topic 2: 0.159*"proyect" + 0.053*"gestion" + 0.049*"proces" + 0.047*"conoc" + 0.047*"sistem" + 0.040*"desarroll" + 0.026*"servici" + 0.023*"inform" + 0.020*"minim" + 0.016*"analisis" + 0.011*"aplic" + 0.007*"alcanc" + 0.005*"cronogram" + 0.005*"relacion" + 0.004*"innov"
+Topic 3: 0.097*"inform" + 0.091*"proces" + 0.065*"gestion" + 0.030*"analisis" + 0.012*"servici" + 0.010*"minim" + 0.007*"conoc" + 0.007*"period" + 0.006*"normat" + 0.006*"norm" + 0.005*"rentabil" + 0.005*"credit" + 0.005*"efect" + 0.005*"extern" + 0.004*"comport"
+Topic 4: 0.123*"desarroll" + 0.108*"aplic" + 0.099*"conoc" + 0.090*"program" + 0.052*"sistem" + 0.031*"analisis" + 0.029*"minim" + 0.019*"proyect" + 0.009*"uml" + 0.007*"patron" + 0.005*"soa" + 0.005*"cap" + 0.005*"servici" + 0.005*"codig_fuent" + 0.005*"scrum"
+Topic 5: 0.117*"sistem" + 0.063*"conoc" + 0.039*"inform" + 0.035*"servici" + 0.024*"gestion" + 0.014*"minim" + 0.013*"aplic" + 0.007*"instal_configur" + 0.006*"norm" + 0.006*"networking" + 0.006*"institu" + 0.006*"manten_prevent" + 0.004*"red_lan" + 0.004*"dat" + 0.004*"respald"
+Topic 6: 0.108*"servici" + 0.014*"minim" + 0.007*"transport" + 0.007*"tickets" + 0.006*"sistem" + 0.006*"lug" + 0.006*"multinacional" + 0.006*"repar" + 0.006*"resolu_problem" + 0.006*"remot" + 0.006*"centr" + 0.006*"desempeñ_accentur" + 0.005*"zon" + 0.005*"industri_import" + 0.005*"global"
+Topic 7: 0.015*"servici" + 0.010*"postul" + 0.009*"institu" + 0.009*"virtual" + 0.007*"internacional" + 0.007*"analytics" + 0.006*"red_social" + 0.006*"libr" + 0.006*"ley" + 0.005*"pagin" + 0.005*"educ" + 0.005*"aspect" + 0.005*"condicion" + 0.005*"cv_expect" + 0.005*"concurs"

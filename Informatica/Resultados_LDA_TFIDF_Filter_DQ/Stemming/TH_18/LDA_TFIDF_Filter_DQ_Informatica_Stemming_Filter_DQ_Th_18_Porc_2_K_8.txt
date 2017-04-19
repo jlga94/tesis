@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.568141131915
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -2.07028074682
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: 0.188843065807
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: 0.111959669643
+Topic 0: 0.049*"inform" + 0.043*"gestion" + 0.028*"tecnolog" + 0.028*"proyect" + 0.027*"servici" + 0.026*"equip" + 0.021*"sistem" + 0.017*"polit" + 0.014*"norm" + 0.012*"acuerd" + 0.012*"estandar" + 0.010*"general" + 0.010*"especializ" + 0.010*"proces" + 0.008*"direccion"
+Topic 1: 0.086*"desarroll" + 0.068*"conoc" + 0.063*"aplic" + 0.059*"program" + 0.058*"sistem" + 0.034*"analisis" + 0.028*"dat" + 0.025*"bas" + 0.025*"minim" + 0.019*"proyect" + 0.014*"equip" + 0.014*"implement" + 0.013*"tecnolog" + 0.009*"metodolog" + 0.007*"mejor"
+Topic 2: 0.051*"conoc" + 0.026*"program" + 0.018*"benefici" + 0.012*"horari" + 0.012*"line_carrer" + 0.009*"benefici_ley" + 0.009*"ingres_planill" + 0.008*"part" + 0.008*"ley" + 0.008*"planill" + 0.007*"desarroll" + 0.006*"facil" + 0.006*"css" + 0.006*"pm" + 0.006*"crecimient"
+Topic 3: 0.097*"proces" + 0.066*"inform" + 0.045*"mejor" + 0.038*"analisis" + 0.038*"gestion" + 0.018*"client" + 0.010*"implement" + 0.009*"accion" + 0.009*"minim" + 0.008*"eficient" + 0.008*"unidad" + 0.007*"conoc" + 0.006*"financ" + 0.005*"optimiz" + 0.005*"estrateg"
+Topic 4: 0.017*"educ" + 0.016*"academ" + 0.012*"docent" + 0.012*"material" + 0.012*"virtual" + 0.009*"alumn" + 0.009*"sed" + 0.008*"envi" + 0.008*"bootstrap" + 0.007*"compr" + 0.007*"sistem" + 0.006*"equip" + 0.006*"postul" + 0.006*"sal" + 0.005*"nacional"
+Topic 5: 0.153*"client" + 0.080*"servici" + 0.040*"equip" + 0.021*"tecnolog" + 0.017*"minim" + 0.011*"sistem" + 0.010*"conoc" + 0.007*"potencial" + 0.007*"relacion" + 0.006*"gerent" + 0.006*"excelent" + 0.006*"valor" + 0.005*"industri" + 0.005*"orient" + 0.005*"acuerd"
+Topic 6: 0.148*"proyect" + 0.061*"sistem" + 0.054*"gestion" + 0.048*"conoc" + 0.034*"proces" + 0.034*"implement" + 0.034*"desarroll" + 0.027*"inform" + 0.024*"tecnolog" + 0.018*"minim" + 0.017*"mejor" + 0.014*"servici" + 0.013*"metodolog" + 0.012*"analisis" + 0.010*"aplic"
+Topic 7: 0.122*"dat" + 0.083*"bas" + 0.072*"conoc" + 0.050*"sistem" + 0.033*"inform" + 0.023*"equip" + 0.017*"servici" + 0.014*"program" + 0.013*"aplic" + 0.012*"minim" + 0.012*"implement" + 0.012*"analisis" + 0.010*"gestion" + 0.007*"correct" + 0.005*"instal_configur"

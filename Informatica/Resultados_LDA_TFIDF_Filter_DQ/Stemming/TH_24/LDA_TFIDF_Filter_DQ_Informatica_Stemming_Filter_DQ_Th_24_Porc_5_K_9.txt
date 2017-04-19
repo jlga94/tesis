@@ -1,0 +1,13 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_9: 0.436709566735
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_9: -5.87695890467
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_9: -1.85524297717
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_9: 0.00696617757625
+Topic 0: 0.154*"proces" + 0.072*"inform" + 0.056*"proyect" + 0.054*"gestion" + 0.024*"sistem" + 0.019*"conoc" + 0.006*"met" + 0.005*"comites" + 0.005*"legal" + 0.004*"priv" + 0.004*"clav" + 0.004*"sector_public" + 0.004*"mape" + 0.004*"aprob" + 0.004*"asign"
+Topic 1: 0.115*"conoc" + 0.080*"dat" + 0.059*"inform" + 0.052*"proces" + 0.006*"analytics" + 0.005*"performanc" + 0.004*"proyeccion" + 0.004*"consolid" + 0.004*"tabl_dinam" + 0.003*"deseabl" + 0.003*"taller" + 0.003*"obtencion" + 0.003*"pucp" + 0.003*"spss" + 0.003*"lectur"
+Topic 2: 0.079*"conoc" + 0.015*"sistem" + 0.010*"capacit_constant" + 0.007*"weblogic" + 0.006*"vide" + 0.006*"virtualiz" + 0.006*"api" + 0.006*"horari_oficin" + 0.006*"exchang" + 0.006*"nub" + 0.006*"rest" + 0.005*"comprob" + 0.005*"tomcat" + 0.005*"directori_activ" + 0.005*"microsoft_dynamics"
+Topic 3: 0.032*"conoc" + 0.014*"red_lan" + 0.011*"impresor" + 0.011*"disposit" + 0.010*"bootstrap" + 0.010*"conexion" + 0.010*"central_telefon" + 0.009*"enlac" + 0.009*"cotiz" + 0.008*"firewall" + 0.008*"pcs" + 0.008*"lan" + 0.008*"perifer" + 0.007*"telefon_ip" + 0.007*"conect"
+Topic 4: 0.011*"rrhh" + 0.009*"talent" + 0.008*"vacacion" + 0.007*"soci" + 0.007*"proteccion" + 0.006*"seleccion" + 0.006*"titul" + 0.006*"informix" + 0.005*"expert" + 0.005*"transaccion" + 0.005*"seac" + 0.005*"television" + 0.005*"etic" + 0.005*"temporal" + 0.004*"calif"
+Topic 5: 0.246*"proyect" + 0.126*"gestion" + 0.037*"conoc" + 0.034*"proces" + 0.034*"inform" + 0.029*"desarroll" + 0.016*"sistem" + 0.006*"rol" + 0.006*"demand" + 0.005*"pmi" + 0.005*"gobiern" + 0.004*"complej" + 0.004*"outsourcing" + 0.004*"etap" + 0.004*"pmp"
+Topic 6: 0.014*"conoc" + 0.009*"empres_transnacional" + 0.008*"metodolog_agil" + 0.007*"front_end" + 0.007*"grup_empresarial" + 0.006*"plus" + 0.006*"junt" + 0.006*"axcess_financial" + 0.006*"gestion" + 0.006*"person_talent" + 0.006*"acredit" + 0.006*"vid" + 0.006*"actas_reunion" + 0.006*"lider_peru" + 0.005*"sd"
+Topic 7: 0.239*"desarroll" + 0.149*"conoc" + 0.090*"sistem" + 0.070*"proyect" + 0.050*"dat" + 0.005*"rup" + 0.004*"prototip" + 0.003*"ajax" + 0.003*"rup_uml" + 0.003*"ide" + 0.003*"estim" + 0.003*"python" + 0.003*"alta_capac" + 0.003*"agil" + 0.003*"motor"
+Topic 8: 0.194*"sistem" + 0.111*"dat" + 0.108*"inform" + 0.069*"conoc" + 0.042*"gestion" + 0.029*"proces" + 0.020*"desarroll" + 0.004*"respald" + 0.004*"operat" + 0.004*"optim" + 0.003*"unix" + 0.003*"element" + 0.003*"recuper" + 0.003*"fall" + 0.003*"institucional"

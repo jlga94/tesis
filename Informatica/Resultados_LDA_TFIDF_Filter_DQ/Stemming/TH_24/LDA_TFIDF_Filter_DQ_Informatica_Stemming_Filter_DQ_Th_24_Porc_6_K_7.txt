@@ -1,0 +1,11 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_7: 0.427973630472
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_7: -8.12359796221
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_7: -4.18305243259
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_7: -0.0961351939333
+Topic 0: 0.008*"zon" + 0.007*"comerci_electron" + 0.007*"colegi" + 0.007*"ofert" + 0.007*"consumidor" + 0.006*"messag_brok" + 0.006*"represent" + 0.006*"empres_franc" + 0.006*"presencial" + 0.005*"latinoamer_pais" + 0.005*"sodex_alimentici" + 0.005*"osinergmin" + 0.005*"mont_horari" + 0.005*"via" + 0.005*"transaccion"
+Topic 1: 0.009*"social" + 0.009*"bootstrap" + 0.007*"sbs" + 0.007*"sector_public" + 0.006*"comprob" + 0.006*"matriz" + 0.006*"concurs" + 0.006*"pilot" + 0.006*"fideliz" + 0.006*"gestion" + 0.005*"vacacion" + 0.005*"instrument" + 0.005*"fond" + 0.005*"seleccion" + 0.005*"regul"
+Topic 2: 0.163*"proyect" + 0.116*"proces" + 0.114*"gestion" + 0.067*"inform" + 0.063*"sistem" + 0.055*"conoc" + 0.018*"desarroll" + 0.004*"pmi" + 0.003*"gobiern" + 0.003*"comites" + 0.003*"diplom" + 0.002*"alin" + 0.002*"legal" + 0.002*"satisfaccion" + 0.002*"critic"
+Topic 3: 0.184*"inform" + 0.148*"dat" + 0.045*"proces" + 0.040*"sistem" + 0.035*"conoc" + 0.025*"gestion" + 0.005*"institucional" + 0.004*"obtencion" + 0.003*"confidencial" + 0.003*"tabl_dinam" + 0.003*"agent" + 0.003*"organ" + 0.003*"materi" + 0.003*"parametr" + 0.003*"recuper"
+Topic 4: 0.036*"sistem" + 0.008*"sunat" + 0.008*"impresion" + 0.007*"comision" + 0.006*"vide" + 0.006*"tributari" + 0.006*"red_lan" + 0.006*"proteccion" + 0.006*"ambiental" + 0.006*"licenci" + 0.005*"seo" + 0.005*"fisic" + 0.005*"edicion" + 0.005*"ccna" + 0.005*"administracion"
+Topic 5: 0.176*"conoc" + 0.109*"sistem" + 0.078*"desarroll" + 0.050*"dat" + 0.017*"proyect" + 0.008*"gestion" + 0.003*"metodolog_agil" + 0.003*"unix" + 0.003*"respald" + 0.003*"inform" + 0.003*"weblogic" + 0.003*"backup" + 0.003*"virtualiz" + 0.002*"central_telefon" + 0.002*"disposit"
+Topic 6: 0.188*"desarroll" + 0.083*"proyect" + 0.078*"sistem" + 0.057*"dat" + 0.051*"conoc" + 0.020*"proces" + 0.006*"agil" + 0.004*"candidat" + 0.004*"empres_transnacional" + 0.004*"estim" + 0.003*"entren" + 0.003*"codif" + 0.003*"interaccion" + 0.003*"planill_benefici" + 0.003*"sw"

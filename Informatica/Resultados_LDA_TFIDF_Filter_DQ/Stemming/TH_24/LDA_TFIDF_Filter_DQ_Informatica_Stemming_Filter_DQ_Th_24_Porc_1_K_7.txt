@@ -1,0 +1,11 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_7: 0.581552254694
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_7: -1.23064907441
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_7: 0.256501858762
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_7: 0.106290113866
+Topic 0: 0.045*"sistem" + 0.044*"conoc" + 0.041*"desarroll" + 0.026*"proyect" + 0.026*"minim" + 0.024*"softwar" + 0.017*"metodolog" + 0.016*"herramient" + 0.016*"aplic" + 0.014*"calid" + 0.013*"cas" + 0.012*"equip" + 0.012*"analisis" + 0.011*"tecnolog" + 0.011*"proces"
+Topic 1: 0.070*"proyect" + 0.053*"proces" + 0.043*"gestion" + 0.041*"inform" + 0.023*"mejor" + 0.020*"sistem" + 0.019*"negoci" + 0.018*"conoc" + 0.016*"implement" + 0.015*"control" + 0.014*"analisis" + 0.013*"tecnolog" + 0.012*"solucion" + 0.011*"calid" + 0.010*"plan"
+Topic 2: 0.079*"client" + 0.023*"servici" + 0.019*"negoci" + 0.019*"empres" + 0.012*"equip" + 0.009*"inform" + 0.009*"contrat" + 0.008*"funcion" + 0.008*"estrategi" + 0.008*"gestion" + 0.008*"cuent" + 0.007*"minim" + 0.007*"marketing" + 0.007*"mejor" + 0.006*"segment"
+Topic 3: 0.113*"dat" + 0.082*"bas" + 0.072*"conoc" + 0.051*"program" + 0.036*"analisis" + 0.033*"manej" + 0.030*"sistem" + 0.026*"herramient" + 0.026*"inform" + 0.026*"desarroll" + 0.021*"diseñ" + 0.016*"minim" + 0.012*"aplic" + 0.012*"implement" + 0.010*"tecnic"
+Topic 4: 0.018*"empres" + 0.016*"program" + 0.015*"proyect" + 0.014*"benefici" + 0.012*"competent" + 0.012*"funcion" + 0.011*"curs" + 0.010*"desarroll" + 0.010*"equip" + 0.009*"habil" + 0.009*"academ" + 0.009*"line_carrer" + 0.008*"part" + 0.008*"educ" + 0.008*"ley"
+Topic 5: 0.067*"desarroll" + 0.065*"aplic" + 0.034*"conoc" + 0.032*"diseñ" + 0.031*"softwar" + 0.031*"program" + 0.029*"sistem" + 0.024*"solucion" + 0.024*"tecnic" + 0.019*"usuari" + 0.016*"proyect" + 0.015*"equip" + 0.015*"tecnolog" + 0.014*"analisis" + 0.011*"integr"
+Topic 6: 0.054*"sistem" + 0.039*"servici" + 0.036*"administr" + 0.032*"conoc" + 0.027*"oper" + 0.024*"equip" + 0.020*"usuari" + 0.019*"tecnolog" + 0.018*"empres" + 0.015*"tecnic" + 0.013*"funcion" + 0.013*"softwar" + 0.013*"inform" + 0.012*"gestion" + 0.009*"hardwar"

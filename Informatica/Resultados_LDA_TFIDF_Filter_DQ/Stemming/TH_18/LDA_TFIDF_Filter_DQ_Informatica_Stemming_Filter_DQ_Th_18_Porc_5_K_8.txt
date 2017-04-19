@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.476973223038
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -6.39968665814
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: -2.20142336757
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: -8.85411875632e-05
+Topic 0: 0.062*"inform" + 0.041*"gestion" + 0.016*"dat" + 0.010*"priv" + 0.008*"met" + 0.007*"institucional" + 0.006*"sistem" + 0.006*"criteri" + 0.006*"cotiz" + 0.006*"sector_public" + 0.005*"central" + 0.005*"sbs" + 0.005*"presupuestal" + 0.005*"vigent" + 0.005*"licenci"
+Topic 1: 0.239*"inform" + 0.085*"proces" + 0.072*"sistem" + 0.052*"gestion" + 0.050*"dat" + 0.007*"analytics" + 0.005*"respect" + 0.005*"plan_contingent" + 0.004*"impresion" + 0.004*"legal" + 0.004*"tratamient" + 0.004*"critic" + 0.004*"centr_comput" + 0.004*"materi" + 0.004*"seleccion"
+Topic 2: 0.161*"conoc" + 0.114*"sistem" + 0.111*"dat" + 0.096*"desarroll" + 0.017*"proyect" + 0.015*"inform" + 0.005*"gestion" + 0.003*"performanc" + 0.003*"rup" + 0.003*"metodolog_agil" + 0.002*"respald" + 0.002*"unix" + 0.002*"motor" + 0.002*"logic" + 0.002*"weblogic"
+Topic 3: 0.194*"proyect" + 0.094*"gestion" + 0.067*"sistem" + 0.055*"conoc" + 0.051*"desarroll" + 0.049*"proces" + 0.037*"inform" + 0.004*"rol" + 0.004*"pmi" + 0.003*"etap" + 0.003*"demand" + 0.003*"gobiern" + 0.003*"liderazg" + 0.003*"dat" + 0.003*"comites"
+Topic 4: 0.014*"red_lan" + 0.011*"virtualiz" + 0.008*"firewall" + 0.008*"enlac" + 0.008*"conect" + 0.008*"telefon_ip" + 0.007*"tributari" + 0.007*"directory" + 0.007*"exchang" + 0.007*"firewalls" + 0.006*"gestion" + 0.006*"segur_perimetral" + 0.006*"storag" + 0.006*"design" + 0.006*"lan"
+Topic 5: 0.013*"capacit_constant" + 0.009*"pucp" + 0.009*"conoc" + 0.009*"sistem" + 0.008*"comerci_electron" + 0.007*"afp" + 0.006*"escritur_lectur" + 0.006*"fond" + 0.005*"latinoamer_pais" + 0.005*"hoj_calcul" + 0.005*"sodex_alimentici" + 0.005*"back_offic" + 0.005*"sal" + 0.005*"vide" + 0.005*"rut"
+Topic 6: 0.063*"desarroll" + 0.029*"conoc" + 0.009*"plus" + 0.008*"bootstrap" + 0.007*"agil" + 0.007*"presencial" + 0.006*"python" + 0.006*"maquet" + 0.006*"git" + 0.006*"reporting" + 0.006*"seccion" + 0.006*"creativ" + 0.005*"seo" + 0.005*"liderazg" + 0.005*"caden"
+Topic 7: 0.300*"proces" + 0.048*"conoc" + 0.010*"mape" + 0.007*"rediseñ" + 0.007*"clav" + 0.005*"tabler_control" + 0.005*"diagram_fluj" + 0.005*"edicion" + 0.005*"excel_tabl" + 0.005*"seleccion" + 0.005*"scripts" + 0.005*"experient" + 0.004*"regl" + 0.004*"learning" + 0.004*"interact"

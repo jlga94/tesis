@@ -1,0 +1,13 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_9: 0.520171972604
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_9: -4.76606879817
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_9: -1.2368317867
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_9: 0.0366526662718
+Topic 0: 0.016*"ley" + 0.015*"priv" + 0.012*"talent" + 0.011*"post_vent" + 0.010*"capacit_constant" + 0.010*"eps" + 0.010*"lin" + 0.009*"crecimient" + 0.008*"lug" + 0.007*"transferent" + 0.007*"sector_public" + 0.007*"miner" + 0.006*"condicion" + 0.006*"cv_expect" + 0.006*"entidad_public"
+Topic 1: 0.011*"transport" + 0.008*"pucp" + 0.008*"riesg_operacional" + 0.007*"taller" + 0.007*"front_end" + 0.007*"peruan" + 0.007*"regional" + 0.006*"retencion" + 0.006*"element" + 0.006*"paquet" + 0.006*"sas" + 0.006*"ej" + 0.006*"presupuestal" + 0.006*"cobertur" + 0.005*"conoc"
+Topic 2: 0.101*"conoc" + 0.063*"sistem" + 0.012*"gestion" + 0.010*"networking" + 0.009*"manten_prevent" + 0.009*"virtual" + 0.008*"corre" + 0.007*"disposit" + 0.007*"respald" + 0.007*"red_lan" + 0.007*"remot" + 0.006*"impresor" + 0.006*"virtualiz" + 0.006*"ip" + 0.005*"backup"
+Topic 3: 0.065*"desarroll" + 0.055*"conoc" + 0.013*"patron" + 0.009*"libr" + 0.008*"codig_fuent" + 0.008*"metodolog_agil" + 0.007*"plus" + 0.005*"scrum" + 0.005*"agil" + 0.005*"querys" + 0.004*"git" + 0.004*"scripts" + 0.004*"rendimient" + 0.004*"seo" + 0.004*"rest"
+Topic 4: 0.146*"proces" + 0.092*"proyect" + 0.086*"gestion" + 0.064*"conoc" + 0.055*"sistem" + 0.051*"inform" + 0.009*"desarroll" + 0.005*"altern" + 0.005*"gobiern" + 0.005*"planeamient" + 0.004*"lineamient" + 0.004*"ingeni_industrial" + 0.004*"visi" + 0.003*"mape" + 0.003*"pow_point"
+Topic 5: 0.153*"inform" + 0.067*"proces" + 0.057*"gestion" + 0.046*"sistem" + 0.014*"conoc" + 0.005*"kpis" + 0.005*"respect" + 0.004*"matriz" + 0.004*"ped" + 0.004*"med" + 0.004*"mediant" + 0.004*"mision" + 0.004*"departament" + 0.004*"correspondient" + 0.004*"alert"
+Topic 6: 0.269*"dat" + 0.193*"bas" + 0.078*"conoc" + 0.045*"inform" + 0.032*"sistem" + 0.006*"desarroll" + 0.005*"motor" + 0.004*"estructur" + 0.004*"relacional" + 0.004*"mediant" + 0.003*"migracion" + 0.003*"performanc" + 0.003*"rendimient" + 0.003*"promocion" + 0.003*"linux_unix"
+Topic 7: 0.227*"proyect" + 0.068*"gestion" + 0.046*"desarroll" + 0.017*"inform" + 0.014*"alcanc" + 0.013*"conoc" + 0.006*"sistem" + 0.006*"cicl_vid" + 0.005*"proces" + 0.005*"demand" + 0.005*"liderazg" + 0.005*"rol" + 0.005*"fas" + 0.005*"tic" + 0.004*"equivalent"
+Topic 8: 0.162*"sistem" + 0.160*"desarroll" + 0.133*"conoc" + 0.045*"proyect" + 0.029*"dat" + 0.026*"bas" + 0.018*"inform" + 0.014*"proces" + 0.005*"gestion" + 0.005*"rup" + 0.004*"cap" + 0.003*"uml_rup" + 0.003*"rup_uml" + 0.003*"scrum" + 0.003*"simil"

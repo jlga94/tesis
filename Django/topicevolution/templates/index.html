@@ -1,0 +1,405 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href='{% static "img/favicon.png" %}'>
+
+    <title>Topic Evolution BTPUCP</title>
+
+    <!-- Bootstrap CSS -->    
+    <link href='{% static "css/bootstrap.min.css" %}' rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href='{% static "css/bootstrap-theme.css" %}' rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href='{% static "css/elegant-icons-style.css" %}' rel="stylesheet" />
+    <link href='{% static "css/font-awesome.min.css" %}' rel="stylesheet" />    
+    <!-- full calendar css-->
+    <link href='{% static "assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" %}' rel="stylesheet" />
+	<link href='{% static "assets/fullcalendar/fullcalendar/fullcalendar.css" %}' rel="stylesheet" />
+    <!-- easy pie chart-->
+    <link href='{% static "assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" %}' rel="stylesheet" type="text/css" media="screen"/>
+    <!-- owl carousel -->
+    <link rel="stylesheet" href='{% static "css/owl.carousel.css" %}' type="text/css">
+	<link href='{% static "css/jquery-jvectormap-1.2.2.css" %}' rel="stylesheet">
+    <!-- Custom styles -->
+	<link rel="stylesheet" href='{% static "css/fullcalendar.css" %}'>
+	<link href='{% static "css/widgets.css" %}' rel="stylesheet">
+    <link href='{% static "css/style.css" %}' rel="stylesheet">
+    <link href='{% static "css/style-responsive.css" %}' rel="stylesheet" />
+	<link href='{% static "css/xcharts.min.css" %}' rel=" stylesheet">	
+	<link href='{% static "css/jquery-ui-1.10.4.min.css" %}' rel="stylesheet">
+    
+    <style>
+        body {
+          
+        }
+
+        .chart { 
+          background: #fff;
+        }
+
+        p {
+          font: 12px helvetica;
+        }
+
+
+        .axis path, .axis line {
+          fill: none;
+          stroke: #000;
+          stroke-width: 2px;
+          shape-rendering: crispEdges;
+        }
+
+        button {
+          position: absolute;
+          right: 50px;
+          top: 10px;
+        }
+    </style>
+
+    <!-- =======================================================
+        Theme Name: NiceAdmin
+        Theme URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+        Author: BootstrapMade
+        Author URL: https://bootstrapmade.com
+    ======================================================= -->
+  </head>
+
+  <body>
+  <!-- container section start -->
+  <section id="container" class="">
+     
+      
+      <header class="header dark-bg">
+            <div class="toggle-nav">
+                <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+            </div>
+
+            <!--logo start-->
+            <a href="index.html" class="logo">Topic Evolution <span class="lite">BTPUCP</span></a>
+            <!--logo end-->
+
+            <div class="top-nav notification-row">                
+                <!-- notificatoin dropdown start-->
+                <ul class="nav pull-right top-menu">
+                    
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="profile-ava">
+                                <img alt="" src='{% static "img/avatar1_small.jpg" %}'>
+                            </span>
+                            <span class="username">BTPUCP</span>
+                            <b class="caret"></b>
+                        </a>
+
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!-- notificatoin dropdown end-->
+            </div>
+      </header>      
+      <!--header end-->
+
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu">                
+                  <li class="active">
+                      <a class="" href='{% url "especialidades:init" %}'>
+                          <i class="icon_house_alt"></i>
+                          <span>Home</span>
+                      </a>
+                  </li>
+                  <li>
+                      <a class="" href='{% url "especialidades:init" %}'>
+                          <i class="icon_desktop"></i>
+                          <span>Topic Evolution</span>
+                      </a>
+                  </li>
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      
+      <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">            
+              <!--overview start-->
+			    {% block content %}
+                {% endblock %}
+              <!-- project team & activity end -->
+          </section>
+
+        </div>
+      </section>
+      <!--main content end-->
+  </section>
+  <!-- container section start -->
+
+    <!-- javascripts -->
+    <script src='{% static "js/d3.v2.js" %}'></script>
+    <script src='{% static "js/jquery.js" %}'></script>
+	<script src='{% static "js/jquery-ui-1.10.4.min.js" %}'></script>
+    <script src='{% static "js/jquery-1.8.3.min.js" %}'></script>
+    <script type="text/javascript" src='{% static "js/jquery-ui-1.9.2.custom.min.js" %}'></script>
+    <!-- bootstrap -->
+    <script src='{% static "js/bootstrap.min.js" %}'></script>
+    <!-- nice scroll -->
+    <script src='{% static "js/jquery.scrollTo.min.js" %}'></script>
+    <script src='{% static "js/jquery.nicescroll.js" %}' type="text/javascript"></script>
+    <!-- charts scripts -->
+    <script src='{% static "assets/jquery-knob/js/jquery.knob.js" %}'></script>
+    <script src='{% static "js/jquery.sparkline.js" %}' type="text/javascript"></script>
+    <script src='{% static "js/owl.carousel.js" %}'></script>
+    <!-- jQuery full calendar -->
+    <<script src='{% static "js/fullcalendar.min.js" %}'></script> <!-- Full Google Calendar - Calendar -->
+	<script src='{% static "assets/fullcalendar/fullcalendar/fullcalendar.js" %}'></script>
+    <!--script for this page only-->
+    <script src='{% static "js/calendar-custom.js" %}'></script>
+	<script src='{% static "js/jquery.rateit.min.js" %}'></script>
+    <!-- custom select -->
+    <script src='{% static "js/jquery.customSelect.min.js" %}'></script>
+	
+    <!--custome script for all page-->
+    <script src='{% static "js/scripts.js" %}'></script>
+    <!-- custom script for this page-->
+    <script src='{% static "js/jquery-jvectormap-1.2.2.min.js" %}'></script>
+	<script src='{% static "js/jquery-jvectormap-world-mill-en.js" %}'></script>
+	<script src='{% static "js/jquery.autosize.min.js" %}'></script>
+	<script src='{% static "js/jquery.placeholder.min.js" %}'></script>
+	<script src='{% static "js/gdp-data.js" %}'></script>	
+	<script src='{% static "js/morris.min.js" %}'></script>
+	<script src='{% static "js/sparklines.js" %}'></script>	
+	<script src='{% static "js/jquery.slimscroll.min.js" %}'></script>
+  <script>
+
+      //knob
+      $(function() {
+        $(".knob").knob({
+          'draw' : function () { 
+            $(this.i).val(this.cv + '%')
+          }
+        })
+      });
+
+      //carousel
+      $(document).ready(function() {
+          $("#owl-slider").owlCarousel({
+              navigation : true,
+              slideSpeed : 300,
+              paginationSpeed : 400,
+              singleItem : true
+
+          });
+      });
+
+      //custom select box
+
+      $(function(){
+          $('select.styled').customSelect();
+      });
+	  
+	  /* ---------- Map ---------- */
+	$(function(){
+	  $('#map').vectorMap({
+	    map: 'world_mill_en',
+	    series: {
+	      regions: [{
+	        values: gdpData,
+	        scale: ['#000', '#000'],
+	        normalizeFunction: 'polynomial'
+	      }]
+	    },
+		backgroundColor: '#eef3f7',
+	    onLabelShow: function(e, el, code){
+	      el.html(el.html()+' (GDP - '+gdpData[code]+')');
+	    }
+	  });
+	});
+
+    chart("/static/data.csv", "blue");
+
+    var datearray = [];
+    var colorrange = [];
+
+    function chart(csvpath, color) {
+
+        if (color == "blue") {
+          colorrange = ["#045A8D", "#2B8CBE", "#74A9CF", "#A6BDDB", "#D0D1E6", "#F1EEF6"];
+        }
+        else if (color == "pink") {
+          colorrange = ["#980043", "#DD1C77", "#DF65B0", "#C994C7", "#D4B9DA", "#F1EEF6"];
+        }
+        else if (color == "orange") {
+          colorrange = ["#B30000", "#E34A33", "#FC8D59", "#FDBB84", "#FDD49E", "#FEF0D9"];
+        }
+        strokecolor = colorrange[0];
+
+        var format = d3.time.format("%m/%y");
+
+        var margin = {top: 20, right: 40, bottom: 30, left: 30};
+        var width = document.body.clientWidth - margin.left - margin.right -200;
+        var height = 400 - margin.top - margin.bottom;
+
+        var tooltip = $(".remove") ;
+            
+
+        var x = d3.time.scale()
+            .range([0, width]);
+
+        var y = d3.scale.linear()
+            .range([height-10, 0]);
+
+        var z = d3.scale.ordinal()
+            .range(colorrange);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom")
+            .tickFormat(format)
+            .ticks(d3.time.months,6);
+
+        var yAxis = d3.svg.axis()
+            .scale(y);
+
+        var yAxisr = d3.svg.axis()
+            .scale(y);
+
+        var stack = d3.layout.stack()
+            .offset("silhouette")
+            .values(function(d) { return d.values; })
+            .x(function(d) { return d.date; })
+            .y(function(d) { return d.value; });
+
+        var nest = d3.nest()
+            .key(function(d) { return d.key; });
+
+        var area = d3.svg.area()
+            .interpolate("cardinal")
+            .x(function(d) { return x(d.date); })
+            .y0(function(d) { return y(d.y0); })
+            .y1(function(d) { return y(d.y0 + d.y); });
+
+        var svg = d3.select(".chart").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var graph = d3.csv(csvpath, function(data) {
+          data.forEach(function(d) {
+            d.date = format.parse(d.date);
+            d.value = +d.value;
+          });
+
+          var layers = stack(nest.entries(data));
+
+          x.domain(d3.extent(data, function(d) { return d.date; }));
+          y.domain([0, d3.max(data, function(d) { return d.y0 + d.y; })]);
+
+          svg.selectAll(".layer")
+              .data(layers)
+            .enter().append("path")
+              .attr("class", "layer")
+              .attr("d", function(d) { return area(d.values); })
+              .style("fill", function(d, i) { return z(i); });
+
+
+          svg.append("g")
+              .attr("class", "x axis")
+              .attr("transform", "translate(0," + height + ")")
+              .call(xAxis);
+
+          svg.append("g")
+              .attr("class", "y axis")
+              .attr("transform", "translate(" + width + ", 0)")
+              .call(yAxis.orient("right"));
+
+          svg.append("g")
+              .attr("class", "y axis")
+              .call(yAxis.orient("left"));
+
+          svg.selectAll(".layer")
+            .attr("opacity", 1)
+            .on("mouseover", function(d, i) {
+              svg.selectAll(".layer").transition()
+              .duration(250)
+              .attr("opacity", function(d, j) {
+                return j != i ? 0.6 : 1;
+            })})
+
+            .on("mousemove", function(d, i) {
+              mousex = d3.mouse(this);
+              mousex = mousex[0];
+              var invertedx = x.invert(mousex);
+              var month = invertedx.getMonth();
+              if(month<6)
+                month=0;
+              else
+                month=6;
+              invertedx = month + invertedx.getFullYear()*100;
+              var selected = (d.values);
+              for (var k = 0; k < selected.length; k++) {
+                datearray[k] = selected[k].date;
+                datearray[k] = datearray[k].getMonth() + datearray[k].getFullYear()*100;
+              }
+              mousedate = datearray.indexOf(invertedx);
+              pro = d.values[mousedate].value;
+
+              d3.select(this)
+              .classed("hover", true)
+              .attr("stroke", strokecolor)
+              .attr("stroke-width", "0.5px"), 
+              tooltip.html( "<p>" + d.key + "<br>" + pro + "</p>" ).style("visibility", "visible");
+              
+            })
+            .on("mouseout", function(d, i) {
+             svg.selectAll(".layer")
+              .transition()
+              .duration(250)
+              .attr("opacity", "1");
+              d3.select(this)
+              .classed("hover", false)
+              .attr("stroke-width", "0px"), tooltip.html( "<p>" + d.key + "<br>" + pro + "</p>" ).style("visibility", "hidden");
+          })
+            
+          var vertical = d3.select(".chart")
+                .append("div")
+                .attr("class", "remove")
+                .style("position", "absolute")
+                .style("z-index", "19")
+                .style("width", "1px")
+                .style("height", "380px")
+                .style("top", "10px")
+                .style("bottom", "30px")
+                .style("left", "0px")
+                .style("background", "#fff");
+
+          d3.select(".chart")
+              .on("mousemove", function(){  
+                 mousex = d3.mouse(this);
+                 //mousex = mousex[0] + 5;
+                 mousex = mousex[0] + 13;
+                 vertical.style("left", mousex + "px" )})
+              .on("mouseover", function(){  
+                 mousex = d3.mouse(this);
+                 //mousex = mousex[0] + 5;
+                 mousex = mousex[0] + 13;
+                 vertical.style("left", mousex + "px")});
+        });
+    }
+
+  </script>
+
+  </body>
+</html>

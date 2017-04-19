@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.502373799842
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -4.46104976983
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: -0.790618118398
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: 0.0485560418152
+Topic 0: 0.197*"proyect" + 0.122*"proces" + 0.109*"gestion" + 0.047*"inform" + 0.037*"conoc" + 0.021*"sistem" + 0.014*"desarroll" + 0.009*"alcanc" + 0.004*"altern" + 0.004*"gobiern" + 0.004*"pmi" + 0.004*"cicl_vid" + 0.004*"demand" + 0.003*"planeamient" + 0.003*"lineamient"
+Topic 1: 0.083*"conoc" + 0.009*"libr" + 0.008*"lin" + 0.008*"descripcion" + 0.007*"metodolog_agil" + 0.007*"pucp" + 0.006*"js" + 0.006*"grup_empresarial" + 0.005*"sap_mm" + 0.005*"analytics" + 0.005*"seo" + 0.005*"ley" + 0.005*"aspect" + 0.005*"offic_word" + 0.005*"person_talent"
+Topic 2: 0.099*"desarroll" + 0.039*"conoc" + 0.019*"patron" + 0.012*"codig_fuent" + 0.008*"agil" + 0.007*"qa" + 0.007*"pas_produccion" + 0.007*"plus" + 0.006*"asegur_calid" + 0.006*"bootstrap" + 0.006*"capacit_constant" + 0.006*"desplieg" + 0.006*"scripts" + 0.006*"scrum" + 0.006*"concept"
+Topic 3: 0.115*"sistem" + 0.061*"inform" + 0.022*"conoc" + 0.012*"proces" + 0.006*"departament" + 0.005*"titul" + 0.005*"institucional" + 0.004*"priv" + 0.004*"materi" + 0.004*"sector_public" + 0.004*"conveni" + 0.004*"repar" + 0.004*"operat" + 0.004*"zon" + 0.004*"correspondient"
+Topic 4: 0.076*"conoc" + 0.049*"sistem" + 0.018*"gestion" + 0.011*"networking" + 0.009*"virtual" + 0.007*"red_lan" + 0.006*"virtualiz" + 0.006*"ip" + 0.005*"respald" + 0.005*"central_telefon" + 0.005*"protocol" + 0.005*"enlac" + 0.005*"manten_prevent" + 0.005*"corre" + 0.005*"telefon_ip"
+Topic 5: 0.182*"dat" + 0.135*"bas" + 0.093*"conoc" + 0.045*"sistem" + 0.043*"inform" + 0.030*"desarroll" + 0.027*"proces" + 0.005*"gestion" + 0.003*"mediant" + 0.003*"capac_analit" + 0.003*"transaccional" + 0.003*"estructur" + 0.003*"motor" + 0.003*"performanc" + 0.003*"uml_rup"
+Topic 6: 0.173*"desarroll" + 0.153*"sistem" + 0.116*"conoc" + 0.089*"proyect" + 0.011*"inform" + 0.008*"gestion" + 0.005*"cap" + 0.004*"rup" + 0.004*"fas" + 0.004*"alcanc" + 0.003*"simil" + 0.003*"arquitect" + 0.003*"gestor" + 0.003*"ide" + 0.003*"senior"
+Topic 7: 0.111*"inform" + 0.060*"gestion" + 0.041*"proces" + 0.006*"sistem" + 0.006*"comites" + 0.005*"respect" + 0.005*"legal" + 0.005*"event" + 0.005*"recomend" + 0.005*"conoc" + 0.005*"proyeccion" + 0.004*"condicion" + 0.004*"presupuestal" + 0.004*"asegur" + 0.004*"salud"

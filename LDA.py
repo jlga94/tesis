@@ -3,7 +3,7 @@ import gensim
 from preprocesamiento import Input_Output
 from collections import Counter
 from gensim.models import Phrases,Word2Vec,CoherenceModel
-import openpyxl
+import openpyxl, pickle, operator
 
 coherenceTypes = ['u_mass','c_v','c_uci','c_npmi']
 
@@ -24,7 +24,7 @@ def writeLDAFile(numArch,tipo,listTopics,dictionary,corpus,texts):
 		
 		coherencePerKTopic[listTopics[i]] = coherenceTypesValues
 
-		#F.write(str(ldamodel.print_topic(num_topics=listTopics[i],num_words=15))+'\n')
+		#F.write(str(ldamodel.print_topics(num_topics=listTopics[i],num_words=15))+'\n')
 		for iTopic in range(listTopics[i]):
 			F.write('Topic '+str(iTopic)+': '+str(ldamodel.print_topic(topicno=iTopic,topn=15))+'\n')
 		F.close()
@@ -134,7 +134,6 @@ def replaceBigrams_v2(dataset,bigram_model):
 		newDataset.append(words_oferta)
 	return newDataset
 
-
 def LDA_GENSIM_COMPLETO_BIGRAM():
 	inputOutput = Input_Output()
 	carrera = 'Informatica'
@@ -204,8 +203,154 @@ def LDA_GENSIM_COMPLETO_BIGRAM():
 	writeExcelCoherencePerTopic(carrera,'Lemmatizacion_Bigram_Th',thresholds,listTopics,coherencePerThresholdLemma)
 	writeExcelCoherencePerTopic(carrera,'Steeming_Bigram_Th',thresholds,listTopics,coherencePerThresholdSteeming)
 
+def removeWordsFromDataset(dataset,words):
+	newDataset = []
+	for document in dataset:
+		for wordToRemove in words:
+			document = [wDoc for wDoc in document if wDoc!=wordToRemove]
+		newDataset.append(document)
+	return newDataset
 
+def writeExcelCoherencePerTopic_TFIDF(career,typeProcessing,thresholds,porcDelete,numTopics,coherencePerThreshold):
+	newExcel = openpyxl.Workbook()
+	actualSheet = newExcel.active
+	TypeProcessingColumn =1
+	ThresholdColumn = 2
+	PorcColumn = 3
+	K_Column = 4
+	CV_CoherenceColumn =5
+	Umass_CoherenceColumn = 6
+	CUCI_CoherenceColumn = 7
+	CNPMI_CoherenceColumn = 8
+	actualSheet.title = career 
+	actualSheet.cell(row=1, column=TypeProcessingColumn).value = 'TypeProcessing'
+	actualSheet.cell(row=1, column=ThresholdColumn).value = 'Threshold'
+	actualSheet.cell(row=1, column=PorcColumn).value = 'PorcDelete'
+	actualSheet.cell(row=1, column=K_Column).value = 'K_Topic'
+	actualSheet.cell(row=1, column=CV_CoherenceColumn).value = 'c_v'
+	actualSheet.cell(row=1, column=Umass_CoherenceColumn).value = 'u_mass'
+	actualSheet.cell(row=1, column=CUCI_CoherenceColumn).value = 'c_uci'
+	actualSheet.cell(row=1, column=CNPMI_CoherenceColumn).value = 'c_npmi'
 
-LDA_GENSIM_COMPLETO_BIGRAM()
+	actualRow = 2
+	for threshold in thresholds:
+		for porc in porcDelete:
+			for iTopic in numTopics:
+				actualSheet.cell(row=actualRow, column=TypeProcessingColumn).value = typeProcessing
+				actualSheet.cell(row=actualRow, column=ThresholdColumn).value = threshold
+				actualSheet.cell(row=actualRow, column=PorcColumn).value = porc
+				actualSheet.cell(row=actualRow, column=K_Column).value = iTopic
+				actualSheet.cell(row=actualRow, column=CV_CoherenceColumn).value = coherencePerThreshold[threshold][porc][iTopic]['c_v']
+				actualSheet.cell(row=actualRow, column=Umass_CoherenceColumn).value = coherencePerThreshold[threshold][porc][iTopic]['u_mass']
+				actualSheet.cell(row=actualRow, column=CUCI_CoherenceColumn).value = coherencePerThreshold[threshold][porc][iTopic]['c_uci']
+				actualSheet.cell(row=actualRow, column=CNPMI_CoherenceColumn).value = coherencePerThreshold[threshold][porc][iTopic]['c_npmi']
+
+				actualRow += 1
+
+	newExcel.save(career + '_' + typeProcessing + '_Resultados_Coherencia_TH_P_CV.xlsx')
+
+def writeLDA_models_BIGRAM_TFIDF(career,typeProcessing,datasetsBigram,variances,thresholds,porcDelete,numTopics):
+	coherencePerThreshold = {}
+
+	for index_TH in range(len(thresholds)):
+		print('Empezando con '+typeProcessing + ' '+ str(thresholds[index_TH]))
+		wordsSortedByValue = sorted(variances[index_TH].items(),key=operator.itemgetter(1))
+		wordPerPorc = []
+		coherencePerThreshold[thresholds[index_TH]] = {}
+		for porcIndex in range(len(porcDelete)):
+			wordPerPorc.append([])
+			coherencePerThreshold[thresholds[index_TH]][porcDelete[porcIndex]]={}
+
+		bounds = []
+		for porc in porcDelete:
+			bounds.append(int(len(wordsSortedByValue)*porc/100))
+
+		print('Extrayendo las palabras segun limites')
+		for iWord in range(len(wordsSortedByValue)-1,len(wordsSortedByValue)-bounds[len(bounds)-1]-1,-1): # Se escoge el de mayor porcentaje			
+			wordPerPorc[len(bounds)-1].append(wordsSortedByValue[iWord][0])
+			for indexPorc in range(len(porcDelete)-1):
+				if iWord >= len(wordsSortedByValue)-bounds[indexPorc]-1:
+					wordPerPorc[indexPorc].append(wordsSortedByValue[iWord][0])
+
+		for porcIndex in range(len(porcDelete)):
+			print('Removiendo palabras TFIDF por porcentajes de ' + str(porcDelete[porcIndex]))
+			dataset_TFIDF = removeWordsFromDataset(datasetsBigram[index_TH],wordPerPorc[porcIndex])
+			pickle.dump(dataset_TFIDF,open("DatasetTFIDF_Filter_DQ_" + career + '_'+ typeProcessing + "_Th_" + str(thresholds[index_TH]) + '_Porc_' + str(porcDelete[porcIndex]) + ".p","wb"))
+
+			dictionary = corpora.Dictionary(dataset_TFIDF)
+			corpus = [dictionary.doc2bow(text) for text in dataset_TFIDF]
+
+			print('Empenzando con los LDAs')
+			for numTopic in numTopics:
+				print('Obteniendo LDA de ' + typeProcessing + ' ' + str(porcDelete[porcIndex]) + ' NumTopic: ' + str(numTopic))
+				ldamodel = gensim.models.ldamodel.LdaModel(corpus, num_topics=numTopic,id2word = dictionary, passes=20)
+				print('Termino de construir LDA')
+				#pickle.dump(ldamodel,open("LDA_TFIDF_" + career + '_'+ typeProcessing + "_Th_" + str(thresholds[index_TH]) + '_Porc_' + str(porcDelete[porcIndex]) + '_K_' + str(numTopic)+ ".p","wb"))
+				F = open('LDA_TFIDF_Filter_DQ_'+career + '_'+ typeProcessing + "_Th_" + str(thresholds[index_TH]) + '_Porc_' + str(porcDelete[porcIndex]) + '_K_' + str(numTopic)+'.txt','w')
+				cv_coherence_Model = CoherenceModel(model=ldamodel,corpus=corpus,texts=dataset_TFIDF,coherence='c_v').get_coherence()
+				umass_coherence_Model = CoherenceModel(model=ldamodel,corpus=corpus,texts=dataset_TFIDF,coherence='u_mass').get_coherence()
+				cuci_coherence_Model = CoherenceModel(model=ldamodel,corpus=corpus,texts=dataset_TFIDF,coherence='c_uci').get_coherence()
+				cnpmi_coherence_Model = CoherenceModel(model=ldamodel,corpus=corpus,texts=dataset_TFIDF,coherence='c_npmi').get_coherence()
+				
+
+				coherencePerThreshold[thresholds[index_TH]][porcDelete[porcIndex]][numTopic]= {}				
+				coherencePerThreshold[thresholds[index_TH]][porcDelete[porcIndex]][numTopic]['c_v'] = cv_coherence_Model
+				coherencePerThreshold[thresholds[index_TH]][porcDelete[porcIndex]][numTopic]['u_mass'] = umass_coherence_Model
+				coherencePerThreshold[thresholds[index_TH]][porcDelete[porcIndex]][numTopic]['c_uci'] = cuci_coherence_Model
+				coherencePerThreshold[thresholds[index_TH]][porcDelete[porcIndex]][numTopic]['c_npmi'] = cnpmi_coherence_Model
+
+				F.write('Coherencia c_v de ' + career + '_'+ typeProcessing + '_K_' + str(numTopic) + ': ' +str(cv_coherence_Model)+'\n')
+				F.write('Coherencia u_mass de ' + career + '_'+ typeProcessing + '_K_' + str(numTopic) + ': ' +str(umass_coherence_Model)+'\n')
+				F.write('Coherencia c_uci de ' + career + '_'+ typeProcessing + '_K_' + str(numTopic) + ': ' +str(cuci_coherence_Model)+'\n')
+				F.write('Coherencia c_npmi de ' + career + '_'+ typeProcessing + '_K_' + str(numTopic) + ': ' +str(cnpmi_coherence_Model)+'\n')
+				for iTopic in range(numTopic):
+					F.write('Topic '+str(iTopic)+': '+str(ldamodel.print_topic(topicno=iTopic,topn=15))+'\n')
+				F.close()
+
+	print("Imprimiendo EXCEL de Coherencias")
+	writeExcelCoherencePerTopic_TFIDF(career,typeProcessing,thresholds,porcDelete,numTopics,coherencePerThreshold)
+
+def LDA_GENSIM_COMPLETO_BIGRAM_TFIDF():
+	carrera = 'Informatica'
+
+	datasetsLemmatizacionBigram = []
+	datasetsStemmingBigram = []
+
+	thresholds_Lemma = [15,24]
+	thresholds_Stem = [18,24]
+
+	variancesLemmatizacion = []
+	variancesStemming = []
+
+	numTopics = [7,8,9,10,11,12,13]
+	porcDelete = [1,2,3,4,5,6,7]
+
+	typeProcessing = 'Lemmatizacion'
+	print('Cargando datasets y Variance de ' + typeProcessing)
+	for threshold in thresholds_Lemma:
+		datasetLemmatizacionBigram = pickle.load(open("DatasetBigram_Filter_DQ_"+ carrera + "_" + typeProcessing +"_Th_"+ str(threshold)+".p","rb"))
+		datasetsLemmatizacionBigram.append(datasetLemmatizacionBigram)
+		varianceLemmatizacion = pickle.load(open("Variance_Filter_DQ_"+ carrera + "_" + typeProcessing +"_Th_"+ str(threshold)+".p","rb"))
+		variancesLemmatizacion.append(varianceLemmatizacion)
+
+	writeLDA_models_BIGRAM_TFIDF(carrera,'Lemmatizacion_Filter_DQ_',datasetsLemmatizacionBigram,variancesLemmatizacion,thresholds_Lemma,porcDelete,numTopics)
+	
+
+	typeProcessing = 'Stemming'
+	print('Cargando datasets y Variance de ' + typeProcessing)
+	for threshold in thresholds_Stem:
+		datasetStemmingBigram = pickle.load(open("DatasetBigram_Filter_DQ_"+ carrera + "_" + typeProcessing +"_Th_"+ str(threshold)+".p","rb"))
+		datasetsStemmingBigram.append(datasetStemmingBigram)
+		varianceStemming = pickle.load(open("Variance_Filter_DQ_"+ carrera + "_" + typeProcessing +"_Th_"+ str(threshold)+".p","rb"))
+		variancesStemming.append(varianceStemming)
+
+	
+
+	writeLDA_models_BIGRAM_TFIDF(carrera,'Stemming_Filter_DQ',datasetsStemmingBigram,variancesStemming,thresholds_Stem,porcDelete,numTopics)
+
+	
+
+LDA_GENSIM_COMPLETO_BIGRAM_TFIDF()
+#LDA_GENSIM_COMPLETO_BIGRAM()
 #LDA_GENSIM_COMPLETO()
 #LDA_GENSIM_DIVIDIDO()

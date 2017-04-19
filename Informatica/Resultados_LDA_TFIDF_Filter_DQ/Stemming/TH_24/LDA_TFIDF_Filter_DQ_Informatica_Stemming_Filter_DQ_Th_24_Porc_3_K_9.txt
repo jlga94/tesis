@@ -1,0 +1,13 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_9: 0.51091353231
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_9: -2.95048405374
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_9: -0.253497521616
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_9: 0.0759116943417
+Topic 0: 0.044*"servici" + 0.033*"proces" + 0.032*"gestion" + 0.018*"inform" + 0.016*"minim" + 0.011*"conoc" + 0.011*"analisis" + 0.010*"potencial" + 0.009*"rentabil" + 0.008*"credit" + 0.007*"relacion" + 0.007*"sistem" + 0.007*"pag" + 0.007*"portafoli" + 0.006*"contact"
+Topic 1: 0.104*"desarroll" + 0.095*"conoc" + 0.080*"sistem" + 0.077*"program" + 0.073*"aplic" + 0.037*"dat" + 0.037*"analisis" + 0.034*"bas" + 0.032*"minim" + 0.025*"proyect" + 0.006*"proces" + 0.006*"uml" + 0.005*"servici" + 0.005*"inform" + 0.004*"version"
+Topic 2: 0.119*"inform" + 0.114*"dat" + 0.078*"bas" + 0.042*"proces" + 0.041*"analisis" + 0.040*"conoc" + 0.033*"sistem" + 0.029*"gestion" + 0.015*"program" + 0.011*"desarroll" + 0.011*"minim" + 0.007*"aplic" + 0.006*"fuent" + 0.005*"tom_decision" + 0.004*"estructur"
+Topic 3: 0.017*"sistem" + 0.017*"servici" + 0.010*"minim" + 0.010*"libr" + 0.008*"cicl_vid" + 0.008*"prestacion_servici" + 0.008*"innov" + 0.008*"excel_macr" + 0.007*"comun_oral" + 0.007*"resolu_problem" + 0.007*"patron" + 0.007*"analisis" + 0.007*"alta" + 0.007*"motiv" + 0.006*"ampli"
+Topic 4: 0.080*"sistem" + 0.076*"servici" + 0.074*"conoc" + 0.016*"minim" + 0.016*"dat" + 0.013*"aplic" + 0.013*"gestion" + 0.010*"instal_configur" + 0.009*"inform" + 0.009*"networking" + 0.008*"respald" + 0.008*"manten_prevent" + 0.007*"corre" + 0.007*"cent" + 0.006*"disposit"
+Topic 5: 0.015*"educ" + 0.015*"program" + 0.012*"internacional" + 0.012*"conoc" + 0.012*"benefici_ley" + 0.012*"ingres_planill" + 0.010*"crecimient" + 0.009*"pm" + 0.008*"ley" + 0.008*"horari_pm" + 0.008*"capacit_constant" + 0.007*"salud" + 0.007*"eps" + 0.007*"aprendizaj" + 0.006*"clas"
+Topic 6: 0.036*"proyect" + 0.032*"inform" + 0.027*"sistem" + 0.017*"norm" + 0.010*"institu" + 0.010*"formul" + 0.010*"priv" + 0.010*"gerent" + 0.010*"minim" + 0.009*"normat" + 0.008*"sector_public" + 0.007*"regional" + 0.007*"institucional" + 0.006*"peru" + 0.006*"emision"
+Topic 7: 0.171*"proyect" + 0.090*"proces" + 0.088*"gestion" + 0.044*"conoc" + 0.043*"sistem" + 0.040*"inform" + 0.036*"servici" + 0.032*"desarroll" + 0.020*"analisis" + 0.020*"minim" + 0.009*"alcanc" + 0.008*"aplic" + 0.004*"cronogram" + 0.004*"relacion" + 0.004*"pmi"
+Topic 8: 0.045*"conoc" + 0.009*"aplic" + 0.009*"wordpress" + 0.008*"bootstrap" + 0.008*"red_social" + 0.008*"central_telefon" + 0.007*"rest" + 0.007*"maquet" + 0.007*"presencial" + 0.007*"python" + 0.006*"analytics" + 0.006*"grup_empresarial" + 0.006*"sap_mm" + 0.006*"seo" + 0.006*"nub"

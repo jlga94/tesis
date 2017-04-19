@@ -1,0 +1,11 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_7: 0.452720431
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_7: -9.03639064857
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_7: -4.77397466894
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_7: -0.11273593764
+Topic 0: 0.196*"desarroll" + 0.130*"conoc" + 0.040*"sistem" + 0.039*"proyect" + 0.035*"dat" + 0.005*"metodolog_agil" + 0.005*"agil" + 0.003*"descripcion" + 0.003*"postgresql" + 0.003*"presencial" + 0.003*"planill_benefici" + 0.003*"empres_transnacional" + 0.003*"js" + 0.003*"logic" + 0.003*"jboss"
+Topic 1: 0.010*"transferent" + 0.010*"sbs" + 0.009*"sunat" + 0.008*"perifer" + 0.007*"instrument" + 0.007*"disposit" + 0.007*"entidad_public" + 0.006*"fond" + 0.006*"afp" + 0.006*"prospect" + 0.006*"sucursal" + 0.006*"edicion" + 0.006*"motiv" + 0.005*"experient" + 0.005*"microsoft_dynamics"
+Topic 2: 0.007*"colegi" + 0.007*"ambiental" + 0.006*"vid" + 0.005*"ej" + 0.005*"constanci" + 0.005*"contact_cent" + 0.005*"tributari" + 0.005*"seac" + 0.005*"inspeccion" + 0.004*"gas_natural" + 0.004*"television" + 0.004*"unet_sunat" + 0.004*"obras" + 0.004*"exterior" + 0.004*"aut"
+Topic 3: 0.261*"proyect" + 0.097*"gestion" + 0.047*"conoc" + 0.047*"desarroll" + 0.040*"proces" + 0.037*"sistem" + 0.022*"inform" + 0.003*"estim" + 0.003*"cmmi" + 0.003*"certif_pmp" + 0.003*"pmp" + 0.003*"diplom" + 0.003*"global" + 0.003*"pmbok" + 0.003*"junt"
+Topic 4: 0.010*"bootstrap" + 0.007*"credicorp" + 0.006*"empres_franc" + 0.006*"cor" + 0.006*"usabil" + 0.005*"caden" + 0.005*"director" + 0.005*"proteccion" + 0.005*"system" + 0.004*"ofert_comercial" + 0.004*"conversion" + 0.004*"ampli_investig" + 0.004*"exit_mund" + 0.004*"incompar_ampli" + 0.004*"interbank"
+Topic 5: 0.162*"sistem" + 0.158*"conoc" + 0.138*"dat" + 0.038*"desarroll" + 0.032*"inform" + 0.003*"backup" + 0.003*"fall" + 0.003*"gestion" + 0.003*"central_telefon" + 0.003*"telefon_ip" + 0.003*"ccna" + 0.003*"corre_electron" + 0.002*"fisic" + 0.002*"firewall" + 0.002*"antivirus"
+Topic 6: 0.152*"inform" + 0.146*"proces" + 0.081*"gestion" + 0.076*"sistem" + 0.047*"conoc" + 0.040*"dat" + 0.020*"proyect" + 0.011*"desarroll" + 0.004*"gobiern" + 0.003*"critic" + 0.003*"aprob" + 0.002*"situacion" + 0.002*"comites" + 0.002*"inmediat" + 0.002*"materi"

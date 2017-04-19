@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.5810356391
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -1.39587514844
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: 0.29181278973
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: 0.106945311549
+Topic 0: 0.043*"sistem" + 0.039*"servici" + 0.033*"administr" + 0.030*"conoc" + 0.026*"oper" + 0.025*"equip" + 0.020*"usuari" + 0.016*"tecnic" + 0.015*"inform" + 0.014*"empres" + 0.014*"tecnolog" + 0.014*"softwar" + 0.012*"funcion" + 0.011*"gestion" + 0.009*"hardwar"
+Topic 1: 0.067*"desarroll" + 0.053*"sistem" + 0.048*"conoc" + 0.047*"aplic" + 0.034*"program" + 0.032*"softwar" + 0.030*"proyect" + 0.029*"diseñ" + 0.025*"tecnic" + 0.024*"analisis" + 0.019*"minim" + 0.018*"solucion" + 0.018*"implement" + 0.017*"usuari" + 0.014*"dat"
+Topic 2: 0.038*"conoc" + 0.027*"desarroll" + 0.026*"program" + 0.020*"html" + 0.020*"diseñ" + 0.016*"javascript" + 0.014*"aplic" + 0.013*"etc" + 0.012*"tecnolog" + 0.011*"framework" + 0.010*"css" + 0.010*"portal" + 0.010*"mvc" + 0.010*"pagin_web" + 0.009*"jquery"
+Topic 3: 0.081*"proyect" + 0.035*"gestion" + 0.022*"inform" + 0.013*"control" + 0.012*"proces" + 0.011*"cumplimient" + 0.011*"plan" + 0.010*"ejecu" + 0.009*"planif" + 0.009*"equip" + 0.009*"cost" + 0.008*"implement" + 0.008*"minim" + 0.007*"funcion" + 0.007*"recurs"
+Topic 4: 0.073*"proces" + 0.041*"inform" + 0.041*"proyect" + 0.040*"gestion" + 0.033*"mejor" + 0.028*"negoci" + 0.022*"sistem" + 0.022*"tecnolog" + 0.019*"solucion" + 0.018*"conoc" + 0.016*"implement" + 0.015*"analisis" + 0.015*"calid" + 0.015*"servici" + 0.013*"control"
+Topic 5: 0.124*"client" + 0.032*"negoci" + 0.031*"empres" + 0.026*"servici" + 0.012*"estrategi" + 0.011*"analisis" + 0.011*"solucion" + 0.011*"funcion" + 0.010*"marketing" + 0.010*"cuent" + 0.009*"equip" + 0.009*"segment" + 0.009*"minim" + 0.008*"mejor" + 0.007*"tecnic"
+Topic 6: 0.128*"dat" + 0.093*"bas" + 0.055*"conoc" + 0.052*"inform" + 0.036*"manej" + 0.030*"program" + 0.029*"analisis" + 0.024*"sistem" + 0.022*"herramient" + 0.019*"proces" + 0.012*"administr" + 0.011*"gestion" + 0.009*"oper" + 0.008*"minim" + 0.007*"control"
+Topic 7: 0.041*"conoc" + 0.019*"empres" + 0.017*"minim" + 0.015*"funcion" + 0.014*"competent" + 0.013*"equip" + 0.013*"program" + 0.012*"benefici" + 0.012*"sistem" + 0.011*"habil" + 0.011*"desarroll" + 0.010*"herramient" + 0.010*"manej" + 0.009*"line_carrer" + 0.007*"planill"

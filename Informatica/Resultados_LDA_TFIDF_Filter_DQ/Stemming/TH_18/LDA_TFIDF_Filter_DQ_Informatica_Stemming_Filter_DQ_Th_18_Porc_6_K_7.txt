@@ -1,0 +1,11 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_7: 0.453756006702
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_7: -6.86458134942
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_7: -2.66955865143
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_7: -0.0266257375562
+Topic 0: 0.009*"bootstrap" + 0.009*"sbs" + 0.006*"concurs" + 0.006*"seo" + 0.005*"afp" + 0.005*"ajust" + 0.005*"cobertur" + 0.005*"credicorp" + 0.005*"agent" + 0.005*"interact" + 0.004*"tesor" + 0.004*"usabil" + 0.004*"fond" + 0.004*"siti_web" + 0.004*"triggers"
+Topic 1: 0.158*"sistem" + 0.048*"conoc" + 0.019*"gestion" + 0.008*"inform" + 0.007*"respald" + 0.007*"red_lan" + 0.007*"fall" + 0.006*"backup" + 0.005*"disposit" + 0.005*"conexion" + 0.005*"central_telefon" + 0.005*"licenci" + 0.005*"virtualiz" + 0.004*"repar" + 0.004*"sunat"
+Topic 2: 0.202*"conoc" + 0.144*"dat" + 0.116*"desarroll" + 0.098*"sistem" + 0.013*"inform" + 0.003*"motor" + 0.003*"weblogic" + 0.003*"rup_uml" + 0.003*"relacional" + 0.003*"unix" + 0.003*"transaccional" + 0.002*"querys" + 0.002*"webservic" + 0.002*"python" + 0.002*"perifer"
+Topic 3: 0.010*"conoc" + 0.007*"grup_empresarial" + 0.007*"onlin" + 0.007*"zon" + 0.007*"transferent" + 0.006*"ej" + 0.006*"rrhh" + 0.006*"person_talent" + 0.006*"lider_peru" + 0.005*"mund" + 0.005*"consumidor" + 0.005*"naveg" + 0.005*"presencial" + 0.004*"licit" + 0.004*"tv"
+Topic 4: 0.162*"inform" + 0.136*"proces" + 0.082*"gestion" + 0.050*"dat" + 0.049*"sistem" + 0.039*"conoc" + 0.003*"institucional" + 0.003*"mape" + 0.003*"critic" + 0.003*"presupuestal" + 0.003*"tabl_dinam" + 0.003*"legal" + 0.003*"matriz" + 0.003*"gobiern" + 0.002*"alin"
+Topic 5: 0.261*"proyect" + 0.077*"gestion" + 0.073*"desarroll" + 0.057*"sistem" + 0.056*"conoc" + 0.049*"proces" + 0.028*"inform" + 0.005*"pmi" + 0.003*"cmmi" + 0.003*"estim" + 0.003*"pmp" + 0.003*"certif_pmp" + 0.003*"pmo" + 0.002*"pmbok" + 0.002*"diplom"
+Topic 6: 0.093*"desarroll" + 0.019*"conoc" + 0.008*"logic" + 0.008*"plus" + 0.007*"rest" + 0.007*"dat" + 0.007*"sistem" + 0.006*"agil" + 0.005*"front_end" + 0.005*"normaliz" + 0.004*"capaz" + 0.004*"nub" + 0.004*"entidad_public" + 0.004*"planill_benefici" + 0.004*"metodolog_agil"

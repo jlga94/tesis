@@ -1,0 +1,11 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_7: 0.553863862877
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_7: -1.82153353105
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_7: 0.326918229053
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_7: 0.0999590443007
+Topic 0: 0.011*"institu" + 0.010*"academ" + 0.010*"program" + 0.008*"registr" + 0.007*"educ" + 0.007*"perfil" + 0.007*"material" + 0.007*"postul" + 0.007*"docent" + 0.006*"credit" + 0.006*"econom" + 0.006*"acuerd" + 0.006*"orden" + 0.006*"envi" + 0.005*"pag"
+Topic 1: 0.040*"conoc" + 0.037*"program" + 0.013*"css" + 0.012*"mvc" + 0.011*"opcional" + 0.011*"portal" + 0.010*"framework" + 0.008*"tecnolog" + 0.007*"wordpress" + 0.006*"frameworks" + 0.006*"ibm" + 0.006*"php_mysql" + 0.006*"jquery" + 0.006*"general" + 0.005*"maquet"
+Topic 2: 0.073*"proces" + 0.068*"inform" + 0.067*"gestion" + 0.067*"proyect" + 0.034*"mejor" + 0.028*"sistem" + 0.022*"conoc" + 0.020*"analisis" + 0.019*"implement" + 0.019*"tecnolog" + 0.016*"servici" + 0.011*"minim" + 0.008*"polit" + 0.007*"accion" + 0.007*"client"
+Topic 3: 0.117*"client" + 0.028*"servici" + 0.017*"minim" + 0.017*"equip" + 0.013*"conoc" + 0.011*"benefici" + 0.007*"desarroll" + 0.006*"line_carrer" + 0.006*"inform" + 0.006*"potencial" + 0.006*"crecimient" + 0.006*"relacion" + 0.005*"mejor" + 0.005*"part" + 0.005*"gerent"
+Topic 4: 0.083*"desarroll" + 0.074*"proyect" + 0.059*"conoc" + 0.057*"aplic" + 0.052*"sistem" + 0.023*"program" + 0.022*"analisis" + 0.022*"tecnolog" + 0.022*"equip" + 0.019*"implement" + 0.019*"minim" + 0.015*"metodolog" + 0.010*"servici" + 0.010*"mejor" + 0.009*"gestion"
+Topic 5: 0.071*"servici" + 0.055*"equip" + 0.055*"sistem" + 0.043*"conoc" + 0.025*"tecnolog" + 0.016*"gestion" + 0.010*"correct" + 0.009*"aplic" + 0.009*"inform" + 0.008*"minim" + 0.008*"itil" + 0.007*"polit" + 0.007*"internet" + 0.006*"instal_configur" + 0.006*"networking"
+Topic 6: 0.139*"dat" + 0.104*"bas" + 0.076*"conoc" + 0.063*"sistem" + 0.061*"program" + 0.041*"analisis" + 0.035*"desarroll" + 0.033*"inform" + 0.024*"minim" + 0.023*"aplic" + 0.013*"implement" + 0.011*"proces" + 0.004*"equip" + 0.004*"optimiz" + 0.004*"business_intelligenc"

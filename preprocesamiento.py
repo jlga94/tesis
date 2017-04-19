@@ -25,6 +25,9 @@ class TextProcessor:
 
     def __init__(self):
         self.lemmatizer = treetaggerwrapper.TreeTagger(TAGLANG='es')
+        self.lemmaTypeWords = {'adv','ord','ppc','ppx','ppo','qu','rel','ummx','vcliger','vcliinf','vclifin','veadj','vefin','veger','veinf',
+        'vhadj','vhfin','vhger','vhinf','vladj','vlfin','vlger','vlinf','vmadj','vmfin','vmger','vminf','vsadj','vsfin','vsger','vsinf'}
+
         stopwords_en_nltk = set(stopwords.words('english'))
         stopwords_en_sw = set(get_stop_words('english'))
         self.stopEnglish = set(stopwords_en_nltk.union(stopwords_en_sw))
@@ -32,9 +35,10 @@ class TextProcessor:
         stopwords_sp_nltk = set(stopwords.words('spanish'))
         stopwords_sp_sw = set(get_stop_words('spanish'))
         self.stopSpanish = set(stopwords_sp_nltk.union(stopwords_sp_sw))
-        additionalStopwordsSpanish = {'u','y/o','año','años','ser','hacer','tener','experiencia','trabajo','bueno','afín','afine','nivel','pequeño','haber','menos','deseable','incluir',
-        'pues','lunes','martes','miércoles','jueves','viernes','sábado','domingo','enero','febrero','marzo','abril','mayo','junio','julio','agosto','setiembre','octubre','noviembre','diciembre','asi','así'
-        'través'}
+        additionalStopwordsSpanish = {'u','y/o','año','años','alto','ser','etc','respecto','hacer','tal','dentro','mes','meses','tener','experiencia','trabajo','bueno','afín','afine',
+        'nivel','pequeño','haber','menos','menor','deseable','incluir','pues','parte','manera','según','lunes','martes','miércoles','jueves','viernes','sábado','domingo','lugar','fondo',
+        'enero','febrero','marzo','abril','mayo','junio','julio','agosto','setiembre','octubre','noviembre','diciembre','asi','así','través','uno','uso','casa','mismo','mediante','gran',
+        'grande','hacia','conforme','número','siguiente','link','cuatro','tres','cinco','sitio','lista','anual','mensual','trimestral','bimestral','semestral','semanal','diario','día'}
         self.stopSpanish = self.stopSpanish.union(additionalStopwordsSpanish)
         
         self.spanishStemmer=SpanishStemmer()
@@ -102,6 +106,47 @@ class TextProcessor:
     	
     	return newText.strip()
 
+    def lematizeText_Filter_TypeWord(self,text):
+    	newText = ""
+    	lemmaTypeWord = 1
+    	lemmaElement = 2
+
+    	for sentence in sent_tokenize(text,language='spanish'): #Para analizar frases y mejorar el desempeno del lemmatizador
+    		textWithSeparatePunctuation=self._separateFirstLetterFromPunctuation(sentence)
+    		lemmaResultText = self.lemmatizer.tag_text(textWithSeparatePunctuation)# Return [[word,type of word, lemma]]
+    		#print(lemmaResultText)
+    		for wordLemmaResult in lemmaResultText:
+    			#print(word)
+    			typeWord = wordLemmaResult.split('\t')[lemmaTypeWord].lower().strip()
+    			if typeWord not in self.lemmaTypeWords and typeWord[0]!='v':
+	    			word = wordLemmaResult.split('\t')[lemmaElement].lower().strip()
+	    			if word not in self.stopEnglish and word not in self.stopSpanish: #Se retiran stopwords
+	    				if not(len(word)==1 and not(word in string.punctuation)):
+	    					newText += ' ' + word
+    	
+    	return newText.strip()
+
+    def stemText_Filter_TypeWord(self,text):
+    	newText = ""
+    	lemmaTypeWord = 1
+    	lemmaOriginalWord = 0
+
+    	for sentence in sent_tokenize(text,language='spanish'): #Para analizar frases y mejorar el desempeno
+    		textWithSeparatePunctuation=self._separateFirstLetterFromPunctuation(sentence)
+    		lemmaResultText = self.lemmatizer.tag_text(textWithSeparatePunctuation)# Return [[word,type of word, lemma]]
+    		for wordLemmaResult in lemmaResultText:
+    			#print(word)
+    			typeWord = wordLemmaResult.split('\t')[lemmaTypeWord].lower().strip()
+    			if typeWord not in self.lemmaTypeWords and typeWord[0]!='v':
+	    			word = wordLemmaResult.split('\t')[lemmaOriginalWord].lower().strip()
+	    			word = word.replace("\ufeff", "")
+	    			if word not in self.stopEnglish and word not in self.stopSpanish: #Se retiran stopwords
+	    				if not(len(word)==1 and not(word in string.punctuation)):
+	    					wordStemmed = self.spanishStemmer.stem(word)
+    						newText += " " + wordStemmed
+
+    	return newText.strip()
+
     def stemText(self,text):
     	text=self._separateFirstLetterFromPunctuation(text)
     	newText = ""
@@ -146,13 +191,19 @@ class Input_Output:
     	for threshold in thresholds:
     		bigrams.append(Phrases(threshold=threshold))
     	newDataset = []
+    	numOferta = 1
     	for ofertaText in dataset:
     		ofertaText = self.procesadorTextos.preprocessText(ofertaText)
-    		ofertaText = self.procesadorTextos.stemText(ofertaText)
+    		#ofertaText = self.procesadorTextos.stemText(ofertaText)
+    		ofertaText = self.procesadorTextos.stemText_Filter_TypeWord(ofertaText)
     		listaPalabras = self.procesadorTextos.removeStopwordsInList(ofertaText.strip())
-    		for bigram in bigrams:
-    			bigram.add_vocab([listaPalabras])
-    		newDataset.append(listaPalabras)
+    		if len(listaPalabras)>0:
+    			for bigram in bigrams:
+    				bigram.add_vocab([listaPalabras])
+    			newDataset.append(listaPalabras)
+    		else:
+    			print('Stem: No se tomo en cuenta la oferta '+ str(numOferta))
+    		numOferta+=1
     	print('Se termino de limpiarlo completamente con Steeming-Bigram.')
     	return newDataset,bigrams
 
@@ -162,14 +213,19 @@ class Input_Output:
     		bigrams.append(Phrases(threshold=threshold)) 
     	
     	newDataset = []
-    	for oferta in dataset:
-    		cadenaLemmatizada = self.procesadorTextos.lematizeText(oferta.strip())
+    	numOferta = 1
+    	for oferta in dataset:  		
+    		cadenaLemmatizada = self.procesadorTextos.lematizeText_Filter_TypeWord(oferta.strip())
+    		#cadenaLemmatizada = self.procesadorTextos.lematizeText(oferta.strip())
     		cadenaPreProcesadaLemmatizada = self.procesadorTextos.preprocessText(cadenaLemmatizada)
     		listaPalabras = self.procesadorTextos.removeStopwordsInList(cadenaPreProcesadaLemmatizada)
-
-    		for bigram in bigrams:
-    			bigram.add_vocab([listaPalabras])
-    		newDataset.append(listaPalabras)
+    		if len(listaPalabras)>0:
+    			for bigram in bigrams:
+    				bigram.add_vocab([listaPalabras])
+    			newDataset.append(listaPalabras)
+    		else:
+    			print('Lemma: No se tomo en cuenta la oferta '+ str(numOferta))
+    		numOferta+=1
     	print('Se termino de limpiarlo completamente con Lemmatizacion-Bigram.')
     	return newDataset,bigrams
 
@@ -212,7 +268,7 @@ class Input_Output:
         return datasetLemmatizacion
         #return datasetLemmatizacion,datasetSteeming
 
-    def obtenerDatasetAClasificar_Completo_Bigram(self, filename,thresholds):
+    def obtenerDatasetAClasificar_Completo_Bigram(self, filename,thresholds_Lemma,thresholds_Stem):
         "Se lee un archivo Excel con las ofertas a clasificar"
 
         dataset = []
@@ -226,8 +282,8 @@ class Input_Output:
             text = str(sheetAviso.cell(row=num_oferta, column=infoColumn).value)
             dataset.append(text)
 
-        datasetLemmatizacion,bigramsLemmatizacion = self.limpiarDataset_Lemmatizacion_Bigram(dataset,thresholds)
-        datasetSteeming,bigramsSteeming = self.limpiarDataset_Steeming_Bigram(dataset,thresholds)
+        datasetLemmatizacion,bigramsLemmatizacion = self.limpiarDataset_Lemmatizacion_Bigram(dataset,thresholds_Lemma)
+        datasetSteeming,bigramsSteeming = self.limpiarDataset_Steeming_Bigram(dataset,thresholds_Stem)
 
         #return datasetSteeming
         return datasetLemmatizacion,bigramsLemmatizacion,datasetSteeming,bigramsSteeming
@@ -387,4 +443,47 @@ class Input_Output:
 
     	filenameWithoutExtension = filename.split('.')[0]
     	newExcel.save(filenameWithoutExtension + '_PrimerPreProcesamiento_Dividido.xlsx')
+
+    def primeraLimpiezaADatasetAClasificar_D_Q(self, filename):
+    	wb = openpyxl.load_workbook(filename)
+    	sheets = wb.get_sheet_names()
+    	sheetAviso = wb.get_sheet_by_name(sheets[0])
+    	maxFilas = sheetAviso.max_row + 1
+    	maxColumnas = sheetAviso.max_column + 1
+
+    	newExcel = openpyxl.Workbook()
+    	newSheet = newExcel.active
+
+    	self.leerSecciones(filename)
+    	columnasABuscar=[]
+    	#columnasABuscar.append(self.secciones['Job: Job Title'])
+    	columnasABuscar.append(self.secciones['Job: Description'])
+    	columnasABuscar.append(self.secciones['Job: Qualifications'])
+
+    	numColNewExcel_Text = 1
+    	numColNewExcel_Year = 2
+    	numColNewExcel_Month = 3
+
+    	numRowNewExcel=1
+    	for num_oferta in range(2, maxFilas):
+    		completeText = ''
+    		for nColumna in columnasABuscar:
+    			text = str(sheetAviso.cell(row=num_oferta, column=nColumna).value)
+    			completeText+=' ' + text.lower()
+    		idioma = detect(completeText.strip())
+    		if(idioma=='es'):
+    			text = self.procesadorTextos.firstpreprocessText(completeText)
+    			newSheet.cell(row=numRowNewExcel, column=numColNewExcel_Text).value = text
+
+    			date = str(sheetAviso.cell(row=num_oferta, column=self.secciones['Job: Posting Date']).value)
+    			print(date)
+    			ddmmyyyy = date.split('/')
+
+    			newSheet.cell(row=numRowNewExcel, column=numColNewExcel_Year).value = int(ddmmyyyy[2])
+    			newSheet.cell(row=numRowNewExcel, column=numColNewExcel_Month).value = int(ddmmyyyy[1])
+
+    			numRowNewExcel+=1
+
+    	filenameWithoutExtension = filename.split('.')[0]
+    	newExcel.save(filenameWithoutExtension + '_PrimerPreProcesamiento_D_Q.xlsx')
 

@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.416417076092
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -7.57301828786
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: -3.27696577829
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: -0.0510020295206
+Topic 0: 0.168*"inform" + 0.088*"sistem" + 0.075*"proces" + 0.072*"dat" + 0.065*"gestion" + 0.041*"conoc" + 0.005*"desarroll" + 0.003*"institucional" + 0.003*"matriz" + 0.003*"presupuestal" + 0.003*"critic" + 0.002*"firm" + 0.002*"legal" + 0.002*"grad" + 0.002*"sector_public"
+Topic 1: 0.097*"dat" + 0.008*"conoc" + 0.006*"colegi" + 0.006*"ofert" + 0.006*"prospect" + 0.006*"integration_servic" + 0.006*"tributari" + 0.005*"dashboards" + 0.005*"credicorp" + 0.005*"prospeccion" + 0.004*"nacional_internacional" + 0.004*"business_objects" + 0.004*"big" + 0.004*"sunat" + 0.004*"unet_sunat"
+Topic 2: 0.191*"desarroll" + 0.183*"conoc" + 0.142*"sistem" + 0.075*"dat" + 0.047*"proyect" + 0.010*"proces" + 0.003*"rup_uml" + 0.003*"transaccional" + 0.003*"motor" + 0.003*"logic" + 0.003*"metodolog_agil" + 0.002*"weblogic" + 0.002*"relacional" + 0.002*"arquitect" + 0.002*"js"
+Topic 3: 0.009*"rest" + 0.008*"descripcion" + 0.007*"lectur" + 0.007*"transferent" + 0.007*"pucp" + 0.006*"tabl" + 0.006*"dat" + 0.006*"reporting" + 0.006*"seccion" + 0.006*"normaliz" + 0.006*"conoc" + 0.006*"interpret" + 0.005*"seo" + 0.005*"front_end" + 0.005*"fond"
+Topic 4: 0.008*"renov" + 0.008*"grup_empresarial" + 0.007*"comprob" + 0.007*"competit" + 0.007*"design" + 0.006*"consumidor" + 0.006*"person_talent" + 0.006*"lider_peru" + 0.006*"provinci" + 0.006*"sucursal" + 0.006*"sub" + 0.006*"sd" + 0.005*"cor" + 0.005*"region" + 0.004*"osinergmin"
+Topic 5: 0.044*"desarroll" + 0.017*"dat" + 0.014*"agil" + 0.009*"python" + 0.008*"plus" + 0.007*"impresion" + 0.007*"webservic" + 0.007*"zon" + 0.006*"empres_transnacional" + 0.006*"scripts" + 0.006*"messag_brok" + 0.006*"sintesis" + 0.006*"axcess_financial" + 0.005*"clim_laboral" + 0.005*"planill_benefici"
+Topic 6: 0.238*"proyect" + 0.108*"proces" + 0.104*"gestion" + 0.056*"conoc" + 0.038*"inform" + 0.031*"desarroll" + 0.023*"sistem" + 0.005*"pmi" + 0.003*"diplom" + 0.003*"pmp" + 0.003*"certif_pmp" + 0.003*"comites" + 0.003*"pmo" + 0.003*"pmbok" + 0.003*"director"
+Topic 7: 0.103*"conoc" + 0.086*"sistem" + 0.029*"dat" + 0.011*"gestion" + 0.009*"respald" + 0.007*"disposit" + 0.007*"red_lan" + 0.006*"backup" + 0.006*"virtualiz" + 0.006*"fall" + 0.005*"central_telefon" + 0.005*"licenci" + 0.005*"telefon_ip" + 0.005*"backups" + 0.005*"protocol"

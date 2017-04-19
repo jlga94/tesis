@@ -1,0 +1,11 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_7: 0.511378922799
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_7: -2.59053557038
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_7: -0.139364593669
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_7: 0.0846199674186
+Topic 0: 0.102*"desarroll" + 0.093*"conoc" + 0.082*"sistem" + 0.076*"aplic" + 0.075*"program" + 0.045*"dat" + 0.040*"analisis" + 0.039*"bas" + 0.031*"minim" + 0.022*"proyect" + 0.007*"inform" + 0.007*"proces" + 0.006*"servici" + 0.006*"uml" + 0.004*"patron"
+Topic 1: 0.194*"proyect" + 0.050*"gestion" + 0.038*"desarroll" + 0.028*"proces" + 0.028*"conoc" + 0.024*"sistem" + 0.020*"servici" + 0.020*"minim" + 0.017*"inform" + 0.010*"alcanc" + 0.009*"analisis" + 0.007*"aplic" + 0.007*"relacion" + 0.006*"cronogram" + 0.006*"gerent"
+Topic 2: 0.089*"servici" + 0.054*"sistem" + 0.019*"minim" + 0.018*"conoc" + 0.009*"inform" + 0.008*"aplic" + 0.008*"institu" + 0.006*"instal_configur" + 0.006*"priv" + 0.005*"manten_prevent" + 0.005*"gestion" + 0.005*"networking" + 0.005*"respald" + 0.005*"cent" + 0.005*"sed"
+Topic 3: 0.146*"dat" + 0.098*"bas" + 0.065*"inform" + 0.045*"analisis" + 0.025*"conoc" + 0.012*"proces" + 0.010*"minim" + 0.008*"gestion" + 0.008*"program" + 0.007*"fuent" + 0.006*"inteligent" + 0.006*"envi" + 0.006*"rentabil" + 0.005*"tom_decision" + 0.005*"analit"
+Topic 4: 0.088*"conoc" + 0.018*"program" + 0.006*"virtual" + 0.005*"wordpress" + 0.005*"bootstrap" + 0.005*"red_social" + 0.005*"analytics" + 0.004*"ccna" + 0.004*"corre" + 0.004*"maquet" + 0.004*"ip" + 0.004*"python" + 0.004*"plus" + 0.004*"element" + 0.004*"pagin"
+Topic 5: 0.101*"proces" + 0.089*"inform" + 0.077*"gestion" + 0.058*"sistem" + 0.043*"conoc" + 0.021*"analisis" + 0.020*"servici" + 0.019*"proyect" + 0.012*"minim" + 0.008*"desarroll" + 0.007*"norm" + 0.007*"aplic" + 0.006*"program" + 0.005*"period" + 0.005*"normat"
+Topic 6: 0.015*"benefici_ley" + 0.015*"ingres_planill" + 0.013*"educ" + 0.011*"post_vent" + 0.011*"pm" + 0.010*"capacit_constant" + 0.009*"lin" + 0.009*"peru" + 0.008*"internacional" + 0.008*"crecimient" + 0.007*"plaz" + 0.007*"minim" + 0.006*"desempeñ_accentur" + 0.006*"industri_import" + 0.006*"clas"

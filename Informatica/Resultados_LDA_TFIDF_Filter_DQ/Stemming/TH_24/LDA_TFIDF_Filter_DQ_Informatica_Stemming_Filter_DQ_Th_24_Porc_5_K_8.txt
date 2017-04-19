@@ -1,0 +1,12 @@
+Coherencia c_v de Informatica_Stemming_Filter_DQ_K_8: 0.444123418915
+Coherencia u_mass de Informatica_Stemming_Filter_DQ_K_8: -6.89821319298
+Coherencia c_uci de Informatica_Stemming_Filter_DQ_K_8: -2.72206483209
+Coherencia c_npmi de Informatica_Stemming_Filter_DQ_K_8: -0.0331444135369
+Topic 0: 0.227*"proyect" + 0.132*"gestion" + 0.066*"proces" + 0.052*"inform" + 0.030*"conoc" + 0.017*"sistem" + 0.013*"desarroll" + 0.004*"pmi" + 0.004*"demand" + 0.004*"satisfaccion" + 0.004*"diplom" + 0.004*"comites" + 0.003*"outsourcing" + 0.003*"etap" + 0.003*"liderazg"
+Topic 1: 0.130*"conoc" + 0.071*"sistem" + 0.025*"dat" + 0.006*"disposit" + 0.006*"red_lan" + 0.006*"respald" + 0.005*"gestion" + 0.005*"impresor" + 0.005*"virtualiz" + 0.005*"backup" + 0.005*"html_javascript" + 0.004*"fall" + 0.004*"central_telefon" + 0.004*"enlac" + 0.004*"conect"
+Topic 2: 0.017*"analytics" + 0.008*"consumidor" + 0.007*"represent" + 0.007*"mund" + 0.006*"contact_cent" + 0.006*"lms" + 0.005*"osinergmin" + 0.005*"account_manag" + 0.005*"decision" + 0.005*"vent_cotiz" + 0.005*"rut" + 0.005*"vid" + 0.005*"motor" + 0.005*"cuadr_estadist" + 0.004*"cor"
+Topic 3: 0.013*"priv" + 0.011*"sector_public" + 0.009*"candidat" + 0.007*"clav" + 0.007*"electr" + 0.006*"comision" + 0.006*"met" + 0.006*"horari_oficin" + 0.006*"licenci" + 0.006*"aspect" + 0.006*"grup_empresarial" + 0.006*"element" + 0.006*"fideliz" + 0.005*"talent" + 0.005*"vacacion"
+Topic 4: 0.116*"sistem" + 0.100*"conoc" + 0.090*"dat" + 0.083*"inform" + 0.069*"desarroll" + 0.063*"proces" + 0.039*"proyect" + 0.029*"gestion" + 0.003*"rol" + 0.002*"rup" + 0.002*"gobiern" + 0.002*"performanc" + 0.002*"equivalent" + 0.002*"mape" + 0.002*"pow_point"
+Topic 5: 0.199*"desarroll" + 0.080*"conoc" + 0.013*"proyect" + 0.012*"dat" + 0.008*"agil" + 0.008*"capacit_constant" + 0.007*"liderazg" + 0.006*"bootstrap" + 0.006*"rest" + 0.006*"plus" + 0.006*"descripcion" + 0.005*"presencial" + 0.005*"empres_transnacional" + 0.005*"git" + 0.005*"ajax"
+Topic 6: 0.049*"inform" + 0.010*"sbs" + 0.010*"matriz" + 0.009*"social" + 0.008*"cobertur" + 0.008*"cotiz" + 0.007*"bcp" + 0.007*"concurs" + 0.007*"stock" + 0.007*"competit" + 0.006*"regul" + 0.006*"afp" + 0.006*"fond" + 0.006*"prospect" + 0.006*"tabl_dinam"
+Topic 7: 0.067*"proces" + 0.048*"sistem" + 0.009*"transferent" + 0.008*"titul" + 0.008*"gestion" + 0.008*"lug" + 0.007*"rrhh" + 0.007*"firm" + 0.007*"seleccion" + 0.006*"tributari" + 0.006*"llam" + 0.006*"sunat" + 0.005*"colegi" + 0.005*"design" + 0.005*"expert"
