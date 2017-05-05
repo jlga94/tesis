@@ -415,6 +415,19 @@ def TF_IDF_COMPLETO_BIGRAM(carrera):
 		print('Imprimiendo varianza de '+ tipos[i])
 		showImportantVariance(wordsVarianceDictionary,carrera,tipos[i])
 
+def processDataset(career,typeProcessing,thresholds,datasets):
+	for i in range(len(datasets)):
+		pickle.dump(datasets[i],open("DatasetBigram_Filter_DQ_V2_"+ career + '_'+ typeProcessing + "_Th_" + str(thresholds[i]) + ".p","wb"))
+		print('Procesando diccionario de '+ typeProcessing + ' - ' + str(thresholds[i]))
+		dictionaryDistribution = getDictionaryDistributionInDocuments(datasets[i])
+		#print('Insertando diccionario a BD de '+ typeProcessing + ' - ' + str(thresholds[i]))
+		#insertDictionary(carrera,tipos[i],dictionaryDistribution)
+		print('Procesando TF-IDF/Media/Varianza de ' + typeProcessing + '_Th_' + str(thresholds[i]))
+		dictionaryMean,dictionaryVariance = get_TFIDF_Mean_Variance(datasets[i],dictionaryDistribution)
+		print('Imprimiendo varianza de '+ typeProcessing + ' - ' + str(thresholds[i]))
+		pickle.dump(dictionaryVariance,open("Variance_Filter_DQ_V2_" + career + '_'+ typeProcessing + "_Th_" + str(thresholds[i]) + ".p","wb"))
+
+
 def TF_IDF_COMPLETO_BIGRAM_V2(carrera):
 	inputOutput = Input_Output()
 	thresholds_Lemma = [15,24]
@@ -449,6 +462,10 @@ def TF_IDF_COMPLETO_BIGRAM_V2(carrera):
 		datasetStemmingBigram = replaceBigrams(datasetStemming,bigram_model_Stemming)
 		datasetsStemmingBigram.append(datasetStemmingBigram)
 
+	processDataset(carrera,'Lemmatizacion',thresholds_Lemma,datasetsLemmatizacionBigram)
+	processDataset(carrera,'Stemming',thresholds_Stem,datasetsStemmingBigram)
+
+
 	'''index_Lemma = [0,1]
 	datasets = [datasetsLemmatizacionBigram[0],datasetsLemmatizacionBigram[1]]
 	typeProcessing = 'Lemmatizacion'
@@ -467,7 +484,7 @@ def TF_IDF_COMPLETO_BIGRAM_V2(carrera):
 		#showImportantVariance(dictionaryVariance,carrera,tipos[i])
 		#print('Insertando estadisticas de ' + tipos[i])
 		#insertEstadistics_MongoDB(carrera,tipos[i],dictionaryMean,dictionaryVariance)
-	'''
+	
 	index_Stem = [1,2]
 	datasets = [datasetsStemmingBigram[0],datasetsStemmingBigram[1]]
 	typeProcessing = 'Stemming'
@@ -482,7 +499,7 @@ def TF_IDF_COMPLETO_BIGRAM_V2(carrera):
 		dictionaryMean,dictionaryVariance = get_TFIDF_Mean_Variance(datasets[i],dictionaryDistribution)
 		print('Imprimiendo varianza de '+ typeProcessing + ' - ' + str(thresholds[index_Stem[i]]))
 		pickle.dump(dictionaryVariance,open("Variance_Filter_DQ_" + carrera + '_'+ typeProcessing + "_Th_" + str(thresholds[index_Stem[i]]) + ".p","wb"))
-		#pickle.dump(dictionaryVariance,open("Mean_" + carrera + '_'+ typeProcessing + "_Th_" + str(thresholds[index_Stem[i]]) + ".p","wb"))
+		#pickle.dump(dictionaryVariance,open("Mean_" + carrera + '_'+ typeProcessing + "_Th_" + str(thresholds[index_Stem[i]]) + ".p","wb"))'''
 	
 
 

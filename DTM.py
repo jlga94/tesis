@@ -119,14 +119,6 @@ def DTM():
 				#print('\t\tWord: '+vocabularyBigram.get(int(tupleWord[0])) + ' - Value: ' + str(tupleWord[1]))
 		F.close()
 
-
-	'''
-	for iTime in range(len(time_slice_semester)):
-		doc_topic, topic_term,doc_lengths, term_frequency,vocab = dtmModel.dtm_vis(time=iTime,corpus=corpusBigram)
-		vis_wrapper = pyLDAvis.prepare(topic_term_dists=topic_term,doc_topic_dists=doc_topic,doc_lengths=doc_lengths,vocab=vocab,term_frequency=term_frequency)
-		pyLDAvis.display(vis_wrapper)
-	'''
-
 def printTopicsDTM(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,time_slice,dtmModel):
 	for iTopic in range(k_topic):
 		F = open(career + '_'+ typeProcessing +'_Topic_'+str(iTopic)+'_Th_'+ str(threshold) + '_P_'+ str(porcTFIDF) + '_'+typeTime+'.txt','w')
@@ -141,66 +133,89 @@ def printTopicsDTM(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,ti
 
 def process_DTM_TimeSlice(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,corpus,vocabulary,time_slice):
 	print('Inicializando DTM ' + typeProcessing + '_'+ typeTime)
-	dtmModel = ldaseqmodel.LdaSeqModel(corpus=corpus,id2word = vocabulary,time_slice=time_slice,num_topics=k_topic)
+	dtmModel = ldaseqmodel.LdaSeqModel(corpus=corpus,id2word = vocabulary,time_slice=time_slice,num_topics=k_topic,random_state=42)
 	print('Inicializo DTM ' + typeProcessing + '_'+ typeTime)
 	pickle.dump(dtmModel,open("DTM_"+ career + '_' +typeProcessing + "_K_" + str(k_topic) +"_Th_"+ str(threshold) + '_P_'+ str(porcTFIDF) + '_' + typeTime +".p","wb"))
 	print('Imprimiendo topicos de DTM ' + typeProcessing + '_'+ typeTime)
 	printTopicsDTM(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,time_slice,dtmModel)
 
-def process_DTM_TimeSlice_LDA(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,corpus,vocabulary,time_slice):
-	print('Inicializando LDA '+ typeProcessing)
-	ldamodel = gensim.models.ldamodel.LdaModel(corpus=corpus, num_topics=k_topic,id2word = vocabulary, passes=20,iterations=100)
-	pickle.dump(ldamodel,open("LDA_model_"+ typeProcessing + "_K_" + str(k_topic) +"_Th_"+ str(threshold) + '_P_'+ str(porcTFIDF)+".p","wb"))
-
+def process_DTM_TimeSlice_LDA(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,corpus,vocabulary,time_slice,ldamodel):
 	print('Inicializando DTM_LDA ' + typeProcessing + '_'+ typeTime)
-	dtmModel = ldaseqmodel.LdaSeqModel(lda_model=ldamodel,sstats=(len(vocabulary.items()),k_topic),corpus=corpus,id2word = vocabulary,time_slice=time_slice,num_topics=k_topic)
+	dtmModel = ldaseqmodel.LdaSeqModel(initialize='ldamodel',lda_model=ldamodel,sstats=(len(vocabulary.items()),k_topic),corpus=corpus,id2word = vocabulary,time_slice=time_slice,num_topics=k_topic,random_state=42)
 	print('Inicializo DTM ' + typeProcessing + '_'+ typeTime)
-	pickle.dump(dtmModel,open("DTM_LDA_"+ career + '_' +typeProcessing + "_K_" + str(k_topic) +"_Th_"+ str(threshold) + '_P_'+ str(porcTFIDF) + '_' + typeTime +".p","wb"))
+	pickle.dump(dtmModel,open("DTM_LDA_OWN"+ career + '_' +typeProcessing + "_K_" + str(k_topic) +"_Th_"+ str(threshold) + '_P_'+ str(porcTFIDF) + '_' + typeTime +".p","wb"))
 	print('Imprimiendo topicos de DTM_LDA ' + typeProcessing + '_'+ typeTime)
-	printTopicsDTM(career,typeProcessing+'_LDA',k_topic,threshold,porcTFIDF,typeTime,time_slice,dtmModel)
+	printTopicsDTM(career,typeProcessing+'_LDA_OWN',k_topic,threshold,porcTFIDF,typeTime,time_slice,dtmModel)
 
 def process_DTM_by_Typeprocessing(career,typeProcessing,k_topic,threshold,porcTFIDF,dataset_TFIDF,time_slice_semester,time_slice_trimester):
 	print('Comenzo a obtener diccionarios y corpus para Gensim de '+typeProcessing)
 	vocabulary = corpora.Dictionary(dataset_TFIDF)
 	corpus = [vocabulary.doc2bow(text) for text in dataset_TFIDF]
 
+	print('Inicializando LDA '+ typeProcessing)
+	ldamodel = gensim.models.ldamodel.LdaModel(corpus=corpus, num_topics=k_topic,id2word = vocabulary, passes=20,iterations=100,random_state=42)
+	pickle.dump(ldamodel,open("LDA_model_"+ typeProcessing + "_K_" + str(k_topic) +"_Th_"+ str(threshold) + '_P_'+ str(porcTFIDF)+".p","wb"))
+
 	typeTime = 'Sem'
 	#process_DTM_TimeSlice(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,corpus,vocabulary,time_slice_semester)
-	process_DTM_TimeSlice_LDA(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,corpus,vocabulary,time_slice_semester)
+	process_DTM_TimeSlice_LDA(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,corpus,vocabulary,time_slice_semester,ldamodel)
 
 	typeTime = 'Trim'
-	process_DTM_TimeSlice(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,corpus,vocabulary,time_slice_trimester)
-	process_DTM_TimeSlice_LDA(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,corpus,vocabulary,time_slice_trimester)
+	#process_DTM_TimeSlice(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,corpus,vocabulary,time_slice_trimester)
+	process_DTM_TimeSlice_LDA(career,typeProcessing,k_topic,threshold,porcTFIDF,typeTime,corpus,vocabulary,time_slice_trimester,ldamodel)
 
 
 def DTM_BIGRAM_TFIDF():
 	career = 'Informatica'
 	
-	k_topic_Lemma = 7
-	threshold_Lemma = 24
+	k_topic_Lemma = 8
+	threshold_Lemma = 15
 	porcTFIDF_Lemma = 3
 
 	k_topic_Stem = 12
 	threshold_Stem = 24
 	porcTFIDF_Stem = 1
 
-	#dataset_TFIDF_Lemma = pickle.load(open("DatasetTFIDF_" + career + '_'+ 'Lemmatizacion' + "_Th_" + str(threshold_Lemma) + '_Porc_' + str(porcTFIDF_Lemma)+".p","rb"))
-	#dataset_TFIDF_Stem = pickle.load(open("DatasetTFIDF_" + career + '_'+ 'Stemming' + "_Th_" + str(threshold_Stem) + '_Porc_' + str(porcTFIDF_Stem)+".p","rb"))
+	dataset_TFIDF_Lemma = pickle.load(open("DatasetTFIDF_" + career + '_'+ 'Lemmatizacion_Filter_DQ_V2' + "_Th_" + str(threshold_Lemma) + '_Porc_' + str(porcTFIDF_Lemma)+".p","rb"))
+	dataset_TFIDF_Stem = pickle.load(open("DatasetTFIDF_" + career + '_'+ 'Stemming_Filter_DQ_V2' + "_Th_" + str(threshold_Stem) + '_Porc_' + str(porcTFIDF_Stem)+".p","rb"))
 
-	dataset_TFIDF_Lemma = pickle.load(open("DatasetTFIDF_Filter_DQ_" + career + '_'+ 'Lemmatizacion_Filter_DQ_' + "_Th_" + str(threshold_Lemma) + '_Porc_' + str(porcTFIDF_Lemma)+".p","rb"))
+	#dataset_TFIDF_Lemma = pickle.load(open("DatasetTFIDF_Filter_DQ_" + career + '_'+ 'Lemmatizacion_Filter_DQ_' + "_Th_" + str(threshold_Lemma) + '_Porc_' + str(porcTFIDF_Lemma)+".p","rb"))
 	#dataset_TFIDF_Stem = pickle.load(open("DatasetTFIDF_Filter_DQ_" + career + '_'+ 'Stemming_Filter_DQ_' + "_Th_" + str(threshold_Stem) + '_Porc_' + str(porcTFIDF_Stem)+".p","rb"))
 	print(len(dataset_TFIDF_Lemma))
 
+	datesLemmatizacion = pickle.load(open("datesLemmatizacion_" + career + ".p","rb"))
+	datesStemming = pickle.load(open("datesStemming_" + career + ".p","rb"))
 
-	time_slice_semester = [619,1419,1636,1653,1368,1397,1552,1513,1285,1294,1102] # num documentos por periodos de tiempo por semestre
-	time_slice_trimester = [259,360,495,924,849,787,837,816,716,652,651,746,927,625,765,748,719,566,626,668,623,479] # num documentos por periodos de tiempo por trisemestre
+	time_slice_semester_Lemma = [0]
+	time_slice_trimester_Lemma = [0]
+	time_slice_semester_Stem = [0]
+	time_slice_trimester_Stem = [0]
+
+	count_sem = 0
+	count_trim = 0
+	for year in sorted(datesLemmatizacion.keys()):
+		for month in sorted(datesLemmatizacion[year].keys()):
+			if count_sem==6:
+				count_sem = 0
+				time_slice_semester_Lemma.append(0)
+				time_slice_semester_Stem.append(0)
+			if count_trim==4:
+				count_trim = 0
+				time_slice_trimester_Lemma.append(0)
+				time_slice_trimester_Stem.append(0)
+			time_slice_semester_Lemma[len(time_slice_semester_Lemma)-1] += datesLemmatizacion[year][month]
+			time_slice_trimester_Lemma[len(time_slice_trimester_Lemma)-1] += datesLemmatizacion[year][month]
+			time_slice_semester_Stem[len(time_slice_semester_Stem)-1] += datesStemming[year][month]
+			time_slice_trimester_Stem[len(time_slice_trimester_Stem)-1] += datesStemming[year][month]
+
+			count_sem += 1
+			count_trim += 1
 
 	typeProcessing = 'Lemmatizacion'
-	process_DTM_by_Typeprocessing(career,typeProcessing,k_topic_Lemma,threshold_Lemma,porcTFIDF_Lemma,dataset_TFIDF_Lemma,time_slice_semester,time_slice_trimester)
+	process_DTM_by_Typeprocessing(career,typeProcessing,k_topic_Lemma,threshold_Lemma,porcTFIDF_Lemma,dataset_TFIDF_Lemma,time_slice_semester_Lemma,time_slice_trimester_Lemma)
 
 	#typeProcessing = 'Stemming'
-	#process_DTM_by_Typeprocessing(career,typeProcessing,k_topic_Stem,threshold_Stem,porcTFIDF_Stem,dataset_TFIDF_Stem,time_slice_semester,time_slice_trimester)
-
+	#process_DTM_by_Typeprocessing(career,typeProcessing,k_topic_Stem,threshold_Stem,porcTFIDF_Stem,dataset_TFIDF_Stem,time_slice_semester_Stem,time_slice_trimester_Stem)
 
 #DTM()
 DTM_BIGRAM_TFIDF()

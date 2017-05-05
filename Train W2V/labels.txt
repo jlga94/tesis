@@ -1,0 +1,89 @@
+NumTopic: 0
+1: Title: ISO 24014 - Similarity: 0.827860282526
+2: Title: Gestión - Similarity: 0.785912505218
+3: Title: Centro Nacional de Estimación, Prevención y Reducción del Riesgo de Desastres (Perú) - Similarity: 0.78032969343
+4: Title: Facultad de Ciencias Económicas y Empresariales (Universidad Pública de Navarra) - Similarity: 0.780081393409
+5: Title: ISO 22320 - Similarity: 0.779429588314
+6: Title: TMF Group - Similarity: 0.774733784135
+7: Title: .bo - Similarity: 0.767009799389
+8: Title: Avid Technology - Similarity: 0.766381031173
+9: Title: Transición - Similarity: 0.766350177773
+10: Title: Santoña - Similarity: 0.765946062142
+NumTopic: 1
+1: Title: Jabbin - Similarity: 0.768026136852
+2: Title: CONS - Similarity: 0.733737927049
+3: Title: Level 3 Communications - Similarity: 0.675871626517
+4: Title: Spark (software) - Similarity: 0.673981256834
+5: Title: WCCP - Similarity: 0.673113183617
+6: Title: AOE - Similarity: 0.668729651214
+7: Title: TERATEL - Similarity: 0.655564761099
+8: Title: Red digital de servicios integrados - Similarity: 0.651225917218
+9: Title: 3G (desambiguación) - Similarity: 0.64530687655
+10: Title: Virtual Hosting Control System - Similarity: 0.644239863449
+NumTopic: 2
+1: Title: Qooxdoo - Similarity: 0.747545015393
+2: Title: CloudStore - Similarity: 0.732106281091
+3: Title: Apache Camel - Similarity: 0.726822225482
+4: Title: Maverick Framework - Similarity: 0.718416082127
+5: Title: Contenedor web - Similarity: 0.708737643464
+6: Title: Germplasm Resources Information Network - Similarity: 0.705388770281
+7: Title: Benchmark - Similarity: 0.692723006986
+8: Title: Java Web Services Development Pack - Similarity: 0.670035033497
+9: Title: Ansible (software) - Similarity: 0.669829264048
+10: Title: Speccy - Similarity: 0.666733879149
+NumTopic: 3
+1: Title: Ansible (software) - Similarity: 0.791662719398
+2: Title: Alestra - Similarity: 0.785000746829
+3: Title: Comandos Bash - Similarity: 0.779753744402
+4: Title: WP - Similarity: 0.765603441983
+5: Title: Adept - Similarity: 0.76170702212
+6: Title: Listen (software) - Similarity: 0.758435865845
+7: Title: Service Management Facility - Similarity: 0.752734623196
+8: Title: Mammoth - Similarity: 0.740646053587
+9: Title: STL - Similarity: 0.737925173926
+10: Title: Germplasm Resources Information Network - Similarity: 0.737688464393
+NumTopic: 4
+1: Title: Transición - Similarity: 0.785666098908
+2: Title: David Bowie - Similarity: 0.783197476848
+3: Title: B2G - Similarity: 0.766047721619
+4: Title: Watchmen - Similarity: 0.761250426155
+5: Title: The Dark Knight - Similarity: 0.760167804457
+6: Title: Los juegos del hambre (película) - Similarity: 0.755581275178
+7: Title: Club Atlético San Lorenzo de Almagro - Similarity: 0.751644372891
+8: Title: Julián Inza - Similarity: 0.750802064183
+9: Title: Marcelo Schilling - Similarity: 0.744323001197
+10: Title: Selección de fútbol de Italia - Similarity: 0.741078534346
+NumTopic: 5
+1: Title: Escuela Europea de Desarrollo Empresarial - Similarity: 0.77481968962
+2: Title: Ciudad de México - Similarity: 0.759816892333
+3: Title: Batman - Similarity: 0.75936461796
+4: Title: Política (desambiguación) - Similarity: 0.756973036711
+5: Title: Instituto de Investigaciones de la Amazonía Peruana - Similarity: 0.751659632508
+6: Title: Diputación Provincial de Teruel - Similarity: 0.747905561527
+7: Title: Manuel Alvarado Ortega - Similarity: 0.74738813931
+8: Title: Organización Europea para la Calidad - Similarity: 0.745997120794
+9: Title: NLCIFT - Similarity: 0.740822932123
+10: Title: Atersa - Similarity: 0.739840833386
+NumTopic: 6
+1: Title: Rock de Argentina - Similarity: 0.764448292297
+2: Title: DRE Crypt - Similarity: 0.761887340991
+3: Title: Incidencia (desambiguación) - Similarity: 0.761564530427
+4: Title: CCS - Similarity: 0.74898868076
+5: Title: Transacción - Similarity: 0.747594692254
+6: Title: Visualización - Similarity: 0.74262469636
+7: Title: Entrada - Similarity: 0.741501953555
+8: Title: Activo fijo - Similarity: 0.739937226159
+9: Title: Campus virtual - Similarity: 0.738321182997
+10: Title: Cero (desambiguación) - Similarity: 0.737896539141
+NumTopic: 7
+1: Title: Instituto Gallego de Estadística - Similarity: 0.813707790186
+2: Title: Universidad Alonso de Ojeda - Similarity: 0.811407996874
+3: Title: Don Quijote de la Mancha - Similarity: 0.805774993028
+4: Title: Comunidad de aglomeración - Similarity: 0.788264965244
+5: Title: Guerras de los Castores - Similarity: 0.779627510936
+6: Title: Saint Seiya - Similarity: 0.778380233382
+7: Title: Orden al Mérito de la República Italiana - Similarity: 0.778325391164
+8: Title: Edgar Allan Poe - Similarity: 0.77627850502
+9: Title: Carnaval de Barranquilla - Similarity: 0.772612351331
+10: Title: Batman - Similarity: 0.766737814222
+
