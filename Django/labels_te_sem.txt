@@ -1,0 +1,88 @@
+NumTopic: 0
+1: Title: Gestión -- Similarity: 0.842665369144
+2: Title: Bolsa de Barcelona -- Similarity: 0.760546283577
+3: Title: Director general -- Similarity: 0.758649141197
+4: Title: Víctor Marulanda -- Similarity: 0.740433531034
+5: Title: Bolsa de Valencia -- Similarity: 0.737257949196
+6: Title: Alojamiento web -- Similarity: 0.73157685572
+7: Title: Poliamor -- Similarity: 0.728908377319
+8: Title: Infraestructura urbana -- Similarity: 0.727668403646
+9: Title: Claudio Hohmann -- Similarity: 0.718781543826
+10: Title: Department of the Environment and Heritage -- Similarity: 0.709208104964
+NumTopic: 1
+1: Title: NYSE Euronext -- Similarity: 0.451491688238
+2: Title: Xetra -- Similarity: 0.355774365095
+3: Title: Daniel Maurate Romero -- Similarity: 0.331881726565
+4: Title: Prefijo telefónico -- Similarity: 0.322592052046
+5: Title: Unión Cívica Radical -- Similarity: 0.32225534217
+6: Title: Activo (contabilidad) -- Similarity: 0.299257799224
+7: Title: NASDAQ OMX Vilnius -- Similarity: 0.298567317912
+8: Title: El hombre de acero -- Similarity: 0.293138206139
+9: Title: Calidad de datos -- Similarity: 0.292453876423
+10: Title: Gran distribución especializada -- Similarity: 0.289340536455
+NumTopic: 2
+1: Title: Preesm -- Similarity: 0.740486577982
+2: Title: Edonkey plus -- Similarity: 0.697653987488
+3: Title: Calculate Linux -- Similarity: 0.687739210374
+4: Title: Oscar -- Similarity: 0.685351673532
+5: Title: IntelliJ IDEA -- Similarity: 0.674874162044
+6: Title: Oracle WebLogic -- Similarity: 0.673998443936
+7: Title: Anime International Company -- Similarity: 0.667130301441
+8: Title: Open-source Ticket Request System -- Similarity: 0.664582909812
+9: Title: Quanta Plus -- Similarity: 0.661729414346
+10: Title: Kohana -- Similarity: 0.648854668179
+NumTopic: 3
+1: Title: UNE 166002 -- Similarity: 0.709680383017
+2: Title: Diseases Database -- Similarity: 0.709584786522
+3: Title: Gestión -- Similarity: 0.66175907397
+4: Title: Comité Europeo de Normalización -- Similarity: 0.657671032445
+5: Title: International Chemical Identifier -- Similarity: 0.65508439769
+6: Title: Gemeinsame Normdatei -- Similarity: 0.642465637887
+7: Title: Pie -- Similarity: 0.640012979794
+8: Title: Fuero -- Similarity: 0.638135836534
+9: Title: Teoría de la decisión -- Similarity: 0.636519017705
+10: Title: Director general -- Similarity: 0.629700379265
+NumTopic: 4
+1: Title: SCons -- Similarity: 0.710627877519
+2: Title: Análisis de ciclo de vida -- Similarity: 0.688975393879
+3: Title: Apache HBase -- Similarity: 0.68073783691
+4: Title: Gestión de datos -- Similarity: 0.672703508483
+5: Title: Alojamiento web -- Similarity: 0.669381314245
+6: Title: Estrategia -- Similarity: 0.667776850704
+7: Title: Programa de las Naciones Unidas para el Ambiente -- Similarity: 0.667651612923
+8: Title: Ansible (software) -- Similarity: 0.666649454251
+9: Title: Entrenamiento -- Similarity: 0.66464131188
+10: Title: Service Management Facility -- Similarity: 0.656667265995
+NumTopic: 5
+1: Title: Infraestructura urbana -- Similarity: 0.721132563394
+2: Title: Microprocesador -- Similarity: 0.708795848037
+3: Title: Alojamiento web -- Similarity: 0.678329100897
+4: Title: Medicina preventiva y salud pública -- Similarity: 0.66782033916
+5: Title: Lenguaje ensamblador -- Similarity: 0.666137718279
+6: Title: Sistema de información geográfica -- Similarity: 0.661313114225
+7: Title: Especialidades médicas -- Similarity: 0.659276206417
+8: Title: Teorías de la conspiración del 11M -- Similarity: 0.657380955936
+9: Title: Jorge Luis Borges -- Similarity: 0.655015057575
+10: Title: Simposium Internacional de Sistemas Computacionales y Tecnologías de Información -- Similarity: 0.654763762711
+NumTopic: 6
+1: Title: Windows.h -- Similarity: 0.742014713933
+2: Title: Lady Gaga -- Similarity: 0.721867605643
+3: Title: Iquitos -- Similarity: 0.719913430798
+4: Title: Mensajero LAN -- Similarity: 0.716889599773
+5: Title: Coste marginal -- Similarity: 0.713070705558
+6: Title: Nube Virtual Segura -- Similarity: 0.702361678514
+7: Title: Root -- Similarity: 0.698787293855
+8: Title: Virtuozzo -- Similarity: 0.698262419289
+9: Title: Pedro Enríquez de Castilla -- Similarity: 0.691026114989
+10: Title: Anticlericalismo en España -- Similarity: 0.690799405458
+NumTopic: 7
+1: Title: Cerebelo -- Similarity: 0.665149808479
+2: Title: Memoria gráfica de acceso aleatorio -- Similarity: 0.648963316108
+3: Title: Cuero -- Similarity: 0.648941483379
+4: Title: ViolaWWW -- Similarity: 0.648274118683
+5: Title: Licencia de documentación libre de GNU -- Similarity: 0.647023514669
+6: Title: Messerschmitt Me 262 -- Similarity: 0.646172637882
+7: Title: Motor de renderizado -- Similarity: 0.642240514985
+8: Title: Système universitaire de documentation -- Similarity: 0.642068775421
+9: Title: Germplasm Resources Information Network -- Similarity: 0.641340486439
+10: Title: Corel -- Similarity: 0.63743221569

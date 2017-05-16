@@ -11,19 +11,34 @@
     </div>
   
     <div class="row">
-		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-			<select class="form-control input-lg m-bot15">
-		        <option value="0">Ingeniería Informática</option>
-		        <option value="1">Ingeniería Industrial</option>
-		        <option value="2">Contabilidad</option>
+    	<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			<label class="input-lg m-bot15">Especialidad: </label>
+		</div>
+
+		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			<select id="Especialidad" class="form-control input-lg m-bot15" name="Especialidad">
+		        <option value="inf">Ingeniería Informática</option>
+		        <option value="ind">Ingeniería Industrial</option>
+		        <option value="cont">Contabilidad</option>
 	      	</select>
-      	</div><!--/.col-->	
+      	</div>
+
+      	<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			<label class="input-lg m-bot15">Periodo de tiempo: </label>
+		</div>
+
+      	<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			<select id="Periodo" class="form-control input-lg m-bot15" name="Periodo">
+		        <option value="sem">Semestre</option>
+		        <option value="trim">Trimestre</option>
+	      	</select>
+      	</div>
 		
-		<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-			<a class="btn btn-default btn-lg" href="" title="Graficar">Graficar</a>	
-		</div><!--/.col-->	
+		<div class="col-lg-2 col-md-2 col-sm-12 col-xs-12">
+			<a id="Graficar" class="btn btn-default btn-lg" title="Graficar">Graficar</a>	
+		</div>
 	
-	</div><!--/.row-->
+	</div>
 
 	<div class="row">
 	    <div class="col-lg-12">
@@ -39,8 +54,18 @@
 		</div><!--/.col-->	
 		</br>
 		</br>
-		<div class="col-lg-12">
+		<div class="col-lg-10">
 			<div class="chart"></div>		
+		</div><!--/.col-->
+		<div class="col-lg-2">
+			<li name="Etiquetas">Título Temática</li>	
+			<select id="Etiquetas" class="form-control input-lg m-bot15" name="Etiquetas" style="visibility: hidden">
+	      	</select>
+
+	      	<li name="Topic_terms">Términos relevantes</li>	
+			<ul id="Topic_terms" class="list-group" name="Topic_terms">
+
+			</ul> 
 		</div><!--/.col-->
 			
 	</div><!--/.row-->
