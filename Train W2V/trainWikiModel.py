@@ -23,6 +23,15 @@ def readFile(filename):
 			
 	return topics
 
+def readFile_v2(filename):
+	topics = []
+	with open(filename+'.txt') as fp:
+		for line in fp:
+			topicWords = line.strip().split('-')
+			topics.append(topicWords)
+			
+	return topics
+
 def titleArticles(topics):
 	wikipedia.set_lang('es')
 	wikiArticles = set()
@@ -161,7 +170,7 @@ def trainWord2Vec_Final():
 	client = MongoClient('localhost', 27017,maxPoolSize=200)
 	db = client['tesisdb']
 	career = 'Informatica'
-	collection = db[career+'_wiki_phrases_v2']
+	collection = db[career+'_wiki_phrases_te_sem']
 
 	
 	#map = Code(open('map.js','r').read())
@@ -249,7 +258,7 @@ def trainWord2Vec_Final():
 	#print('Cantidad de Sentences: ' + str(len(globalSentences)))
 
 
-	modelw2v = Word2Vec(iter=5, size=400, window=5, min_count=15, workers=4)
+	#modelw2v = Word2Vec(iter=5, size=400, window=5, min_count=15, workers=4)
 	globalSentences = []
 	numDoc = 0
 	numGlobal = 0
@@ -277,10 +286,11 @@ def trainWord2Vec_Final():
 		numDoc+=1
 		#numGlobal+=1
 	print('Build_vocab')
-	modelw2v.build_vocab(globalSentences)
+	#modelw2v.build_vocab(globalSentences)
 	print('Train')
-	modelw2v.train(globalSentences)
+	#modelw2v.train(globalSentences)
 
+	modelw2v = Word2Vec(sentences=globalSentences,iter=5, size=400, window=5, min_count=15, workers=4)
 	'''numDoc = 0
 	for doc in collection.find({},{'Sentences':1,'_id':0}):
 		print('NumDoc: '+str(numDoc))
@@ -300,7 +310,7 @@ def trainWord2Vec_Final():
 	#print('Entrenando word2vec')
 	#modelw2c = Word2Vec(globalSentences, size=100, window=5, min_count=25, workers=4)
 	print('Guardando word2vec')
-	pickle.dump(modelw2v,open("modelw2v_wiki_v2" +  ".p","wb"))
+	pickle.dump(modelw2v,open("modelw2v_wiki_te_sem" +  ".p","wb"))
 	#modelw2v.save('/word2vec')
 
 
@@ -322,7 +332,7 @@ def preProcessWikiArticles(filename):
 	client = MongoClient('localhost', 27017,maxPoolSize=200)
 	db = client['tesisdb']
 	career = 'Informatica'
-	collection = db[career+'_wiki_phrases_v2']
+	collection = db[career+'_wiki_phrases_te_sem']
 
 	#globalSentences = []
 	numArticlesFounds = 0
@@ -421,11 +431,11 @@ def trainWord2Vec(filename):
 	modelw2c.save('/word2vec')
 
 
-#topics = readFile('topics')
+#topics = readFile_v2('topics_v2_Sem')
 #wikiArticles = titleArticles(topics)
-#pickle.dump(wikiArticles,open("wikiArticles_v2" +  ".p","wb"))
+#pickle.dump(wikiArticles,open("wikiArticles_v2_te_sem" +  ".p","wb"))
 
-#trainWord2Vec("wikiArticles_v2")
-#preProcessWikiArticles("wikiArticles_v2")
+#trainWord2Vec("wikiArticles_v2") ya no sirve
+#preProcessWikiArticles("wikiArticles_v2_te_sem")
 #preProcessWikiArticles("wikiTopicArticles")
 trainWord2Vec_Final()

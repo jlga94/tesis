@@ -26,6 +26,15 @@ def readFile(filename):
 			
 	return topics
 
+def readFile_v2(filename):
+	topics = []
+	with open(filename+'.txt') as fp:
+		for line in fp:
+			topicWords = line.strip().split('-')
+			topics.append(topicWords)
+			
+	return topics
+
 def titleArticles(topics):
 	wikipedia.set_lang('es')
 	wikiTopicArticles = []
@@ -119,9 +128,10 @@ def importantText(text):
 
 
 def getWikiTitleArticlesPerTopic():
-	topics = readFile('topics')
+	#topics = readFile('topics')
+	topics = readFile_v2('topics_v2_Sem')
 	wikiTopicArticles = titleArticles(topics)
-	pickle.dump(wikiTopicArticles,open("wikiTopicArticles_v2" +  ".p","wb"))
+	pickle.dump(wikiTopicArticles,open("wikiTopicArticles_te_sem" +  ".p","wb"))
 
 def getWikiArticlePerTopic(filename):
 	wikiTopicArticles = pickle.load(open(filename +  ".p","rb"))
@@ -131,7 +141,7 @@ def getWikiArticlePerTopic(filename):
 	client = MongoClient('localhost', 27017,maxPoolSize=200)
 	db = client['tesisdb']
 	career = 'Informatica'
-	collection = db[career+'_wikiArticles_per_topic_v2']
+	collection = db[career+'_wikiArticles_per_topic_te_sem']
 
 	tp = TextProcessor()
 
@@ -224,12 +234,12 @@ def getValueWords(mongoCursorItem):
 
 def labelTopics():
 	topics = readFile('topics')
-	modelw2c = pickle.load(open("modelw2v_wiki_v2" +  ".p","rb"))
+	modelw2c = pickle.load(open("modelw2v_wiki_te_sem" +  ".p","rb"))
 
 	client = MongoClient('localhost', 27017,maxPoolSize=200)
 	db = client['tesisdb']
 	career = 'Informatica'
-	collection = db[career+'_wikiArticles_per_topic_v2']
+	collection = db[career+'_wikiArticles_per_topic_te_sem']
 	#list(map(getValue,collectionTFIDF.find({},{wordsList[wordIndex]:1,'_id':0})))
 
 	for numTopic in range(len(topics)):
@@ -286,5 +296,5 @@ def labelTopics():
 		 
 
 getWikiTitleArticlesPerTopic()
-getWikiArticlePerTopic("wikiTopicArticles_v2")
+getWikiArticlePerTopic("wikiTopicArticles_te_sem")
 labelTopics()
